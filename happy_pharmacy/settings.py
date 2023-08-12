@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'happy_pharmacy',
     'home',
+    'products',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
