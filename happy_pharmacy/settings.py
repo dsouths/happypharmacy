@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'happy_pharmacy'
+    'happy_pharmacy',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
