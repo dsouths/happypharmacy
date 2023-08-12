@@ -1,6 +1,13 @@
 from django.shortcuts import render
+from django.conf import settings
+from django.http import HttpResponse
+from django.template import loader
 
-# Create your views here.
+
 def index(request):
-    """A view to return the index page"""
-    return render(request, 'home/index.html')
+    """renders homepage"""
+    template = loader.get_template('home/index.html')
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return HttpResponse(template.render(context, request))
