@@ -1,0 +1,50 @@
+[
+    {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+        "sku": "A001",
+        "name": "Cetrine Allergy Relief Tablets 30's",
+        "description": "Cetirizine is a non-drowsy antihistamine used for the relief of the symptoms of hayfever (seasonal allergic rhinitis) and allergies such as dust or pet allergies (perennial allergic rhinitis)and rashes associated with hives and itching (chronic idiopathic urticaria).",
+        "directions": "Take one daily.",
+        "ingredients": "Cetirizine",
+        "price": 11.99,
+        "rating": 4.9,
+        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/cetrine-allergy-relief-tablets-30-s-allergy-relief-meaghers-pharmacy-7207384612977_550x550.png?v=1690497189",
+        "image": "cetrine.webp",
+        "category": 4
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "A002",
+            "name": "Fusion Allergy Lozenges 24 Pack",
+            "description": "Fusion Allergy Lozenges form a natural and moisturising protective shield on irritated mucous membranes in the mouth and throat. They stabilize the cell membranes of the mucosa in the mouth and throat and prevent irritations.The proven effects of Fusion Allergy Lozenges are based on 100% natural ingredients.",
+            "directions": "Dissolve 1 lozenge slowly in the mouth every 3 hours or as often as required. Do not use more than 10 lozenges per day.",
+            "ingredients": "Please read the label",
+            "price": 6.50,
+            "rating": 4.5,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/fusion-allergy-lozenges-24-pack-lozenges-meaghers-pharmacy-30000392372337_1000x1000.jpg?v=1690360405",
+            "image": "fusionallergyloz.webp",
+            "category": 4
+            }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "A003",
+            "name": "Fusion Allergy Nasal Spray 20ml",
+            "description": "Preservative free nasal spray for the treatment and prevention of allergic rhinitis symptoms like running nose, itching nose, and nasal congestion.",
+            "directions": "Remove the cap from the bottle. Hold the bottle with your index and middle finger on either side of the finger rests and your thumb underneath the bottle. Bend your head slightly forward and close one nostril. Insert the tip of the spray into your nostril. While pressing down the pump quickly and firmly, breath in gently through the nose. Repeat in your other nostril.",
+            "ingredients": "Please read the label",
+            "price": 6.50,
+            "rating": 4.5,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/fusion-allergy-nasal-spray-20ml-nasal-spray-meaghers-pharmacy-30000646586481_1000x1000.jpg?v=1690360564",
+            "image": "fusionspray.webp",
+            "category": 4
+            }
+    }
+]
