@@ -1,0 +1,49 @@
+[
+    {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+        "sku": "FA001",
+        "name": "Savlon Antiseptic Cream 60g",
+        "description": "Use to cleanse and help prevent infection and aid the natural healing of cuts & grazes, insect bites & stings, minor burns & scalds and shaving cuts",
+        "directions": "With clean hands gently apply cream to the affected area. Do not use on the eyes or ears. If symptoms persist, or if any unwanted effects occur, stop using & consult your doctor or pharmacist. Bend your head slightly forward and close one nostril. Insert the tip of the spray into your nostril. While pressing down the pump quickly and firmly, breath in gently through the nose. Repeat in your other nostril.",
+        "ingredients": "Please read the label",
+        "price": 5.35,
+        "rating": 4.6,
+        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/savlon-antiseptic-cream-60g-wound-treatment-meaghers-pharmacy-14531221848177_1000x1000.jpg?v=1690441760",
+        "image": "savlon-antiseptic-cream.webp",
+        "category": 5
+        }
+    },
+    {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+        "sku": "FA002",
+        "name": "Sudocrem Antiseptic Healing Cream",
+        "description": "Sudocrem Antiseptic Healing Cream has been mums simple, effective ally for over 85 years and is great for soothing sore skin and treating nappy rash and has been proven to reduce nappy rash rapidly.* Sudocrem Antiseptic Healing Cream is versatile enough to be used by the whole family for all of lifes little dramas and can help with so much more than just treating babies bottoms!",
+        "ingredients": "Please read the label",
+        "price": 4.60,
+        "rating": 4.8,
+        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/sudocrem-antiseptic-healing-cream-antiseptic-cream-125g-meaghers-pharmacy-28091207680113_1000x1000.jpg?v=1690459397",
+        "image": "sudocrem-antiseptic-healing-cream-antiseptic-cream-125g.webp",
+        "category": 5
+        }
+    },
+    {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+        "sku": "FA003",
+        "name": "Deep Heat Patches - 4 Pack",
+        "description": "Deep Heat Well Patches are specially formulated to bring gentle heat to the pain area, providing fast effective relief from muscular aches and pains, joint stiffness, backache and menstrual cramps. Excellent for before and after exercise.",
+        "ingredients": "Please read the label",
+        "price": 9.80,
+        "rating": 4.7,
+        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/deep-heat-patches-4-pack-heat-patches-meaghers-pharmacy-16681127739505_1000x1000.jpg?v=1690347429",
+        "image": "deep-heat-patches-4-pack-heat-patches.webp",
+        "category": 5
+        }
+    }
+
+]
