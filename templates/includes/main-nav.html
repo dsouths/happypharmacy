@@ -1,0 +1,59 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}">
+                Home
+              </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products'%}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products'%}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="whitening_kits-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vitamins
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="whitening_kits-link">
+                <a href="{% url 'products' %}?category=mens_health" class="dropdown-item">Men's Health</a>
+                <a href="{% url 'products' %}?category=womens_health" class="dropdown-item">Women's Health</a>
+                <a href="{% url 'products' %}?category=mens_health,womens_health" class="dropdown-item">All Vitamins</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="whitening_accessories-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pharmacy
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="whitening-kits-link">
+                <a href="{% url 'products' %}?category=allergy" class="dropdown-item">Allergy</a>
+                <a href="{% url 'products' %}?category=eye_ear" class="dropdown-item">Eye & ear</a>
+                <a href="{% url 'products' %}?category=first_aid" class="dropdown-item">First Aid</a>
+                <a href="{% url 'products' %}?category=oral_care" class="dropdown-item">Oral Care</a>
+                
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="refills-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Other
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="refills-link">
+                <a href="{% url 'allposts' %}" class="dropdown-item">Blog</a>
+                <a href="{% url 'contact' %}" class="dropdown-item">Contact</a>
+            </div>
+        </li>
+
+    </ul>
+</div>
