@@ -1,0 +1,50 @@
+[
+    {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+        "sku": "EE001",
+        "name": "Hyloforte Eye Drops",
+        "description": "Hylo-Forte eye drops provides long lasting, more intensive treatment for moderate to severe dry eye symptoms",
+        "directions": "One drop into the affected eye(s) as required",
+        "ingredients": "HYLO-Forte is a sterile, phosphate and preservative free solution containing 0.2% sodium hyaluronate, a citrate buffer, sorbitol and water",
+        "price": 11.99,
+        "rating": 5.0,
+        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/hyloforte-eye-drops-eye-drops-meaghers-pharmacy-7212492980337_470x470.jpg?v=1690369215",
+        "image": "hyloforte-eye-drops-eye-drops.jpg",
+        "category": 6
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "EE002",
+            "name": "Hylo-Dual Eye Drops 7.5ml",
+            "description": "The dual mode of action of sodium hyaluronate and ectoine provides intensive lubrication of the cornea and conjunctiva and prevents the excessive evaporation of the tear film. The resulting stabilisation of the tear film, especially that of the lipid layer, relieves irritated eyes. Therefore, the symptoms of inflammation or those caused by allergy, like burning and itching, disappear.",
+            "directions": "One drop into the affected eye(s) as required",
+            "ingredients": "1 ml of HYLO DUAL® contains 0.5 mg sodium hyaluronate, 20 mg ectoine, boric acid, borax and water for injections.",
+            "price": 14.50,
+            "rating": 4.7,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/hylo-dual-eye-drops-7-5ml-eye-drops-meaghers-pharmacy-14496953598065_1000x1000.jpg?v=1690369026",
+            "image": "hylo-dual-eye-drops-7-5ml-eye-drops.webp",
+            "category": 6
+            }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "EE003",
+            "name": "Thealoz Duo Dry Eye Drops 10ml",
+            "description": "Thealoz Duo dry eye drops are an everyday solution for all your Dry Eye symptoms including watery, irritated or gritty eyes. Clinically proven and recommended by experts. Unique formulation provides you with longer lasting relief and protection for up to four hours on the tear film. An easy to use bottle containing 300 measured drops. Keep for three months once opened. Suitable for contact lens wearers and are free from chemical preservatives.",
+            "directions": "Thealoz Duo dry eye drops are an everyday solution for all your Dry Eye symptoms including watery, irritated or gritty eyes. Clinically proven and recommended by experts. Unique formulation provides you with longer lasting relief and protection for up to four hours on the tear film. An easy to use bottle containing 300 measured drops. Keep for three months once opened. Suitable for contact lens wearers and are free from chemical preservatives.",
+            "ingredients": "Trehalose (3%) and Hyaluronic acid (0.15%)",
+            "price": 11.50,
+            "rating": 4.9,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/thealoz-duo-dry-eye-drops-10ml-eye-drops-meaghers-pharmacy-30188856901745_1000x1000.jpg?v=1690454162",
+            "image": "thealoz-duo-dry-eye-drops-10ml-eye-drops.webp",
+            "category": 6
+            }
+    }
+]
