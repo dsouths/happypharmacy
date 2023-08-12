@@ -24,3 +24,31 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class ProductReviewForm(forms.ModelForm):
+    """for adding product reviews"""
+    class Meta:
+        model = ProductReview
+        fields = ('title', 'content',)
+
+    def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels
+        """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'title': 'Write a snazzy title here',
+            'content': 'Write your review here',
+        }
+
+        for field in self.fields:
+            if field != 'country':
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label = False
