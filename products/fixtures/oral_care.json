@@ -1,0 +1,50 @@
+[
+    {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+        "sku": "OC001",
+        "name": "Oralmedic Mouth Ulcer Treatment",
+        "description": "Oralmedic Mouth Ulcer Treatment is a quick method to treat painful mouth ulcers. Oralmedic will seal the infected area and help promote natural healing. With one application it will eliminate mouth ulcer pain in seconds. The formula is selective in removing damaged oral mucosal tissues from the ulcer site after application and it seeks out and attacks dead or damaged tissue. It then creates a seal or barrier over the area.",
+        "directions": "Dry the ulcer with the cotton drying bud. Remove the Oralmedic treatment stick from the packaging and hold it with the red circle facing upwards. Gently bend the cotton bud at the red circle until it snaps Hold the treatment stick at a 45-degree angle. Oralmedic will now flow to the opposite end of the cotton bud.  Gently apply the treatment to the mouth ulcer, ensuring that the mouth ulcer is completely covered.  After a few seconds, rinse your mouth with water and spit out.",
+        "ingredients": "HYLO-Forte is a sterile, phosphate and preservative free solution containing 0.2% sodium hyaluronate, a citrate buffer, sorbitol and water",
+        "price": 8.99,
+        "rating": 5.0,
+        "image_url": "https://abclive1.s3.amazonaws.com/af604476-fa4c-47ca-87af-630f02e4f274/productimage/400281___1___L.jpg",
+        "image": "oralmedic.webp",
+        "category": 7
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "OC002",
+            "name": "Medijel - Mouth Ulcer Gel 15g",
+            "description": "Medijel Mouth Ulcer Gel offers fast and effective relief for common mouth ulcers, sore gums and denture rubbing.",
+            "directions": "The gel should be applied directly to the affected area(s) with a clean finger or small pad of cotton wool.  If necessary application may be repeated after 20 minutes.",
+            "ingredients": "Glycerol, Hydroxypolyethoxydodecane HSE, Alcohol 96% v/v, Carbomer, Sucrose, Saccharin Sodium, Peppermint Oil, Ethyl vanillin, Di-isopropanolamine 90% aqueous, Purified Water. Always check the product for updates.",
+            "price": 4.50,
+            "rating": 4.7,
+            "image_url": "https://abclive1.s3.amazonaws.com/af604476-fa4c-47ca-87af-630f02e4f274/productimage/801046___1___L.jpg",
+            "image": "medijel.webp",
+            "category": 7
+            }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "OC003",
+            "name": "Bonjela for Mouth Ulcers 15G",
+            "description": "Bonjela Gel provides effective, soothing relief from the pain & discomfort associated with teeting and mouth ulcers. ",
+            "directions": "Apply to affected area as required",
+            "ingredients": "Please read printed instructions",
+            "price": 6.50,
+            "rating": 4.9,
+            "image_url": "https://abclive1.s3.amazonaws.com/af604476-fa4c-47ca-87af-630f02e4f274/productimage/500021___L.jpg",
+            "image": "bonjela_15g.jpg",
+            "category": 7
+            }
+    }
+]
