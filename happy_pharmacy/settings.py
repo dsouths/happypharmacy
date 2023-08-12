@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'happy_pharmacy',
+    'crispy_forms',
     'home',
     'products',
     'profiles',
@@ -69,7 +70,6 @@ ROOT_URLCONF = 'happy_pharmacy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth')
@@ -81,10 +81,17 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents',
+                'happy_pharmacy.context_processors.media',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
+
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -166,3 +173,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# stripe
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = 'pk_test_51Nbmd8IOLnsla5tCS0kYjxQoxQJIlVFz4geTjbnR4xTBlqZ65onnDaAbcWq6UrmcHyNKkv5FL2kvpdvBEpfxpuH900X8gJkHYC'
+STRIPE_SECRET_KEY = 'sk_test_51Nbmd8IOLnsla5tCFplQVYC92do8keVsAkHwBXAnKTQJbFtHVhmb0mUSIbBWVDqnUEQXXIuCcfHmHN8pw6XlJXm1008NzP8UqR'
+
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
