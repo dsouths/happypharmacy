@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'happy_pharmacy',
     'home',
     'products',
+    'profiles',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
