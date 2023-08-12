@@ -1,7 +1,3 @@
-from django.urls import path
-from . import views
+from django.db import models
 
-urlpatterns = [
-    path('', views.view_bag, name='view_bag'),
-    
-]
+# Create your models here.
