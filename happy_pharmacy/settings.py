@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'happy_pharmacy',
-    'home'
+    'home',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
