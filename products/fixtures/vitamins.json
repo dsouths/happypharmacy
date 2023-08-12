@@ -1,0 +1,163 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "MHV001",
+            "name": "Revive Active Health Food Supplement 30 Sachets",
+            "description": "Complete multivitamin formulated for both men & women's nutritional needs.",
+            "directions": "Take one sachet daily with a meal.",
+            "ingredients": "Vitamin A, Vitamin C, Vitamin D, Vitamin E, Vitamin K, Thiamin, Riboflavin, Niacin, Vitamin B6, Folic Acid, Vitamin B12, Biotin, Pantothenic Acid, Calcium, Iron, Phosphorus, Iodine, Magnesium, Zinc, Selenium, Copper, Manganese, Chromium, Molybdenum, Chloride, Potassium.",
+            "price": 54.99,
+            "rating": 4.9,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/revive-active-health-food-supplement-30-sachets-vitamins-supplements-meaghers-pharmacy-13840947282033_1000x1000.jpg?v=1690450572",
+            "image": "revive_active.webp",
+            "category": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "MHV002",
+            "name": "Men's Probiotic Optibac",
+            "description": "Probiotic supplement to support men's digestive health.",
+            "directions": "Take one capsule daily.",
+            "ingredients": "Lactobacillus Acidophilus, Bifidobacterium Lactis, Lactobacillus Paracasei, Lactobacillus Plantarum.",
+            "price": 29.99,
+            "rating": 4.4,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/optibac-probiotics-every-day-vitamins-supplements-meaghers-pharmacy-30569837396081_1000x1000.jpg?v=1690428252",
+            "image": "optibac.webp",
+            "category": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "MHV003",
+            "name": "Revive Active Joint Complex",
+            "description": "Joint Complex is a super supplement with 10 active ingredients formulated for adults (aged 18 and over). Made in a unique forest fruit flavour using a natural sweetener, steviol glycosides, with ingredients including Peptan® Collagen Peptides (marine source), Hyaluronic Acid, Glucosamine, and MSM. It was created to deliver multiple benefits in one easy powdered sachet.",
+            "directions": "Take one sachet daily with a meal.",
+            "ingredients": "Peptan® Collagen Peptides (FISH), MSM (Methylsulfonylmethane), Glucosamine Sulphate 2KCL (Vegetarian), Flavouring (Apple, Strawberry, Raspberry), Acidifier (Malic Acid), Colour (Beetroot Powder), Vitamin C (Ascorbic Acid), Hyaluronic Acid (Sodium Hyaluronate), Vitamin K2 (Menaquinone-7), Sweetener (Steviol Glycosides), Boron (Sodium Borate) Manganese (Manganese Citrate), Vitamin D3 (Cholecalciferol) (Vegan), Copper (Cupric Gluconate).",
+            "price": 42.99,
+            "rating": 4.2,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/revive-active-joint-complex-vitamins-supplements-30-sachets-meaghers-pharmacy-30020379082865_1000x1000.jpg?v=1690450758",
+            "image": "revive_joint.webp",
+            "category": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "MHV004",
+            "name": "Minami MorEPA Platinum Smart Fats + D3 60 Softgels",
+            "description": "MorEPA Platinum is specially formulated for active individuals. It has the highest concentration of omega-3 per softgel, up to 90-95%. Due to its high omega-3 levels. MorEPA Platinum gives your heart the best support during your workout. Besides high omega-3 levels, MorEPA Platinum contains vitamin D3, to help support the immune system as well as muscle function after intense exercise.",
+            "directions": "Take one softgel daily.",
+            "ingredients": "Omega-3 Fish Oil, EPA, DHA.",
+            "price": 35.99,
+            "rating": 4.6,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/minami-morepa-platinum-smart-fats-d3-60-softgels-vitamins-supplements-meaghers-pharmacy-15240784904305_1000x1000.jpg?v=1690400163",
+            "image": "omega3.webp",
+            "category": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "MHV005",
+            "name": "Mylan Vitamin D3 2000IU (60)",
+            "description": "Vitamin D 2000IU contributes for normal bones, normal function of the immune system  and maintenace of normal muscle function.",
+            "directions": "Take one softgel daily with a meal.",
+            "ingredients": "Vitamin D3.",
+            "price": 12.99,
+            "rating": 4.7,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/mylan-vitamin-d3-2000iu-60-vitamins-supplements-meaghers-pharmacy-14233561727089_1000x1000.jpg?v=1690417638",
+            "image": "vitamind.webp",
+            "category": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "WHV001",
+            "name": "Revive Meno Active 30 Sachets",
+            "description": "Meno Active is a super supplement, which was formulated after more than two years of extensive research by specialists in various field of nutrition and science.  With a scientific blend of 31 active ingredients, delivered in a unique daily sachet and daily capsule combination.  Each daily dose contains 4 Plant Extracts, 4 Digestive Enzymes, 350mgs Omega 3 DHA, 3 different strains of Live Friendly Bacteria and 19 Vitamins and Minerals.  ",
+            "directions": "Take 1 sachet daily with food.",
+            "ingredients": "Vitamin A, Vitamin D, Vitamin E, Vitamin C, Thiamin, Riboflavin, Niacin, Vitamin B6, Folic Acid, Vitamin B12, Biotin, Pantothenic Acid, Potassium, Chloride, Calcium, Phosphorus, Magnesium, Iron, Zinc, Copper, Manganese, Selenium, Chromium, Molybdenum, Iodine.",
+            "price": 52.99,
+            "rating": 4.7,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/revive-meno-active-30-sachets-vitamins-supplements-meaghers-pharmacy-30020656201841_1000x1000.jpg?v=1690440496",
+            "image": "revive_meno.webp",
+            "category": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "WHV002",
+            "name": "Optibac Probiotics Intimate Flora For Woman",
+            "description": "For Women contains friendly bacteria strains especially found in the vaginal & urinary tracts, scientifically proven to reach the intimate area, and to complement the vaginal flora. It's suitable for women of all ages and is backed by over 30 years of research.",
+            "directions": "Take one capsule daily.",
+            "ingredients": "Lactobacillus Acidophilus, Lactobacillus Rhamnosus, Bifidobacterium Lactis, Lactobacillus Gasseri.",
+            "price": 29.99,
+            "rating": 4.5,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/optibac-probiotics-intimate-flora-for-woman-vitamins-supplements-30-capsules-meaghers-pharmacy-30569868230769_1000x1000.jpg?v=1690428261",
+            "image": "optibacwomen.webp",
+            "category": 2
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "WHV003",
+            "name": "BetterYou Magnesium Joint Body Spray",
+            "description": "BetterYou Magnesium Joint Body Spray is formulated to relieve muscle stiffness and improve joint flexibility. The formulation is absorbed immediately when sprayed onto skin, replenishing the body with this essential mineral.",
+            "directions": "Spray between five and ten sprays around the body and massage well into the skin to stimulate absorption. After a shower or bath is a great time to apply as the skin is warm and the pores are open which aids absorption.",
+            "ingredients": "Aqua (water), magnesium chloride, PEG-40 hydrogenated castor oil, acetyl glucosamine, propylene glycol, menthol, eucalyptus globulusleaf oil, limonene..",
+            "price": 24.99,
+            "rating": 4.3,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/betteryou-magnesium-joint-body-spray-body-spray-meaghers-pharmacy-29960454144113_1000x1000.jpg?v=1690314844",
+            "image": "betteryoumag.webp",
+            "category": 2
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "WHV004",
+            "name": "Calcichew D3 Forte Tabs 500Mg 100s",
+            "description": "Calcichew D3 Forte chewable tablets contain two active ingredients, calcium carbonate, which is a calcium salt used mainly to supplement calcium in the diet, and colecalciferol, otherwise known as vitamin D3.",
+            "directions": "Adults and elderly: 2 chewable tablets per day, preferably one tablet morning and evening.The tablet may be chewed or sucked.",
+            "ingredients": "Calcium, Vitamin D3",
+            "price": 12.99,
+            "rating": 4.6,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/calcichew-d3-forte-tabs-500mg-100s-calcium-meaghers-pharmacy-14594882633841_659x659.jpg?v=1690318621",
+            "image": "calcichewd3.webp",
+            "category": 2
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "WHV005",
+            "name": "Centrum Women Multivitamin",
+            "description": "Centrum Women is a complete daily multivitamin with minerals scientifically formulated with specially balanced nutrient combinations to help support the health and wellbeing of Women.",
+            "directions": "Take one softgel daily with a meal.",
+            "ingredients": "Vitamin A, D3, E, K, C, B.",
+            "price": 15.99,
+            "rating": 4.7,
+            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/centrum-women-multivitamin-vitamins-supplements-30-tablets-meaghers-pharmacy-28417071349873_1000x1000.jpg?v=1690328706",
+            "image": "centrumwomen.webp",
+            "category": 2
+        }
+    }
+  ]
+  
