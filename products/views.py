@@ -20,6 +20,37 @@ def all_products(request):
     sort = None
     direction = None
 
+def product_detail(request, product_id):
+    """ A view to show individual product details """
+    product = get_object_or_404(Product, pk=product_id)
+    form = ProductReview
+
+    if request.method == 'POST':
+        form = ProductReviewForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.instance.user = request.user
+            form.instance.product = product
+            form.save()
+            messages.success(request, 'Review sent to admin for approval!')
+            context = {
+                'product': product,
+                'form': form,
+            }
+
+            return render(request, 'products/product_detail.html', context)
+        else:
+            messages.error(
+                request,
+                'Failed to add review. Please ensure the form is valid.')
+    else:
+        form = ProductReviewForm()
+        context = {
+            'product': product,
+            'form': form,
+        }
+
+    return render(request, 'products/product_detail.html', context)
+
 @login_required
 def add_product(request):
     """ Add a product to the store """
