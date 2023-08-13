@@ -35,3 +35,21 @@ The [GitHub repository](https://github.com/dsouths/happypharmacy)
 
 This is my 5th project under the Code Institute Diploma in Full Stack Development program.
 This website is a fictional Online Pharmacy selling vitamins, supplements & some healthcare products called HAPPYPHARMACY. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
+
+## UX - User Experience
+### User Stories
+
+### Admin 
+
+- As an admin I want a panel to:
+  - create a blog post.
+  - edit a blog post.
+  - delete a blog post.
+  
+- As an admin I want to be able to:
+  - log in so that I can access superuser privileges
+    
+- As an admin I want a product:
+  - upload form so that I can upload products on the site.
+  - edit form so that I can edit products on the site.
+  - delete so that I can delete products on the site.
