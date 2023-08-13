@@ -17,7 +17,7 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 CSRF_TRUSTED_ORIGINS = [
-   'https://8000-dsouths-happypharmacy-eyhek76rs2b.ws-eu103.gitpod.io',
+   'https://8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu103.gitpod.io',
 
    ]
 
@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '12344')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-dsouths-happypharmacy-eyhek76rs2b.ws-eu103.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu103.gitpod.io']
 
 
 # Application definition
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'storages',
     'blog',
     'contact',
+    
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -173,9 +174,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_root')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Static and media files
+
+STATICFILES_LOCATION = 'static'
+MEDIAFILES_LOCATION = 'media'
 
 if 'USE_AWS' in os.environ:
     # Cache control
@@ -191,12 +198,7 @@ if 'USE_AWS' in os.environ:
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-    # Static and media files
-    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-    STATICFILES_LOCATION = 'static'
-    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-    MEDIAFILES_LOCATION = 'media'
-
+    
   
 
 # Default primary key field type
