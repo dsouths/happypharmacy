@@ -95,13 +95,6 @@
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        {% if user.is_authenticated %}
-                        {% if product in wishlist.products.all %}
-                            <a href="{% url 'remove_from_wishlist' product.id %}">Remove from Wishlist</a>
-                        {% else %}
-                            <a href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
-                        {% endif %}
-                        {% endif %}
                     </div>
                 </form>
                 {% else %}
