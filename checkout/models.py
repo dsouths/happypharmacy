@@ -3,11 +3,33 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from django.utils import timezone 
 
 from django_countries.fields import CountryField
 
 from products.models import Product
 from profiles.models import UserProfile
+
+
+class Coupon(models.Model):
+    code = models.CharField(max_length=20, unique=True)
+    discount = models.DecimalField(max_digits=5, decimal_places=2)
+    valid_from = models.DateTimeField()
+    valid_to = models.DateTimeField()
+    is_active = models.BooleanField(default=True)
+    discount_type = models.CharField(
+        max_length=10,
+        choices=[('Percentage', 'Percentage'), ('Fixed', 'Fixed')],
+        default='Fixed'
+    )
+
+    def __str__(self):
+        return self.code
+
+    def is_valid(self):
+        if self.active and self.valid_from <= timezone.now() <= self.valid_to:
+            return True
+        return False
 
 
 class Order(models.Model):
@@ -40,6 +62,8 @@ class Order(models.Model):
         decimal_places=2,
         null=False,
         default=0)
+    coupon = models.ForeignKey(Coupon, on_delete=models.SET_NULL, null=True, blank=True)
+    discount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(
         max_length=254,
@@ -54,10 +78,6 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
-        """
-        Update grand total each time a line item is added,
-        accounting for delivery costs.
-        """
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
@@ -66,7 +86,16 @@ class Order(models.Model):
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
+
+        # Apply coupon discount if present and valid
+        if self.coupon and self.coupon.is_valid():
+            if self.coupon.discount_type == 'Percentage':
+                self.grand_total -= self.grand_total * self.coupon.discount / 100
+            elif self.coupon.discount_type == 'Fixed':
+                self.grand_total -= self.coupon.discount
+
         self.save()
+
 
     def save(self, *args, **kwargs):
         """
@@ -115,3 +144,4 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
+

@@ -17,7 +17,7 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 CSRF_TRUSTED_ORIGINS = [
-   'https://8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu103.gitpod.io',
+   'https://8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu104.gitpod.io',
 
    ]
 
@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '12344')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu103.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu104.gitpod.io']
 
 
 # Application definition

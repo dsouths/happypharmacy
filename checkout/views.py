@@ -3,9 +3,8 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
-
+from .forms import OrderForm, ApplyCouponForm
+from .models import Order, OrderLineItem, Coupon 
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
@@ -13,6 +12,23 @@ from bag.contexts import bag_contents
 
 import stripe
 import json
+
+
+@require_POST
+def apply_coupon(request):
+    form = ApplyCouponForm(request.POST or None)
+    if form.is_valid():
+        code = form.cleaned_data['code']
+        try:
+            coupon = Coupon.objects.get(code=code, is_active=True)
+            request.session['coupon_id'] = coupon.id
+        except Coupon.DoesNotExist:
+            request.session['invalid_coupon'] = True # Flag for invalid coupon
+        return redirect('checkout:checkout') # Redirect to your checkout view
+    else:
+    # Render the form again with the error messages or redirect to an error page
+
+        return render(request, 'checkout.html', {'form': form})
 
 
 @require_POST
@@ -27,19 +43,24 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be \
-            processed right now. Please try again later.')
+        messages.error(request, 'Sorry, your payment cannot be processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
-    """Processs the checkout"""
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    bag = request.session.get('bag', {})
+    current_bag = bag_contents(request)
+    total = current_bag['grand_total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
 
     if request.method == 'POST':
-        bag = request.session.get('bag', {})
-
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -53,8 +74,6 @@ def checkout(request):
         }
 
         order_form = OrderForm(form_data)
-
-        """Creates the order/line order and saves them to the db"""
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -72,8 +91,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items(
-                        ):
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -82,40 +100,39 @@ def checkout(request):
                             )
                             order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(
-                        request, ("One of the products in your bag wasn't found in our database. "
-                                  "Please call us for assistance!"))
+                    messages.error(request,
+                                   "One of the products in your bag wasn't found in our database. Please call us for assistance!")
                     order.delete()
                     return redirect(reverse('view_bag'))
 
-            # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(
-                reverse(
-                    'checkout_success',
-                    args=[
-                        order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            messages.error(request, 'There was an error with your form. Please double check your information.')
     else:
-        bag = request.session.get('bag', {})
         if not bag:
-            messages.error(
-                request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
-        current_bag = bag_contents(request)
-        total = current_bag['grand_total']
-        stripe_total = round(total * 100)
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY,
-        )
+        coupon_code = request.session.get('coupon_code', '')
+        coupon = None
+        try:
+            coupon = Coupon.objects.get(code=coupon_code)
+            if not coupon.is_valid():
+                messages.error(request, 'Invalid coupon code.')
+                coupon = None
+        except Coupon.DoesNotExist:
+            messages.error(request, 'Invalid coupon code.')
 
-        # Attempt to prefill the form with any info the user maintains in their
-        # profile
+        if coupon:
+            if coupon.discount_type == 'Percentage':
+                discount = total * coupon.discount / 100
+            elif coupon.discount_type == 'Fixed':
+                discount = coupon.discount
+            total -= discount
+
+        order_form = OrderForm()
+
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -132,12 +149,9 @@ def checkout(request):
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
-        else:
-            order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
@@ -186,6 +200,18 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+
+
+    coupon_id = request.session.get('coupon_id')
+    discount = 0
+    if coupon_id:
+        coupon = Coupon.objects.get(id=coupon_id)
+        if coupon.discount_type == 'Percentage':
+            discount = total * coupon.discount / 100
+        elif coupon.discount_type == 'Fixed':
+            discount = coupon.discount
+        total -= discount
+
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \

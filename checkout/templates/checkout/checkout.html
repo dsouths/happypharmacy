@@ -69,8 +69,22 @@
         </div>
         <div class="col-12 col-lg-6">
             <p class="text-muted">Please fill out the form below to complete your order</p>
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <form action="{% url 'checkout:checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Coupon</legend>
+                </fieldset>
+            </form>
+            <form action="{% url 'checkout:apply_coupon' %}" method="POST" id="coupon-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" name="code" placeholder="Coupon Code">
+                    <button type="submit" class="btn btn-primary">Apply Coupon</button>
+                </div>
+                {% if invalid_coupon %}
+                <p class="text-danger">Invalid coupon code!</p>
+                {% endif %}
+            </form>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
@@ -99,6 +113,10 @@
                         {% endif %}
                     </div>
                 </fieldset>
+                
+                  {% if invalid_coupon %}
+                    <p>Invalid coupon code!</p>
+                  {% endif %}
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->

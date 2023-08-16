@@ -7,8 +7,8 @@
 
         <div class="col-lg-6 ml-3 mr-3 pt-4 pb-5 allauth-form-inner-content">
             <h1>Contact Us</h1>
-            <p>We'll be happy to hear from you!</p>
-            {% if user.is_authenticated %}
+            <p>Please fill out the form below, we'll be happy to hear from you!</p>
+            
             <form method="POST">
                 {{ form.name | as_crispy_field }}
                 {{ form.email | as_crispy_field }}
@@ -18,10 +18,10 @@
                 {% csrf_token %}
                 <button class='btn-outline-primary btn' type="submit">Send Message</button>
             </form>
-            {% else %}
-            <p class="text-danger">Please log in to send us a message.</p>
             
-            {% endif %}
+           
+            
+            
         </div>
     </div>
 </div>
