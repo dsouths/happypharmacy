@@ -17,18 +17,23 @@ import json
 @require_POST
 def apply_coupon(request):
     form = ApplyCouponForm(request.POST or None)
+    code = None # Define code variable outside the scope of if
     if form.is_valid():
         code = form.cleaned_data['code']
-        try:
-            coupon = Coupon.objects.get(code=code, is_active=True)
-            request.session['coupon_id'] = coupon.id
-        except Coupon.DoesNotExist:
-            request.session['invalid_coupon'] = True # Flag for invalid coupon
-        return redirect('checkout:checkout') # Redirect to your checkout view
-    else:
-    # Render the form again with the error messages or redirect to an error page
 
-        return render(request, 'checkout.html', {'form': form})
+    if not code:
+        messages.error(request, "Invalid coupon code!")
+        return redirect('checkout:checkout')
+
+    try:
+        coupon = Coupon.objects.get(code=code, is_active=True)
+        request.session['coupon_id'] = coupon.id
+    except Coupon.DoesNotExist:
+        request.session['invalid_coupon'] = True # Flag for invalid coupon
+        return redirect('checkout:checkout') # Redirect to your checkout view
+    
+    # Render the form again with the error messages or redirect to an error page
+    return render(request, 'checkout/checkout.html', {'form': form})
 
 
 @require_POST
@@ -202,10 +207,10 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
 
-    coupon_id = request.session.get('coupon_id')
+    apply_coupon = request.session.get('apply_coupon')
     discount = 0
-    if coupon_id:
-        coupon = Coupon.objects.get(id=coupon_id)
+    if apply_coupon:
+        coupon = Coupon.objects.get(id=apply_coupon)
         if coupon.discount_type == 'Percentage':
             discount = total * coupon.discount / 100
         elif coupon.discount_type == 'Fixed':
