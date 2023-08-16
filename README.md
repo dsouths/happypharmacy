@@ -78,3 +78,21 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
   - have a landing page so that I can land at the site homepage.
   - I have system messages so that I can receive feedback on my actions e.g. you have logged in successfully
   - can avail of a responsive design so that I can view the app on mobile or desktop devices.
+
+### Overall Goals
+* Create an e-commerceweb application to sell vitamins, supplements & other healthcare products online.
+* Create & allow a superuser access to full CRUD (create, read, update and delete) functionality on reviews and products
+* Supply users to with a targeted product selection functionality to create smooth customer experience when shopping.
+
+### Strategy
+* Happy Pharmacy is focused on selling B2C products to end users. Habits of the consumers have changed in the last number of years with more consumers being more health conscious & the vitamin & supplement industry booming with over €31m spent in Ireland in 2023 already. This is where Happy Pharmacy aims to benefit consumers by offering in demand products direct to their door.
+
+### Site User / Target Audience / Demographic
+* Target market is aimed at health conscious individuals who like to look after themselves & family/friends.
+* People with healthcare needs. I have provided a few products in the "Pharmacy" sections under Allergy, Eye & Ear, Oral Care & First Aid. I plan to develop these further & include more products if the site is to be taken into production. The few products included give an idea of how the site could benefit users & how product range could be expanded to include other ailments  
+
+### Site Goals
+* The site's main purpose is immediately clear, "Happy Pharmacy" to help users "be their best self" by buying vitamins & supplements to optimize their body's nutrional needs.
+* Simple navigation that allows the user to find information and resources intuitively
+* User authentication
+* CRUD functionality for superuser(s)
