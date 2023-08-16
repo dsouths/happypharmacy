@@ -19,11 +19,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="whitening_kits-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="vitamins_link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Vitamins
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="whitening_kits-link">
+            <div class="dropdown-menu border-0" aria-labelledby="vitamins_link">
                 <a href="{% url 'products' %}?category=mens_health" class="dropdown-item">Men's Health</a>
                 <a href="{% url 'products' %}?category=womens_health" class="dropdown-item">Women's Health</a>
                 <a href="{% url 'products' %}?category=mens_health,womens_health" class="dropdown-item">All Vitamins</a>
@@ -31,11 +31,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="whitening_accessories-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="pharmacy_items-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Pharmacy
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="whitening-kits-link">
+            <div class="dropdown-menu border-0" aria-labelledby="pharmacy_items-link">
                 <a href="{% url 'products' %}?category=allergy" class="dropdown-item">Allergy</a>
                 <a href="{% url 'products' %}?category=eye_ear" class="dropdown-item">Eye & ear</a>
                 <a href="{% url 'products' %}?category=first_aid" class="dropdown-item">First Aid</a>
@@ -44,10 +44,9 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="refills-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Other
+        <li>
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'contact' %}" id="refills-link">
+                Contact
             </a>
            
         </li>
