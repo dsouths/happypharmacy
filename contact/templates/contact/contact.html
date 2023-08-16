@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row py-4 min-height-100">
+
+        <div class="col-lg-6 ml-3 mr-3 pt-4 pb-5 allauth-form-inner-content">
+            <h1>Contact Us</h1>
+            <p>We'll be happy to hear from you!</p>
+            {% if user.is_authenticated %}
+            <form method="POST">
+                {{ form.name | as_crispy_field }}
+                {{ form.email | as_crispy_field }}
+                {{ form.phone_number | as_crispy_field }}
+                {{ form.subject | as_crispy_field }}
+                {{ form.message | as_crispy_field }}
+                {% csrf_token %}
+                <button class='btn-outline-primary btn' type="submit">Send Message</button>
+            </form>
+            {% else %}
+            <p class="text-danger">Please log in to send us a message.</p>
+            
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
