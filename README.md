@@ -57,24 +57,24 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
 ### User
 
 - As a user I can:
-- create an account so that I can save and secure my details.
-- log in & log out so that I can access my account.
-- view products so that I can choose one to buy.
-- view product details to give more detail about an item.
-- filter feature so that I can filter the products.
-- have a search feature so that I can search the database of products.
-- leave a review on the product so that I can give feedback.
-- have a review edit button so that I can ammend my mistakes.
-- have a review delete button so that I can delete a review.
-- want a shopping bag so that I can add prodcts to it.
-- want an edit bag/delete item button so that I can edit/delete quantity in my shopping bag.
-- I want a total so that I can see the total cost of my shopping bag.
-- want a checkout so that I can checkout securely.
-- want a contact page so that I can send a message to the admin.
-- want a navigation bar that is intuitive so that I can nav the website.
-- FAQ's page so that I can find out more info or common questions users may have
-- have access to a privacy policy so that I can know my rights.
-- can view the social media page so that I can share the site.
-- have a landing page so that I can land at the site homepage.
-- I have system messages so that I can receive feedback on my actions e.g. you have logged in successfully
-- can avail of a responsive design so that I can view the app on mobile or desktop devices.
+  - create an account so that I can save and secure my details.
+  - log in & log out so that I can access my account.
+  - view products so that I can choose one to buy.
+  - view product details to give more detail about an item.
+  - filter feature so that I can filter the products.
+  - have a search feature so that I can search the database of products.
+  - leave a review on the product so that I can give feedback.
+  - have a review edit button so that I can ammend my mistakes.
+  - have a review delete button so that I can delete a review.
+  - want a shopping bag so that I can add prodcts to it.
+  - want an edit bag/delete item button so that I can edit/delete quantity in my shopping bag.
+  - I want a total so that I can see the total cost of my shopping bag.
+  - want a checkout so that I can checkout securely.
+  - want a contact page so that I can send a message to the admin.
+  - want a navigation bar that is intuitive so that I can nav the website.
+  - FAQ's page so that I can find out more info or common questions users may have
+  - have access to a privacy policy so that I can know my rights.
+  - can view the social media page so that I can share the site.
+  - have a landing page so that I can land at the site homepage.
+  - I have system messages so that I can receive feedback on my actions e.g. you have logged in successfully
+  - can avail of a responsive design so that I can view the app on mobile or desktop devices.
