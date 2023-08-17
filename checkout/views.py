@@ -3,8 +3,8 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm, ApplyCouponForm
-from .models import Order, OrderLineItem, Coupon 
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
@@ -12,28 +12,6 @@ from bag.contexts import bag_contents
 
 import stripe
 import json
-
-
-@require_POST
-def apply_coupon(request):
-    form = ApplyCouponForm(request.POST or None)
-    code = None # Define code variable outside the scope of if
-    if form.is_valid():
-        code = form.cleaned_data['code']
-
-    if not code:
-        messages.error(request, "Invalid coupon code!")
-        return redirect('checkout:checkout')
-
-    try:
-        coupon = Coupon.objects.get(code=code, is_active=True)
-        request.session['coupon_id'] = coupon.id
-    except Coupon.DoesNotExist:
-        request.session['invalid_coupon'] = True # Flag for invalid coupon
-        return redirect('checkout:checkout') # Redirect to your checkout view
-    
-    # Render the form again with the error messages or redirect to an error page
-    return render(request, 'checkout/checkout.html', {'form': form})
 
 
 @require_POST
@@ -111,30 +89,14 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout:checkout_success', args=[order.order_number]))
+
         else:
             messages.error(request, 'There was an error with your form. Please double check your information.')
     else:
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
-
-        coupon_code = request.session.get('coupon_code', '')
-        coupon = None
-        try:
-            coupon = Coupon.objects.get(code=coupon_code)
-            if not coupon.is_valid():
-                messages.error(request, 'Invalid coupon code.')
-                coupon = None
-        except Coupon.DoesNotExist:
-            messages.error(request, 'Invalid coupon code.')
-
-        if coupon:
-            if coupon.discount_type == 'Percentage':
-                discount = total * coupon.discount / 100
-            elif coupon.discount_type == 'Fixed':
-                discount = coupon.discount
-            total -= discount
 
         order_form = OrderForm()
 
@@ -205,17 +167,6 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-
-
-    apply_coupon = request.session.get('apply_coupon')
-    discount = 0
-    if apply_coupon:
-        coupon = Coupon.objects.get(id=apply_coupon)
-        if coupon.discount_type == 'Percentage':
-            discount = total * coupon.discount / 100
-        elif coupon.discount_type == 'Fixed':
-            discount = coupon.discount
-        total -= discount
 
 
     messages.success(request, f'Order successfully processed! \
