@@ -17,9 +17,21 @@
                 {{ form.subject | as_crispy_field }}
                 {{ form.contact_type | as_crispy_field }}
                 {{ form.message | as_crispy_field }}
-                {{ form.rating | as_crispy_field }}
+                
+                <div class="rating">
+                    {% for i in "12345" %}
+                        <span data-value="{{ i }}" class="star {% if i|add:'0' <= form.rating.value %}selected{% endif %}">★</span>
+                    {% endfor %}
+                    <input type="hidden" name="rating" id="rating" value="{{ form.rating.value|default:'0' }}">
+                </div>
+                
                 <button class='btn-outline-primary btn' type="submit">Send Message</button>
             </form>
+            
+            
+            
+            
+            
         </div>
 
         <!-- Testimonials Section (RHS) -->
@@ -31,8 +43,43 @@
                     <p>{{ testimonial.message }}</p>
                     <p>Rating: {{ testimonial.rating }} / 5</p>
                 </div>
+                <div class="rating">
+                    <span data-value="5">☆</span>
+                    <span data-value="4">☆</span>
+                    <span data-value="3">☆</span>
+                    <span data-value="2">☆</span>
+                    <span data-value="1">☆</span>
+                    <input type="hidden" name="rating" id="rating" value="{{ form.rating.value|default:'0' }}">
+                </div>
             {% endfor %}
         </div>
     </div>
 </div>
+
+<script>
+    function setStarRating(ratingValue) {
+    document.querySelectorAll('.rating span').forEach(function(star) {
+        star.style.color = star.getAttribute('data-value') <= ratingValue ? 'gold' : '#ccc';
+        if (star.getAttribute('data-value') <= ratingValue) {
+            star.classList.add('selected');
+        } else {
+            star.classList.remove('selected');
+        }
+    });
+}
+
+document.querySelectorAll('.rating span').forEach(function(star) {
+    star.addEventListener('click', function() {
+        var value = this.getAttribute('data-value');
+        document.getElementById('rating').value = value;
+        setStarRating(value);
+    });
+});
+
+// Set the initial star rating based on the hidden input value
+var initialRating = document.getElementById('rating').value || '0';
+setStarRating(initialRating);
+
+
+</script>
 {% endblock %}

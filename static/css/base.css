@@ -287,6 +287,20 @@ input[name='q']::placeholder {
     color: gold;
 }
 
+.rating span.selected {
+    color: gold;
+}
+
+.star {
+    font-size: 50px; /* Adjust the size as needed */
+    color: #FFD700; /* Set the star color to gold */
+    cursor: pointer;
+}
+
+.selected {
+    color: #FFD700; /* Set the color of the selected stars to gold */
+}
+
 /* Product Form */
 
 .btn-file {
