@@ -3,17 +3,12 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
-    coupon_code = forms.CharField(
-        required=False,
-        widget=forms.TextInput(attrs={'placeholder': 'Enter Coupon Code'})
-    )
-   
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
                   'town_or_city', 'postcode', 'country',
-                  'county','coupon_code',)
+                  'county')
 
     def __init__(self, *args, **kwargs):
         """
@@ -44,5 +39,5 @@ class OrderForm(forms.ModelForm):
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
 
-class ApplyCouponForm(forms.Form):
-    code = forms.CharField(label='Coupon Code')
+class CouponApplyForm(forms.Form):
+    code = forms.CharField()

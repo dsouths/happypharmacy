@@ -10,6 +10,8 @@
 {% block page_header %}
 {% endblock %}
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!-- checkout page /form -->
 {% block content %}
 <div class="container template-body my-4">
@@ -62,22 +64,47 @@
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3">
-                    <p class="my-0">€{{ total | floatformat:2 }}</p>
+                    <p class="my-0">€<span id="total">{{ total | floatformat:2 }}</span></p>
                     <p class="my-0">€{{ delivery | floatformat:2 }}</p>
                     <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
+        
         <div class="col-12 col-lg-6">
             <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout:checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
             
+                <!-- Coupon Code Section -->
+                <div class="coupon-section">
+                    <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                    <button type="button" id="apply-coupon">Apply</button> <!-- type="button" to prevent form submission -->
+                    <p id="discount-message"></p> <!-- Message to display success or error -->
+                </div>
+            
+                <script>
+                    $('#apply-coupon').click(function() {
+                        var code = $('#coupon-code').val();
+                        $.post("{% url 'checkout:apply_coupon' %}", { code: code, csrfmiddlewaretoken: "{{ csrf_token }}" }, function(data) {
+                            if (data.success) {
+                                // Update the total on the page
+                                $('#total').text(data.new_total.toFixed(2));
+                                $('#discount-message').text("Discount applied successfully!");
+                            } else {
+                                // Show an error message
+                                $('#discount-message').text(data.error);
+                            }
+                        });
+                    });
+                </script>
+            
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
-                </fieldset>
+              
+            
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}

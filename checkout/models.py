@@ -11,27 +11,6 @@ from products.models import Product
 from profiles.models import UserProfile
 
 
-class Coupon(models.Model):
-    code = models.CharField(max_length=20, unique=True)
-    discount = models.DecimalField(max_digits=5, decimal_places=2)
-    valid_from = models.DateTimeField()
-    valid_to = models.DateTimeField()
-    is_active = models.BooleanField(default=True)
-    discount_type = models.CharField(
-        max_length=10,
-        choices=[('Percentage', 'Percentage'), ('Fixed', 'Fixed')],
-        default='Fixed'
-    )
-
-    def __str__(self):
-        return self.code
-
-    def is_valid(self):
-        if self.active and self.valid_from <= timezone.now() <= self.valid_to:
-            return True
-        return False
-
-
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
@@ -62,14 +41,7 @@ class Order(models.Model):
         decimal_places=2,
         null=False,
         default=0)
-    coupon = models.ForeignKey(Coupon, on_delete=models.SET_NULL, null=True, blank=True)
-    discount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    original_bag = models.TextField(null=False, blank=False, default='')
-    stripe_pid = models.CharField(
-        max_length=254,
-        null=False,
-        blank=False,
-        default='')
+    
 
     def _generate_order_number(self):
         """
@@ -86,15 +58,6 @@ class Order(models.Model):
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
-
-        # Apply coupon discount if present and valid
-        if self.coupon and self.coupon.is_valid():
-            if self.coupon.discount_type == 'Percentage':
-                self.grand_total -= self.grand_total * self.coupon.discount / 100
-            elif self.coupon.discount_type == 'Fixed':
-                self.grand_total -= self.coupon.discount
-
-        self.save()
 
 
     def save(self, *args, **kwargs):
@@ -145,3 +108,11 @@ class OrderLineItem(models.Model):
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
 
+
+class Coupon(models.Model):
+    code = models.CharField(max_length=50, unique=True)
+    discount = models.DecimalField(max_digits=10, decimal_places=2)
+    active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.code

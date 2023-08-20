@@ -27,8 +27,5 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ('-date',)
 
 
-@admin.register(Coupon)
-class CouponAdmin(admin.ModelAdmin):
-    list_display = ['code', 'discount', 'discount_type', 'valid_from', 'valid_to', 'is_active']
+admin.site.register(Coupon)
 
-admin.site.register(Order, OrderAdmin)

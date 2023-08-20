@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.http import JsonResponse
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .forms import OrderForm, CouponApplyForm
+from .models import Order, OrderLineItem, Coupon
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
@@ -36,6 +37,21 @@ def checkout(request):
     bag = request.session.get('bag', {})
     current_bag = bag_contents(request)
     total = current_bag['grand_total']
+    coupon_id = request.session.get('coupon_id')
+    discount = 0
+
+    if coupon_id:
+        try:
+            coupon = Coupon.objects.get(id=coupon_id)
+            if coupon.active:
+                discount = coupon.discount
+        except Coupon.DoesNotExist:
+            request.session['coupon_id'] = None
+
+    # Apply the discount to the total price
+    total = float(current_bag['grand_total'])
+    total = total - discount
+    request.session['total'] = total
     stripe_total = round(total * 100)
     stripe.api_key = stripe_secret_key
     intent = stripe.PaymentIntent.create(
@@ -83,8 +99,7 @@ def checkout(request):
                             )
                             order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request,
-                                   "One of the products in your bag wasn't found in our database. Please call us for assistance!")
+                    messages.error(request, "One of the products in your bag wasn't found in our database. Please call us for assistance!")
                     order.delete()
                     return redirect(reverse('view_bag'))
 
@@ -125,9 +140,28 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'discount': discount,
+        'grand_total': total,  # Include the updated total
     }
 
     return render(request, template, context)
+
+
+
+def apply_coupon(request):
+    total = float(request.session.get('total', 0))  # Retrieve the total from the session and convert to float
+    code = request.POST.get('code')
+    try:
+        coupon = Coupon.objects.get(code=code)
+        if coupon.active:
+            discount = float(coupon.discount)  # Convert the discount to float
+            new_total = total - discount
+            request.session['discount'] = discount
+            return JsonResponse({'success': True, 'new_total': new_total})
+        else:
+            return JsonResponse({'success': False, 'error': 'Coupon is not active'})
+    except Coupon.DoesNotExist:
+        return JsonResponse({'success': False, 'error': 'Invalid coupon code'})
 
 
 def checkout_success(request, order_number):
@@ -182,3 +216,4 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+    
