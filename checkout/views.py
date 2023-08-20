@@ -162,16 +162,11 @@ def apply_coupon(request):
             existing_discount = float(request.session.get('discount', 0))
             if existing_discount > 0:
                 return JsonResponse({'success': False, 'error': 'A discount has already been applied'})
+            elif existing_discount == 0:
+                # Allow the user to apply a new coupon if the existing discount is zero
+                pass
 
             new_total = total - discount
-             # Debugging print statements
-            print("Total:", total)
-            print("Discount Type:", coupon.discount_type)
-            print("Discount Value:", coupon.discount_value)
-            print("Discount:", discount)
-            print("New Total:", new_total)
-            # End of print statements
-            
             request.session['total'] = new_total  # Update the total in the session here
             request.session['discount'] = discount
             return JsonResponse({'success': True, 'new_total': new_total, 'discount': discount})

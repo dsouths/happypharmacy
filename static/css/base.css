@@ -274,6 +274,11 @@ input[name='q']::placeholder {
     /* text-info */
 }
 
+.vertical-align-section > div,
+.vertical-align-section > fieldset {
+    margin-bottom: 20px; /* Adjust the space between the sections */
+}
+
 /* Product Form */
 
 .btn-file {

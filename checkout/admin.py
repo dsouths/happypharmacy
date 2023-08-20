@@ -32,3 +32,4 @@ class CouponAdmin(admin.ModelAdmin):
     list_filter = ['active', 'discount_type']
 
 admin.site.register(Coupon, CouponAdmin)
+admin.site.register(Order, OrderAdmin)

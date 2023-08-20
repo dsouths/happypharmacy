@@ -111,7 +111,7 @@ class OrderLineItem(models.Model):
 
 class Coupon(models.Model):
     code = models.CharField(max_length=50, unique=True)
-    discount = models.DecimalField(max_digits=10, decimal_places=2)
+    discount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     discount_value = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     active = models.BooleanField(default=True)
     DISCOUNT_TYPE_CHOICES = (
