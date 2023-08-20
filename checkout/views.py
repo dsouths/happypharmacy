@@ -147,7 +147,6 @@ def checkout(request):
     return render(request, template, context)
 
 
-
 def apply_coupon(request):
     total = float(request.session.get('total', 0))  # Retrieve the total from the session and convert to float
     code = request.POST.get('code')
@@ -156,8 +155,9 @@ def apply_coupon(request):
         if coupon.active:
             discount = float(coupon.discount)  # Convert the discount to float
             new_total = total - discount
+            request.session['total'] = new_total  # Update the total in the session here
             request.session['discount'] = discount
-            return JsonResponse({'success': True, 'new_total': new_total})
+            return JsonResponse({'success': True, 'new_total': new_total, 'discount': discount})
         else:
             return JsonResponse({'success': False, 'error': 'Coupon is not active'})
     except Coupon.DoesNotExist:

@@ -60,13 +60,15 @@
             <div class="row text-black text-right">
                 <div class="col-7 offset-2">
                     <p class="my-0">Order Total:</p>
+                    <p class="my-0">Discount: </p>
                     <p class="my-0">Delivery:</p>
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3">
-                    <p class="my-0">€<span id="total">{{ total | floatformat:2 }}</span></p>
+                    <p class="my-0">€{{ total | floatformat:2 }}</p>
+                    <p class="my-0">€<span id="discount">0.00</span></p>
                     <p class="my-0">€{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0"><strong>€<span id="total">{{ grand_total | floatformat:2 }}</span></strong></p>
                 </div>
             </div>
         </div>
@@ -90,6 +92,17 @@
                             if (data.success) {
                                 // Update the total on the page
                                 $('#total').text(data.new_total.toFixed(2));
+                                $('#discount').text(data.discount.toFixed(2));
+                                
+                                // Calculate and update the delivery charge
+                                var orderTotal = parseFloat($('#total').text());
+                                var delivery = orderTotal > 50 ? 0 : orderTotal * 0.1;
+                                $('#delivery').text("€" + delivery.toFixed(2));
+
+                                // Optionally, you may also update the grand total here
+                                var grandTotal = orderTotal - data.discount + delivery;
+                                $('#grand_total').text("€" + grandTotal.toFixed(2));
+                                
                                 $('#discount-message').text("Discount applied successfully!");
                             } else {
                                 // Show an error message
@@ -98,6 +111,7 @@
                         });
                     });
                 </script>
+                
             
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
