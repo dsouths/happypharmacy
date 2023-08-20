@@ -11,27 +11,20 @@
             
             <form method="POST">
                 {% csrf_token %}
-                {{ form.name | as_crispy_field }}
-                {{ form.email | as_crispy_field }}
-                {{ form.phone_number | as_crispy_field }}
-                {{ form.subject | as_crispy_field }}
                 {{ form.contact_type | as_crispy_field }}
-                {{ form.message | as_crispy_field }}
-                
-                <div class="rating">
+                <div class="rating" id="star-rating" style="display: none;">
                     {% for i in "12345" %}
                         <span data-value="{{ i }}" class="star {% if i|add:'0' <= form.rating.value %}selected{% endif %}">★</span>
                     {% endfor %}
                     <input type="hidden" name="rating" id="rating" value="{{ form.rating.value|default:'0' }}">
                 </div>
-                
+                {{ form.name | as_crispy_field }}
+                {{ form.email | as_crispy_field }}
+                {{ form.phone_number | as_crispy_field }}
+                {{ form.subject | as_crispy_field }}
+                {{ form.message | as_crispy_field }}
                 <button class='btn-outline-primary btn' type="submit">Send Message</button>
             </form>
-            
-            
-            
-            
-            
         </div>
 
         <!-- Testimonials Section (RHS) -->
@@ -39,17 +32,14 @@
             <h2>Testimonials</h2>
             {% for testimonial in testimonials %}
                 <div class="testimonial">
-                    <h3>{{ testimonial.name }}</h3>
+                    <h3>{{ testimonial.subject }}</h3>
                     <p>{{ testimonial.message }}</p>
-                    <p>Rating: {{ testimonial.rating }} / 5</p>
-                </div>
-                <div class="rating">
-                    <span data-value="5">☆</span>
-                    <span data-value="4">☆</span>
-                    <span data-value="3">☆</span>
-                    <span data-value="2">☆</span>
-                    <span data-value="1">☆</span>
-                    <input type="hidden" name="rating" id="rating" value="{{ form.rating.value|default:'0' }}">
+                    <p>User: {{ testimonial.name }}</p>
+                    <div class="rating">
+                        {% for i in "12345" %}
+                            <span data-value="{{ i }}" class="star_testimonial {% if i|add:'0' <= testimonial.rating %}selected{% endif %}" style="pointer-events: none;">★</span>
+                        {% endfor %}
+                    </div>
                 </div>
             {% endfor %}
         </div>
@@ -57,29 +47,40 @@
 </div>
 
 <script>
-    function setStarRating(ratingValue) {
-    document.querySelectorAll('.rating span').forEach(function(star) {
-        star.style.color = star.getAttribute('data-value') <= ratingValue ? 'gold' : '#ccc';
-        if (star.getAttribute('data-value') <= ratingValue) {
-            star.classList.add('selected');
-        } else {
-            star.classList.remove('selected');
-        }
+    function setStarRating(ratingValue, stars) {
+        stars.forEach(function(star) {
+            star.style.color = star.getAttribute('data-value') <= ratingValue ? 'gold' : '#ccc';
+        });
+    }
+
+    // Code for LHS star rating
+    var starsLHS = document.querySelectorAll('#star-rating .star');
+    var initialRatingLHS = document.getElementById('rating').value || '0';
+    setStarRating(initialRatingLHS, starsLHS);
+
+    starsLHS.forEach(function(star) {
+        star.addEventListener('click', function() {
+            var value = this.getAttribute('data-value');
+            document.getElementById('rating').value = value;
+            setStarRating(value, starsLHS);
+        });
     });
-}
 
-document.querySelectorAll('.rating span').forEach(function(star) {
-    star.addEventListener('click', function() {
-        var value = this.getAttribute('data-value');
-        document.getElementById('rating').value = value;
-        setStarRating(value);
+    // Show/hide star rating section on LHS based on dropdown selection
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactTypeSelect = document.getElementById('id_contact_type');
+        const starRatingSection = document.getElementById('star-rating');
+
+        contactTypeSelect.addEventListener('change', function() {
+            if (this.value === 'testimonial') {
+                starRatingSection.style.display = 'block';
+            } else {
+                starRatingSection.style.display = 'none';
+            }
+        });
+
+        // Trigger initial change event to handle any pre-filled values
+        contactTypeSelect.dispatchEvent(new Event('change'));
     });
-});
-
-// Set the initial star rating based on the hidden input value
-var initialRating = document.getElementById('rating').value || '0';
-setStarRating(initialRating);
-
-
 </script>
 {% endblock %}
