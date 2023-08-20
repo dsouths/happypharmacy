@@ -153,8 +153,25 @@ def apply_coupon(request):
     try:
         coupon = Coupon.objects.get(code=code)
         if coupon.active:
-            discount = float(coupon.discount)  # Convert the discount to float
+            if coupon.discount_type == 'fixed':
+                discount = float(coupon.discount_value)
+            else:  # Assume percentage
+                discount = float(total * (float(coupon.discount_value) / 100))  # Convert discount_value to float
+
+            # Check if a discount has already been applied and is above €0.00
+            existing_discount = float(request.session.get('discount', 0))
+            if existing_discount > 0:
+                return JsonResponse({'success': False, 'error': 'A discount has already been applied'})
+
             new_total = total - discount
+             # Debugging print statements
+            print("Total:", total)
+            print("Discount Type:", coupon.discount_type)
+            print("Discount Value:", coupon.discount_value)
+            print("Discount:", discount)
+            print("New Total:", new_total)
+            # End of print statements
+            
             request.session['total'] = new_total  # Update the total in the session here
             request.session['discount'] = discount
             return JsonResponse({'success': True, 'new_total': new_total, 'discount': discount})
@@ -187,6 +204,10 @@ def checkout_success(request, order_number):
                     request,
                     f'Not enough stock available. Please contact us for more information.')
 
+
+        request.session['discount'] = 0
+
+
         # Save the user's info
         if save_info:
             profile_data = {
@@ -217,3 +238,4 @@ def checkout_success(request, order_number):
 
     return render(request, template, context)
     
+
