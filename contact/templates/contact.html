@@ -10,12 +10,14 @@
             <p>Please fill out the form below, we'll be happy to hear from you!</p>
             
             <form method="POST">
+                {% csrf_token %}
                 {{ form.name | as_crispy_field }}
                 {{ form.email | as_crispy_field }}
                 {{ form.phone_number | as_crispy_field }}
                 {{ form.subject | as_crispy_field }}
+                {{ form.contact_type | as_crispy_field }}
                 {{ form.message | as_crispy_field }}
-                {% csrf_token %}
+                {{ form.rating | as_crispy_field }}
                 <button class='btn-outline-primary btn' type="submit">Send Message</button>
             </form>
         </div>
@@ -26,7 +28,8 @@
             {% for testimonial in testimonials %}
                 <div class="testimonial">
                     <h3>{{ testimonial.name }}</h3>
-                    <p>{{ testimonial.content }}</p>
+                    <p>{{ testimonial.message }}</p>
+                    <p>Rating: {{ testimonial.rating }} / 5</p>
                 </div>
             {% endfor %}
         </div>

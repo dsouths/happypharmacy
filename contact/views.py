@@ -1,41 +1,37 @@
-from django.shortcuts import render
 from .forms import MessageForm
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView
 from .models import Testimonial
 
-
-# Create your views here.
-
-def message(request):
-    """Saves contact form input to db"""
+def contact_view(request):
     form = MessageForm()
-    if request.method == 'POST':
+    testimonials = Testimonial.objects.all()
 
-        form = MessageForm(request.POST, request.FILES)
+    if request.method == 'POST':
+        form = MessageForm(request.POST)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Message sent to admin!')
-            return redirect('contact')
+            message = form.save()
+            if message.contact_type == 'testimonial':
+                # Create a testimonial from the submitted message
+                Testimonial.objects.create(
+                    name=message.name,
+                    content=message.message,
+                    rating=message.rating
+                )
+                messages.success(request, 'Testimonial submitted to admin!')
+            else:
+                messages.success(request, 'Message sent to admin!')
+
+            return redirect('contact')  # Replace with the appropriate URL name for your contact page
 
         else:
             messages.error(
                 request,
                 'Failed to send message. Please ensure the form is valid.')
-            return redirect('contact')
-    else:
-        form = MessageForm()
-        context = {
-            'form': form,
-        }
-        return render(request, 'contact.html', context)
 
+    context = {
+        'form': form,
+        'testimonials': testimonials,
+    }
 
-class ContactView(TemplateView):
-    template_name = 'contact.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['testimonials'] = Testimonial.objects.all()
-        return context    
+    return render(request, 'contact.html', context)

@@ -279,6 +279,14 @@ input[name='q']::placeholder {
     margin-bottom: 20px; /* Adjust the space between the sections */
 }
 
+.fa-star {
+    color: gray;
+}
+
+.checked {
+    color: gold;
+}
+
 /* Product Form */
 
 .btn-file {

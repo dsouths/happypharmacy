@@ -1,12 +1,14 @@
 from django import forms
 from .models import Message
 
-
 class MessageForm(forms.ModelForm):
     """renders the contact form"""
     class Meta:
-        fields = '__all__'
+        fields = ['name', 'email', 'phone_number', 'subject', 'message', 'contact_type', 'rating']
         model = Message
+        widgets = {
+            'rating': forms.RadioSelect, # Render rating as radio buttons
+        }
 
     def __init__(self, *args, **kwargs):
         """
@@ -20,6 +22,8 @@ class MessageForm(forms.ModelForm):
             'phone_number': 'Phone Number',
             'subject': 'Subject',
             'message': 'Your message',
+            'contact_type': 'Contact Type',
+            'rating': 'Rating (Only for testimonials)',
         }
 
         self.fields['name'].widget.attrs['autofocus'] = True
@@ -32,3 +36,4 @@ class MessageForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+
