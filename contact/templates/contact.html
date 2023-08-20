@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">
     <div class="row py-4 min-height-100">
-
+        <!-- Contact Form Section (LHS) -->
         <div class="col-lg-6 ml-3 mr-3 pt-4 pb-5 allauth-form-inner-content">
             <h1>Contact Us</h1>
             <p>Please fill out the form below, we'll be happy to hear from you!</p>
@@ -18,12 +18,18 @@
                 {% csrf_token %}
                 <button class='btn-outline-primary btn' type="submit">Send Message</button>
             </form>
-            
-           
-            
-            
+        </div>
+
+        <!-- Testimonials Section (RHS) -->
+        <div class="col-lg-5 ml-3 mr-3 pt-4 pb-5">
+            <h2>Testimonials</h2>
+            {% for testimonial in testimonials %}
+                <div class="testimonial">
+                    <h3>{{ testimonial.name }}</h3>
+                    <p>{{ testimonial.content }}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
-
 {% endblock %}
