@@ -95,7 +95,7 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: #fec636 !important;
 }
 
 .border-black {
@@ -371,6 +371,15 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23fec636' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-toggler {
+    border-color: #fec636 !important;
+}
+
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -590,4 +599,12 @@ input[name='q']::placeholder {
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+
+#faq {
+    padding: 20px; /* Add padding inside the container */
+    margin: 20px;  /* Add margin outside the container */
+    border: 1px solid #e0e0e0; /* Optional: Add a light border for visual separation */
+    background-color: #f9f9f9; /* Optional: Add a light background color for better visibility */
 }
