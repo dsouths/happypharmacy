@@ -18,3 +18,8 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.footer {
+    width: 100%;
+    box-sizing: border-box; /* Ensures that padding and border are included in the total width */
+}
