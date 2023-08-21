@@ -22,6 +22,7 @@ class Message(models.Model):
 
 class Testimonial(models.Model):
     name = models.CharField(max_length=50)
+    subject = models.CharField(max_length=50, default="Subject")
     content = models.TextField()
     rating = models.PositiveIntegerField(default=0, choices=[(i, i) for i in range(6)]) # Rating from 0 to 5
     created_at = models.DateTimeField(auto_now_add=True)

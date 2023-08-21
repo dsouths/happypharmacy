@@ -14,9 +14,10 @@ def contact_view(request):
             if message.contact_type == 'testimonial':
                 # Create a testimonial from the submitted message
                 Testimonial.objects.create(
-                    name=message.name,
+                    subject=message.subject,
                     content=message.message,
-                    rating=message.rating
+                    rating=message.rating,
+                    name=message.name
                 )
                 messages.success(request, 'Testimonial submitted to admin!')
             else:
