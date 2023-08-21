@@ -293,6 +293,14 @@ input[name='q']::placeholder {
 
 .star,
 .star_testimonial {
+    font-size: 50px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.star,
+.star_testimonial {
     font-size: 40px; /* Adjust as needed */
     display: inline-block; /* Make stars inline */
     white-space: nowrap; /* Prevent wrapping to the next line */
@@ -307,18 +315,32 @@ input[name='q']::placeholder {
     min-width: 200px;
 }
 
-/* Custom Style for Medium Screens (1855px to 991px) */
-@media screen and (min-width: 991px) and (max-width: 1855px) {
+/* Custom Style for Large Screens (min-width: 992px) */
+@media screen and (min-width: 992px) {
+    .testimonial-item {
+        width: 50%;
+    }
+}
+
+/* Custom Style for Medium Screens (min-width: 768px and max-width: 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .testimonial-item {
         width: 50%; /* 2 columns */
     }
 }
 
-/* Custom Style for Small Screens (< 990px) */
-@media screen and (max-width: 990px) {
+/* Custom Style for Small Screens (max-width: 767px) */
+@media screen and (max-width: 767px) {
     .testimonial-item {
         width: 100%; /* 1 column */
     }
+}
+
+.mailchimp-container,
+.testimonials-container {
+    flex: 1; /* Take up equal space */
+    padding: 10px; /* Add padding between containers */
+    margin: 1px;
 }
 
 /* Product Form */
