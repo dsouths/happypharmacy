@@ -5,7 +5,7 @@ from .models import Testimonial
 
 def contact_view(request):
     form = MessageForm()
-    testimonials = Testimonial.objects.all().order_by('-created_at')
+    testimonials = Testimonial.objects.filter(is_approved=True).order_by('-created_at')
 
     if request.method == 'POST':
         form = MessageForm(request.POST)

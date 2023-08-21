@@ -29,7 +29,7 @@
 
 <div class="container mt-3">
     <div class="row justify-content-center py-5">
-        <div class="col-sm-12">
+        <div class="col-sm-6">
             <!-- Begin Mailchimp Signup Form -->
             <div id="mc_embed_signup">
                 <form
@@ -88,6 +88,26 @@
                 var $mcj = jQuery.noConflict(true);
             </script>
             <!--End mc_embed_signup-->
+        </div>
+        <!-- Testimonials Section -->
+        <div class="col-sm-6">
+            <h2>Latest Testimonials</h2>
+            <div class="row">
+                {% for testimonial in testimonials %}
+                    <div class="col-lg-12 col-md-12 col-sm-12 testimonial-item">
+                        <div class="testimonial">
+                            <div class="rating">
+                                {% for i in "12345" %}
+                                    <span data-value="{{ i }}" class="star_testimonial {% if i|add:'0' <= testimonial.rating %}selected{% endif %}" style="pointer-events: none;">★</span>
+                                {% endfor %}
+                            </div>
+                            <h3>{{ testimonial.subject }}</h3>
+                            <p>{{ testimonial.content }}</p>
+                            <p style="font-size: smaller;">{{ testimonial.name }} <small>{{ testimonial.created_at|date:"F j, Y" }}</small></p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

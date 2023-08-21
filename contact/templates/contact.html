@@ -27,25 +27,25 @@
             </form>
         </div>
 
-        <!-- Testimonials Section (RHS) -->
-        <div class="col-lg-6 ml-3 mr-3 pt-4 pb-5">
+        <div class="col-lg-5 ml-3 mr-3 pt-4 pb-5">
             <h2>Testimonials</h2>
-            <div class="row"> 
+            <div class="row">
                 {% for testimonial in testimonials %}
-                    <div class="col-lg-4"> 
+                    <div class="col-lg-7 col-md-6 col-sm-12 testimonial-item"> 
                         <div class="testimonial">
-                            <div class="rating">
-                                {% for i in "12345" %}
-                                    <span data-value="{{ i }}" class="star_testimonial {% if i|add:'0' <= testimonial.rating %}selected{% endif %}" style="pointer-events: none;">★</span>
-                                {% endfor %}
+                                <div class="rating">
+                                    {% for i in "12345" %}
+                                        <span data-value="{{ i }}" class="star_testimonial {% if i|add:'0' <= testimonial.rating %}selected{% endif %}" style="pointer-events: none;">★</span>
+                                    {% endfor %}
+                                </div>
+                                <h3>{{ testimonial.subject }}</h3>
+                                <p>{{ testimonial.content }}</p> 
+                                <p style="font-size: smaller;">{{ testimonial.name }} <small>{{ testimonial.created_at|date:"F j, Y" }}</small></p>
+                                
                             </div>
-                            <h3>{{ testimonial.subject }}</h3>
-                            <p>{{ testimonial.content }}</p> 
-                            <p style="font-size: smaller;">{{ testimonial.name }} <small>{{ testimonial.created_at|date:"F j, Y" }}</small></p>
-                            
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
