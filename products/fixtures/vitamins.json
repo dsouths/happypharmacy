@@ -10,7 +10,6 @@
             "ingredients": "Vitamin A, Vitamin C, Vitamin D, Vitamin E, Vitamin K, Thiamin, Riboflavin, Niacin, Vitamin B6, Folic Acid, Vitamin B12, Biotin, Pantothenic Acid, Calcium, Iron, Phosphorus, Iodine, Magnesium, Zinc, Selenium, Copper, Manganese, Chromium, Molybdenum, Chloride, Potassium.",
             "price": 54.99,
             "rating": 4.9,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/revive-active-health-food-supplement-30-sachets-vitamins-supplements-meaghers-pharmacy-13840947282033_1000x1000.jpg?v=1690450572",
             "image": "revive_active.webp",
             "category": 1
         }
@@ -26,7 +25,6 @@
             "ingredients": "Lactobacillus Acidophilus, Bifidobacterium Lactis, Lactobacillus Paracasei, Lactobacillus Plantarum.",
             "price": 29.99,
             "rating": 4.4,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/optibac-probiotics-every-day-vitamins-supplements-meaghers-pharmacy-30569837396081_1000x1000.jpg?v=1690428252",
             "image": "optibac.webp",
             "category": 1
         }
@@ -42,7 +40,6 @@
             "ingredients": "Peptan® Collagen Peptides (FISH), MSM (Methylsulfonylmethane), Glucosamine Sulphate 2KCL (Vegetarian), Flavouring (Apple, Strawberry, Raspberry), Acidifier (Malic Acid), Colour (Beetroot Powder), Vitamin C (Ascorbic Acid), Hyaluronic Acid (Sodium Hyaluronate), Vitamin K2 (Menaquinone-7), Sweetener (Steviol Glycosides), Boron (Sodium Borate) Manganese (Manganese Citrate), Vitamin D3 (Cholecalciferol) (Vegan), Copper (Cupric Gluconate).",
             "price": 42.99,
             "rating": 4.2,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/revive-active-joint-complex-vitamins-supplements-30-sachets-meaghers-pharmacy-30020379082865_1000x1000.jpg?v=1690450758",
             "image": "revive_joint.webp",
             "category": 1
         }
@@ -58,7 +55,6 @@
             "ingredients": "Omega-3 Fish Oil, EPA, DHA.",
             "price": 35.99,
             "rating": 4.6,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/minami-morepa-platinum-smart-fats-d3-60-softgels-vitamins-supplements-meaghers-pharmacy-15240784904305_1000x1000.jpg?v=1690400163",
             "image": "omega3.webp",
             "category": 1
         }
@@ -74,8 +70,7 @@
             "ingredients": "Vitamin D3.",
             "price": 12.99,
             "rating": 4.7,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/mylan-vitamin-d3-2000iu-60-vitamins-supplements-meaghers-pharmacy-14233561727089_1000x1000.jpg?v=1690417638",
-            "image": "vitamind.webp",
+            "image": "VitaminD32000.webp",
             "category": 1
         }
     },
@@ -90,7 +85,6 @@
             "ingredients": "Vitamin A, Vitamin D, Vitamin E, Vitamin C, Thiamin, Riboflavin, Niacin, Vitamin B6, Folic Acid, Vitamin B12, Biotin, Pantothenic Acid, Potassium, Chloride, Calcium, Phosphorus, Magnesium, Iron, Zinc, Copper, Manganese, Selenium, Chromium, Molybdenum, Iodine.",
             "price": 52.99,
             "rating": 4.7,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/revive-meno-active-30-sachets-vitamins-supplements-meaghers-pharmacy-30020656201841_1000x1000.jpg?v=1690440496",
             "image": "revive_meno.webp",
             "category": 2
         }
@@ -106,7 +100,6 @@
             "ingredients": "Lactobacillus Acidophilus, Lactobacillus Rhamnosus, Bifidobacterium Lactis, Lactobacillus Gasseri.",
             "price": 29.99,
             "rating": 4.5,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/optibac-probiotics-intimate-flora-for-woman-vitamins-supplements-30-capsules-meaghers-pharmacy-30569868230769_1000x1000.jpg?v=1690428261",
             "image": "optibacwomen.webp",
             "category": 2
         }
@@ -122,7 +115,6 @@
             "ingredients": "Aqua (water), magnesium chloride, PEG-40 hydrogenated castor oil, acetyl glucosamine, propylene glycol, menthol, eucalyptus globulusleaf oil, limonene..",
             "price": 24.99,
             "rating": 4.3,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/betteryou-magnesium-joint-body-spray-body-spray-meaghers-pharmacy-29960454144113_1000x1000.jpg?v=1690314844",
             "image": "betteryoumag.webp",
             "category": 2
         }
@@ -138,7 +130,6 @@
             "ingredients": "Calcium, Vitamin D3",
             "price": 12.99,
             "rating": 4.6,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/calcichew-d3-forte-tabs-500mg-100s-calcium-meaghers-pharmacy-14594882633841_659x659.jpg?v=1690318621",
             "image": "calcichewd3.webp",
             "category": 2
         }
@@ -154,7 +145,6 @@
             "ingredients": "Vitamin A, D3, E, K, C, B.",
             "price": 15.99,
             "rating": 4.7,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/centrum-women-multivitamin-vitamins-supplements-30-tablets-meaghers-pharmacy-28417071349873_1000x1000.jpg?v=1690328706",
             "image": "centrumwomen.webp",
             "category": 2
         }

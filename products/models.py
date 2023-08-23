@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
+
 # Create your models here.
 
 
@@ -32,8 +34,7 @@ class Product(models.Model):
         decimal_places=2,
         null=True,
         blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = CloudinaryField('image', default='https://res.cloudinary.com/dghprmi1e/image/upload/v1692824558/noimage.jpg')
     stock_level = models.IntegerField(default=10)
 
     def __str__(self):
