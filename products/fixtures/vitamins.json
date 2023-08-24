@@ -55,7 +55,7 @@
             "ingredients": "Omega-3 Fish Oil, EPA, DHA.",
             "price": 35.99,
             "rating": 4.6,
-            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736555/happypharmacy/omega3.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692908104/happypharmacy/omega3_pq38gi.webp",
             "category": 1
         }
     },
@@ -85,7 +85,7 @@
             "ingredients": "Vitamin A, Vitamin D, Vitamin E, Vitamin C, Thiamin, Riboflavin, Niacin, Vitamin B6, Folic Acid, Vitamin B12, Biotin, Pantothenic Acid, Potassium, Chloride, Calcium, Phosphorus, Magnesium, Iron, Zinc, Copper, Manganese, Selenium, Chromium, Molybdenum, Iodine.",
             "price": 52.99,
             "rating": 4.7,
-            "image": "revive_meno.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/revive_meno_qj6zsn.webp",
             "category": 2
         }
     },
@@ -100,7 +100,7 @@
             "ingredients": "Lactobacillus Acidophilus, Lactobacillus Rhamnosus, Bifidobacterium Lactis, Lactobacillus Gasseri.",
             "price": 29.99,
             "rating": 4.5,
-            "image": "optibacwomen.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/optibacwomen_gi4coh.webp",
             "category": 2
         }
     },
@@ -115,7 +115,7 @@
             "ingredients": "Aqua (water), magnesium chloride, PEG-40 hydrogenated castor oil, acetyl glucosamine, propylene glycol, menthol, eucalyptus globulusleaf oil, limonene..",
             "price": 24.99,
             "rating": 4.3,
-            "image": "betteryoumag.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/betteryoumag_q2hlgz.webp",
             "category": 2
         }
     },
@@ -130,7 +130,7 @@
             "ingredients": "Calcium, Vitamin D3",
             "price": 12.99,
             "rating": 4.6,
-            "image": "calcichewd3.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/calcichewd3_nersor.webp",
             "category": 2
         }
     },
@@ -145,7 +145,7 @@
             "ingredients": "Vitamin A, D3, E, K, C, B.",
             "price": 15.99,
             "rating": 4.7,
-            "image": "centrumwomen.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/centrumwomen_dj5vdy.webp",
             "category": 2
         }
     }

@@ -10,8 +10,7 @@
         "ingredients": "Cetirizine",
         "price": 11.99,
         "rating": 4.9,
-        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/cetrine-allergy-relief-tablets-30-s-allergy-relief-meaghers-pharmacy-7207384612977_550x550.png?v=1690497189",
-        "image": "cetrine.webp",
+        "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/cetrine.webp",
         "category": 4
         }
     },
@@ -26,8 +25,7 @@
             "ingredients": "Please read the label",
             "price": 6.50,
             "rating": 4.5,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/fusion-allergy-lozenges-24-pack-lozenges-meaghers-pharmacy-30000392372337_1000x1000.jpg?v=1690360405",
-            "image": "fusionallergyloz.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/fusionallergyloz_vq0mlw.webp",
             "category": 4
             }
     },
@@ -42,8 +40,7 @@
             "ingredients": "Please read the label",
             "price": 6.50,
             "rating": 4.5,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/fusion-allergy-nasal-spray-20ml-nasal-spray-meaghers-pharmacy-30000646586481_1000x1000.jpg?v=1690360564",
-            "image": "fusionspray.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/fusionspray_qg0mxy.webp",
             "category": 4
             }
     }

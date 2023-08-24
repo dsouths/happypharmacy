@@ -10,8 +10,7 @@
         "ingredients": "Please read the label",
         "price": 5.35,
         "rating": 4.6,
-        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/savlon-antiseptic-cream-60g-wound-treatment-meaghers-pharmacy-14531221848177_1000x1000.jpg?v=1690441760",
-        "image": "savlon-antiseptic-cream.webp",
+        "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/savlon-antiseptic-cream_uqqkqs.webp",
         "category": 5
         }
     },
@@ -25,8 +24,7 @@
         "ingredients": "Please read the label",
         "price": 4.60,
         "rating": 4.8,
-        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/sudocrem-antiseptic-healing-cream-antiseptic-cream-125g-meaghers-pharmacy-28091207680113_1000x1000.jpg?v=1690459397",
-        "image": "sudocrem-antiseptic-healing-cream-antiseptic-cream-125g.webp",
+        "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/sudocrem-antiseptic-healing-cream-antiseptic-cream-125g_r1hfka.webp",
         "category": 5
         }
     },
@@ -40,8 +38,7 @@
         "ingredients": "Please read the label",
         "price": 9.80,
         "rating": 4.7,
-        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/deep-heat-patches-4-pack-heat-patches-meaghers-pharmacy-16681127739505_1000x1000.jpg?v=1690347429",
-        "image": "deep-heat-patches-4-pack-heat-patches.webp",
+        "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/deep-heat-patches-4-pack-heat-patches_sp7qpz.webp",
         "category": 5
         }
     }

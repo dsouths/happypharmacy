@@ -407,12 +407,6 @@ input[name='q']::placeholder {
     margin-top: 40px;
 }
 
-#hero-background {
-    background: url('{{ MEDIA_URL }}yellow_bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-}
-
 #hero {
     margin-top: 200px;
     background: #114b5f;

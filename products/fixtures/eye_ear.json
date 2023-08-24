@@ -10,8 +10,7 @@
         "ingredients": "HYLO-Forte is a sterile, phosphate and preservative free solution containing 0.2% sodium hyaluronate, a citrate buffer, sorbitol and water",
         "price": 11.99,
         "rating": 5.0,
-        "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/hyloforte-eye-drops-eye-drops-meaghers-pharmacy-7212492980337_470x470.jpg?v=1690369215",
-        "image": "hyloforte-eye-drops-eye-drops.jpg",
+        "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736555/happypharmacy/hyloforte-eye-drops-eye-drops.jpg",
         "category": 6
         }
     },
@@ -26,8 +25,7 @@
             "ingredients": "1 ml of HYLO DUAL® contains 0.5 mg sodium hyaluronate, 20 mg ectoine, boric acid, borax and water for injections.",
             "price": 14.50,
             "rating": 4.7,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/hylo-dual-eye-drops-7-5ml-eye-drops-meaghers-pharmacy-14496953598065_1000x1000.jpg?v=1690369026",
-            "image": "hylo-dual-eye-drops-7-5ml-eye-drops.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736555/happypharmacy/hyloforte-eye-drops-eye-drops.jpg",
             "category": 6
             }
     },
@@ -42,8 +40,7 @@
             "ingredients": "Trehalose (3%) and Hyaluronic acid (0.15%)",
             "price": 11.50,
             "rating": 4.9,
-            "image_url": "https://www.meagherspharmacy.ie/cdn/shop/files/thealoz-duo-dry-eye-drops-10ml-eye-drops-meaghers-pharmacy-30188856901745_1000x1000.jpg?v=1690454162",
-            "image": "thealoz-duo-dry-eye-drops-10ml-eye-drops.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/thealoz-duo-dry-eye-drops-10ml-eye-drops_u5mmhg.webp",
             "category": 6
             }
     }

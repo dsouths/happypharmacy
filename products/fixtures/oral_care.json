@@ -10,8 +10,7 @@
         "ingredients": "HYLO-Forte is a sterile, phosphate and preservative free solution containing 0.2% sodium hyaluronate, a citrate buffer, sorbitol and water",
         "price": 8.99,
         "rating": 5.0,
-        "image_url": "https://abclive1.s3.amazonaws.com/af604476-fa4c-47ca-87af-630f02e4f274/productimage/400281___1___L.jpg",
-        "image": "oralmedic.webp",
+        "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/oralmedic_tcirzl.webp",
         "category": 7
         }
     },
@@ -26,8 +25,7 @@
             "ingredients": "Glycerol, Hydroxypolyethoxydodecane HSE, Alcohol 96% v/v, Carbomer, Sucrose, Saccharin Sodium, Peppermint Oil, Ethyl vanillin, Di-isopropanolamine 90% aqueous, Purified Water. Always check the product for updates.",
             "price": 4.50,
             "rating": 4.7,
-            "image_url": "https://abclive1.s3.amazonaws.com/af604476-fa4c-47ca-87af-630f02e4f274/productimage/801046___1___L.jpg",
-            "image": "medijel.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736555/happypharmacy/medijel.webp",
             "category": 7
             }
     },
@@ -42,8 +40,7 @@
             "ingredients": "Please read printed instructions",
             "price": 6.50,
             "rating": 4.9,
-            "image_url": "https://abclive1.s3.amazonaws.com/af604476-fa4c-47ca-87af-630f02e4f274/productimage/500021___L.jpg",
-            "image": "bonjela_15g.jpg",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/bonjela_15g_psx1xq.jpg",
             "category": 7
             }
     }
