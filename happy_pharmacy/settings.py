@@ -36,7 +36,7 @@ CURRENCY_SYMBOL = '€'
 SECRET_KEY = os.environ.get('SECRET_KEY', '12344')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu104.gitpod.io']
 
 
