@@ -10,7 +10,7 @@
             "ingredients": "Vitamin A, Vitamin C, Vitamin D, Vitamin E, Vitamin K, Thiamin, Riboflavin, Niacin, Vitamin B6, Folic Acid, Vitamin B12, Biotin, Pantothenic Acid, Calcium, Iron, Phosphorus, Iodine, Magnesium, Zinc, Selenium, Copper, Manganese, Chromium, Molybdenum, Chloride, Potassium.",
             "price": 54.99,
             "rating": 4.9,
-            "image": "revive_active.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/revive_active_zsl5la.webp",
             "category": 1
         }
     },
@@ -25,7 +25,7 @@
             "ingredients": "Lactobacillus Acidophilus, Bifidobacterium Lactis, Lactobacillus Paracasei, Lactobacillus Plantarum.",
             "price": 29.99,
             "rating": 4.4,
-            "image": "optibac.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/optibac_nepc8m.webp",
             "category": 1
         }
     },
@@ -40,7 +40,7 @@
             "ingredients": "Peptan® Collagen Peptides (FISH), MSM (Methylsulfonylmethane), Glucosamine Sulphate 2KCL (Vegetarian), Flavouring (Apple, Strawberry, Raspberry), Acidifier (Malic Acid), Colour (Beetroot Powder), Vitamin C (Ascorbic Acid), Hyaluronic Acid (Sodium Hyaluronate), Vitamin K2 (Menaquinone-7), Sweetener (Steviol Glycosides), Boron (Sodium Borate) Manganese (Manganese Citrate), Vitamin D3 (Cholecalciferol) (Vegan), Copper (Cupric Gluconate).",
             "price": 42.99,
             "rating": 4.2,
-            "image": "revive_joint.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/revive_joint_l44jfd.webp",
             "category": 1
         }
     },
@@ -55,7 +55,7 @@
             "ingredients": "Omega-3 Fish Oil, EPA, DHA.",
             "price": 35.99,
             "rating": 4.6,
-            "image": "omega3.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736555/happypharmacy/omega3.webp",
             "category": 1
         }
     },
@@ -70,7 +70,7 @@
             "ingredients": "Vitamin D3.",
             "price": 12.99,
             "rating": 4.7,
-            "image": "VitaminD32000.webp",
+            "image": "https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/VitaminD32000.webp",
             "category": 1
         }
     },
