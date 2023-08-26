@@ -489,19 +489,12 @@ input[name='q']::placeholder {
     margin-top: 40px;
 }
 
-#hero-background {
-    background: url('https://res.cloudinary.com/dghprmi1e/image/upload/v1692736554/happypharmacy/.jpg') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-}
-
 #hero {
     margin-top: 200px;
     background: #114b5f;
     color: #fafafa;
     width: 100%;
 }
-
 
 #hero-logo-container {
     background: #25303b;
