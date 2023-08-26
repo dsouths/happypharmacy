@@ -3,6 +3,7 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 from django.http import JsonResponse
+from django.core.mail import send_mail
 
 from .forms import OrderForm, CouponApplyForm
 from .models import Order, OrderLineItem, Coupon
@@ -13,6 +14,9 @@ from bag.contexts import bag_contents
 
 import stripe
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @require_POST
@@ -176,61 +180,79 @@ def apply_coupon(request):
         return JsonResponse({'success': False, 'error': 'Invalid coupon code'})
 
 
+def send_order_confirmation(order):
+    try:
+        logger.info("Sending order confirmation email.")
+        subject = f'Order Confirmation {order.id}'
+        message = 'Thank you for your order!'
+        email_from = settings.DEFAULT_FROM_EMAIL
+        recipient_list = [order.email]
+        send_mail(subject, message, email_from, recipient_list)
+        logger.info("Order confirmation email sent.")
+    except Exception as e:
+        logger.error(f"An error occurred while sending email: {e}")
+
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
-    save_info = request.session.get('save_info')
-    order = get_object_or_404(Order, order_number=order_number)
+    try:
+        save_info = request.session.get('save_info')
+        order = get_object_or_404(Order, order_number=order_number)
 
-    if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
-        order.user_profile = profile
-        order.save()
-        order_items = order.lineitems.all()
-        for order_item in order_items:
-            if order_item.product.stock_level - order_item.quantity >= 0:
+        if request.user.is_authenticated:
+            profile = UserProfile.objects.get(user=request.user)
+            order.user_profile = profile
+            order.save()
 
-                order_item.product.stock_level = order_item.product.stock_level - order_item.quantity
-                order_item.product.save()
-            else:
-                messages.error(
-                    request,
-                    f'Not enough stock available. Please contact us for more information.')
+            order_items = order.lineitems.all()
+            for order_item in order_items:
+                if order_item.product.stock_level - order_item.quantity >= 0:
+                    order_item.product.stock_level -= order_item.quantity
+                    order_item.product.save()
+                else:
+                    messages.error(
+                        request,
+                        f'Not enough stock available. Please contact us for more information.'
+                    )
 
+            # Clear discount session
+            request.session['discount'] = 0
 
-        request.session['discount'] = 0
+            # Save user's info
+            if save_info:
+                profile_data = {
+                    'default_phone_number': order.phone_number,
+                    'default_country': order.country,
+                    'default_postcode': order.postcode,
+                    'default_town_or_city': order.town_or_city,
+                    'default_street_address1': order.street_address1,
+                    'default_street_address2': order.street_address2,
+                    'default_county': order.county,
+                }
+                user_profile_form = UserProfileForm(profile_data, instance=profile)
+                if user_profile_form.is_valid():
+                    user_profile_form.save()
 
+        send_order_confirmation(order)
 
-        # Save the user's info
-        if save_info:
-            profile_data = {
-                'default_phone_number': order.phone_number,
-                'default_country': order.country,
-                'default_postcode': order.postcode,
-                'default_town_or_city': order.town_or_city,
-                'default_street_address1': order.street_address1,
-                'default_street_address2': order.street_address2,
-                'default_county': order.county,
-            }
-            user_profile_form = UserProfileForm(profile_data, instance=profile)
-            if user_profile_form.is_valid():
-                user_profile_form.save()
+        messages.success(request, f'Order successfully processed! \
+            Your order number is {order_number}. A confirmation \
+            email will be sent to {order.email}.')
 
+        # Clear the bag
+        if 'bag' in request.session:
+            del request.session['bag']
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        template = 'checkout/checkout_success.html'
+        context = {
+            'order': order,
+        }
 
-    if 'bag' in request.session:
-        del request.session['bag']
+        return render(request, template, context)
+    except Exception as e:
+        messages.error(request, f'An error occurred: {e}')
+        return redirect(reverse('home'))
 
-    template = 'checkout/checkout_success.html'
-    context = {
-        'order': order,
-    }
-
-    return render(request, template, context)
-    
-
+  

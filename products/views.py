@@ -228,3 +228,5 @@ def edit_review(request, review_id):
         return render(request, 'products/product_detail.html', context)
 
     return render(request, 'products/product_detail.html', context)
+
+    

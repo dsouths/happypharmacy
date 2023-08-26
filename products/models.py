@@ -37,6 +37,9 @@ class Product(models.Model):
     image = CloudinaryField('image', default='https://res.cloudinary.com/dghprmi1e/image/upload/v1692824558/noimage.jpg')
     stock_level = models.IntegerField(default=10)
 
+    def get_absolute_url(self):
+        return reverse('product_detail', args=[str(self.id)])
+    
     def __str__(self):
         return self.name
 
