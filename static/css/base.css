@@ -566,9 +566,6 @@ input[name='q']::placeholder {
     height: auto !important;
   }
 
-#404 {
-    width: 200px;
-}
 
 @media (min-width: 991px) {
     #hero-logo-container {
