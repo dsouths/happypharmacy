@@ -561,6 +561,15 @@ input[name='q']::placeholder {
     color: #fafafa!important;
 }
 
+.responsive-image {
+    width: 75% !important;
+    height: auto !important;
+  }
+
+#404 {
+    width: 200px;
+}
+
 @media (min-width: 991px) {
     #hero-logo-container {
         display: none;
