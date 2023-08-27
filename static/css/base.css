@@ -515,6 +515,11 @@ input[name='q']::placeholder {
     color: #222 !important;  
   }
   
+#fourohfour {
+    width: 100px !important; 
+
+}
+
 
 /* hero section */
 #hero-header {

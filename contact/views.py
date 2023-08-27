@@ -2,7 +2,9 @@ from .forms import MessageForm
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import Testimonial
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def contact_view(request):
     form = MessageForm()
     testimonials = Testimonial.objects.filter(is_approved=True).order_by('-created_at')
@@ -23,7 +25,7 @@ def contact_view(request):
             else:
                 messages.success(request, 'Message sent to admin!')
 
-            return redirect('contact')  # Replace with the appropriate URL name for your contact page
+            return redirect('contact') 
 
         else:
             messages.error(
