@@ -19,13 +19,25 @@
   - [**Media**](#media)
   - [**Acknowledgments**](#acknowledgments)
 
+## Introduction
+
+This website is for educational purposes only and the credit card payment functionality is not set up to accept real payments. If testing interactively, you can use card details below. Further information can be viewed via Stripe documentation test page.
+
+- 4242 4242 4242 4242 (Visa)
+- Expiration date = Any future date (Example: 12/24)
+- CVN = any 3 digits (Example: 132)
+- Zip/Postcode = any 5 digits (Example: 90210)
+
+As an online pharmacy operating in Ireland there are regulations that need to be adhered to if site is going into production.  The pharmacy regulator in Ireland is the PSI & more information on requirements for online pharmacies can be found [here](https://www.thepsi.ie/gns/Internet-Supply/Internet_supply_list_overview.aspx). If taken into production all guidelines will be adhered to including registration with the PSI.
+
+![PSI online pharmacy](https://github.com/dsouths/happypharmacy/assets/105642587/7141a6e6-48da-494a-ae8a-7e87968fbfbe)
 
 
+## Showcase
 
-![PLACEHOLDER]([https://github.com/dsouths/happydentalapp/assets/105642587/18ad7c68-b626-4123-a8cb-814721b38589](https://github.com/dsouths/happypharmacy))
+![amirepsonsive](https://github.com/dsouths/happypharmacy/assets/105642587/23097de1-f4c6-4573-9959-aa829df95ffc)
 
-
-The deployed [HAPPYPHARMACY](https://PLACEHOLDER.com/)
+The deployed [HAPPYPHARMACY](https://happypharmacy-1309edb52292.herokuapp.com/)
 
 The [GitHub repository](https://github.com/dsouths/happypharmacy)
 
@@ -35,6 +47,7 @@ The [GitHub repository](https://github.com/dsouths/happypharmacy)
 
 This is my 5th project under the Code Institute Diploma in Full Stack Development program.
 This website is a fictional Online Pharmacy selling vitamins, supplements & some healthcare products called HAPPYPHARMACY. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
+
 
 ## UX - User Experience
 ### User Stories
@@ -92,7 +105,58 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
 * People with healthcare needs. I have provided a few products in the "Pharmacy" sections under Allergy, Eye & Ear, Oral Care & First Aid. I plan to develop these further & include more products if the site is to be taken into production. The few products included give an idea of how the site could benefit users & how product range could be expanded to include other ailments  
 
 ### Site Goals
-* The site's main purpose is immediately clear, "Happy Pharmacy" to help users "be their best self" by buying vitamins & supplements to optimize their body's nutrional needs.
+* The site's main purpose is immediately clear, "Happy Pharmacy" to help users "Nourish, Thrive, and Glow" by buying vitamins & supplements to optimize their body's nutrional needs.
 * Simple navigation that allows the user to find information and resources intuitively
 * User authentication
 * CRUD functionality for superuser(s)
+
+## Architecture
+### Database Schema
+
+![Happy Pharmacy - database schema](https://github.com/dsouths/happypharmacy/assets/105642587/5cb0f8db-930a-4c58-a48b-edd8fc3a6e1f)
+
+## Design
+
+### Wireframes
+### Mobile Nav
+
+![mobile navbar](https://github.com/dsouths/happypharmacy/assets/105642587/4012010e-e01d-41d5-be52-76639fce5c58)
+
+
+### Homepage
+
+![HP - landing page ](https://github.com/dsouths/happypharmacy/assets/105642587/b7c35d15-ea72-4cfa-9521-4ce4e5ce62ca)
+
+
+### Products
+
+![HP - products page ](https://github.com/dsouths/happypharmacy/assets/105642587/28f9e72a-44d0-4227-a62b-5f60d0a24ecc)
+
+
+### Product Detail
+
+![HP - product detail page ](https://github.com/dsouths/happypharmacy/assets/105642587/1713ffa0-5216-4ade-ba56-7ccec27d8d43)
+
+
+### Contact
+
+![HP - contact   testimonials page ](https://github.com/dsouths/happypharmacy/assets/105642587/ff33569b-5c68-4948-aaba-0e381a178c8e)
+
+
+## Navigation
+
+![HP - Entity Relationship Diagram ](https://github.com/dsouths/happypharmacy/assets/105642587/4bf42687-da7b-4137-a4ed-888009299b07)
+
+
+## Colour Pallete
+
+![colos co](https://github.com/dsouths/happypharmacy/assets/105642587/282e4b51-82c7-4e99-ba08-517e49cae710)
+
+## Typography
+The site uses "Montserrat" and "Lato" from Google Fonts.
+
+## Features
+### Existing Features
+### Homepage
+
+We can see the nav bar along with the authentication options. The user can sign up to mailing lists. Hero section has a CTA leading customers to the products section where they can make a purchase. Nav bar and footer are visible here. They expand as shown below.
