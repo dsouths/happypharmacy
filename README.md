@@ -159,4 +159,77 @@ The site uses "Montserrat" and "Lato" from Google Fonts.
 ### Existing Features
 ### Homepage
 
-We can see the nav bar along with the authentication options. The user can sign up to mailing lists. Hero section has a CTA leading customers to the products section where they can make a purchase. Nav bar and footer are visible here. They expand as shown below.
+We can see the nav bar along with the authentication options. The hero section has a CTA "buy now" leading users to the products section where they can make a purchase. Nav bar and footer are visible here. The user can also sign up to the mailing list.
+Landing page (top)
+![landing page (top)](https://github.com/dsouths/happypharmacy/assets/105642587/0c6f0b2a-1c02-4906-a001-b199ab1fb0e9)
+
+Landing page (bottom)
+![landing page (bottom)](https://github.com/dsouths/happypharmacy/assets/105642587/eed65b2a-5ea2-453a-abe3-6d44c3836c64)
+
+### Products
+Here products are listed. Clicking the item image leads to the product detail page & out of stock items are marked to inform the user
+
+![products page](https://github.com/dsouths/happypharmacy/assets/105642587/dd5d6da5-cd03-434c-9fcf-005fb6f607b1)
+
+### Product Detail
+Here is the more detailed view of the product. Superusers can edit or delete a product. Logged in users can review a product, which are displayed at the bottom of the page, if the admin approves it.  I have used Javascript to make sure that the buttons don't let you add more items than are in stock. The issue with this is that if you reload the page, you can add them again. Products are not removed from the inventory until sold. 
+
+![product detail page](https://github.com/dsouths/happypharmacy/assets/105642587/638d6cf3-acc1-440b-acbc-43293b53c59a)
+
+### Contact
+
+Contact/testimonial form that stores messages/testimonials in the database. This can only be accessed if the user is logged in.
+
+![contact us_testimonial page](https://github.com/dsouths/happypharmacy/assets/105642587/db83db42-f75f-4cc5-a440-a276b80a084d)
+
+### FAQs
+I have included the page to improve SEO for the site & inform the user if they may have any questions about some of the products sold or general health care areas. This will improve the overall usefulness of the site to the user
+
+![faq page](https://github.com/dsouths/happypharmacy/assets/105642587/d1a62544-d467-4a37-a6ee-d22c796a0d09)
+
+### Profile
+Users profile info. Their default address will auto fill at checkout. This can also be amended by the user if necessary.
+
+![my profile page](https://github.com/dsouths/happypharmacy/assets/105642587/3b6d7c75-baac-4cdd-b894-58dd6d8af0d0)
+
+### Shopping Bag
+Items placed in the bag are displayed and the checkout can be accessed from here. I have added logic so that if the user has more product quantity than is in stock, the product quantity will be reduced to the number left in stock and a message displayed.
+
+![shopping bag ](https://github.com/dsouths/happypharmacy/assets/105642587/3cfd109d-5bb6-43ef-929d-c6261ee5192a)
+
+### Checkout
+Fill out personal & payment details to buy the products in the bag. Test values noted above can be used to make a payment. 
+
+checkout (top)
+![checkout (top)](https://github.com/dsouths/happypharmacy/assets/105642587/e8432934-a988-45fd-b485-2c761f5f1cb3)
+
+checkout (bottom)
+![checkout (bottom)](https://github.com/dsouths/happypharmacy/assets/105642587/6cc66972-22bf-4e3b-8c4a-1e0058f27e96)
+
+### Checkout Success
+If Order was successfully placed a confirmation email is sent. This logic is triggered by Stripe webhooks ensuring that the order is created should the user close the page during payment processing. 
+
+![checkout success](https://github.com/dsouths/happypharmacy/assets/105642587/d7acbef8-564e-4a94-ac65-78d733ed60f9)
+
+### Product Management
+Admin can add a product & include all necessary details price, pack size, stock quantity, image, etc
+
+![product management](https://github.com/dsouths/happypharmacy/assets/105642587/4060168e-be7e-4e14-84f0-f23e7e9663c4)
+
+### Log In
+
+![sign in ](https://github.com/dsouths/happypharmacy/assets/105642587/f709d645-dfae-44e2-8ee7-945d3eb7caf9)
+
+
+### Log Out
+
+![sign out](https://github.com/dsouths/happypharmacy/assets/105642587/a17743ed-bde5-488e-b935-3aa42f62db6d)
+
+
+### Sign Up
+
+![sign up](https://github.com/dsouths/happypharmacy/assets/105642587/6b91dbe3-7375-4ee0-b2d4-274e4bdd65ea)
+
+
+### Forgot Password
+![forgot password](https://github.com/dsouths/happypharmacy/assets/105642587/b89a735b-99d2-4874-809b-a274056c5c53)
