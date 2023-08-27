@@ -519,6 +519,12 @@ input[name='q']::placeholder {
     color: #fafafa;
 }
 
+#privacy-container{
+    margin-right: 0;
+    margin-left: 0;
+    overflow-x: hidden;
+}
+
 #privacy-link {
     color: #fafafa!important;
 }

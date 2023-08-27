@@ -460,7 +460,7 @@ input[name='q']::placeholder {
     min-height: 100vh;
 }
 
-/* didn't fancy a numerical id name */
+
 #four-oh-four {
     margin: 30px auto;
 }
@@ -473,7 +473,7 @@ input[name='q']::placeholder {
 }
 
 #privacy-link {
-    margin: 30px auto;
+    margin: 10px auto;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     text-align: center;
