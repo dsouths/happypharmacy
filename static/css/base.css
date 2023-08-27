@@ -13,7 +13,7 @@ body {
     background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-    width: 320px;
+    max-width: 200px;
 }
 
 /*navbar */
@@ -338,14 +338,22 @@ input[name='q']::placeholder {
     .testimonial-item {
         width: 100%; /* 1 column */
     }
+    
 }
 
-.mailchimp-container,
-.testimonials-container {
-    flex: 1; /* Take up equal space */
-    padding: 10px; /* Add padding between containers */
-    margin: 1px;
+@media (min-width: 576px) and (max-width: 770px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
+
+@media (max-width: 575px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
 
 /* Product Form */
 
