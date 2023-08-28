@@ -233,3 +233,125 @@ Admin can add a product & include all necessary details price, pack size, stock 
 
 ### Forgot Password
 ![forgot password](https://github.com/dsouths/happypharmacy/assets/105642587/b89a735b-99d2-4874-809b-a274056c5c53)
+
+
+## Web Marketing / Marketing Strategies
+### SEO
+
+I used Google keyowrd search to research words associated with Pharmacy, Vitamins & Supplements to help otimise pages & content in the FAQs to increase ranking in search engine. Both long & short-tail words were used. 
+
+![SEO](https://github.com/dsouths/happypharmacy/assets/105642587/a47b571a-867f-4034-849f-459be744e16d)
+
+### Social Media Marketing
+
+I created a Facebook business page to help generate growth organically by building a community of interested customers/user and encourage loyalty amongst our target market. It is free and quick to set up a Facebook page, it has a large audience & a business can connect with customers directly via the Facebook platform and wider global audience, quite easily. The main aim of the Facebook page is to build and maintain relationship with target audience by creating content that will engage them.
+
+![HP facebook](https://github.com/dsouths/happypharmacy/assets/105642587/1945d0a6-22df-45a1-8b74-b3ae99e51fb0)
+
+### Email Marketing
+
+Mailchimp provides an effective platform for gaining new customers and retaining existing ones through newsletter campaigns. By tracking signups and engagement, Mailchimp allows us to monitor the performance of our marketing efforts. Customers/users must opt-in to receive our newsletter, & are automatically enrolled in weekly mail outs. This strategy was chosen because its free to set up with the current level of business and can scale quickly as the business grows therefore increase conversions and generate more revenue for the business. Overall, Mailchimp enables us to boost conversions and revenue through targeted email marketing, with no or minimal upfront investment.
+
+### Frameworks, Libraries & Programs Used
+
+* [amiresponsive](http://ami.responsivedesign.is/) to see how responsive the site is on different devices.
+* [Balsamiq](https://balsamiq.com/) was used to create the Wireframes.
+* [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) v4.6 was used to help build responsive, mobile-first design.
+* [Color-hex](https://www.color-hex.com/) once I identified the colors I wanted I used color-hex to generate the palette.
+* [Django](https://www.djangoproject.com/) free and open-source, Python-based web framework that follows the model–template–views architectural pattern.
+* [Font Awesome](https://fontawesome.com/) was used for icons for aesthetic and UX purposes on the buttons.
+* [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+* [GitHub](https://github.com/) GitHub is used to store the projects code after being pushed from Git.
+* [Gitpod](https://www.gitpod.io/) An online IDE linked to the GitHub repository used to write my code.
+* [Google Chrome Dev tools](https://developer.chrome.com/docs/devtools/) for debugging.
+* [Google Fonts](https://fonts.google.com/about) for typography.
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) used for audits to measure the quality of web pages.
+* [Google Keyword Planner](https://ads.google.com/aw/keywordplanner/home?)
+* [Heroku](https://www.heroku.com/) used to deploy this app, a cloud platform as a service supporting several programming languages.
+* [Pexels](https://www.pexels.com/) Images for this project were sourced from Pexels.
+* [Privacy Policy Generator](https://www.privacypolicygenerator.info/) Free Privacy Policy Generator.
+* [Meaghers Pharmacy](www.meaghers.pharmacy.ie) - images were taken borrowed from this website for educational purposes only. If taken into production all appropriate copyrights will be adhered to 
+* [Stripe](https://stripe.com/en-ie) Integrated with Stripe to facilitate online payments.
+* [SQLite](https://www.sqlite.org/index.html) database used in local development was a SQLLite database.
+* [Terms and Conditions Generator](https://www.termsandconditionsgenerator.com/) Free terms and conditions generator.
+* [Unsplash](https://unsplash.com/) Images for this project were sourced from Unsplash.
+* [WAVE](https://wave.webaim.org/extension/) Browser Extension testing.
+* [Wordtracker](https://www.wordtracker.com/)
+* [a11y](https://color.a11y.com/) Color Contrast Accessibility Validator.
+
+
+## Testing
+### Lighthouse
+
+
+### HTML Validation
+HTML files that have been validated with W3.
+- index.html
+- products.html
+- product_detail.html
+- bag.html
+- checkout.html
+- checkout_success.html
+- contact.html
+- profiles.html
+- 404.html
+
+### W3C CSS Validator
+W3C CSS Validator user to ensure there were no errors or warnings present.
+
+### Python Validation
+Autopep8 to validate all the Python files and checked them with Flake8.
+
+### JSHint
+JS files checked with JSHint for conformity.
+
+### Color Contrast Accessibility Validator
+The site passed the color contrast test on https://color.a11y.com/ 
+
+Here is the test cases rewritten for an online pharmacy website called Happy Pharmacy:
+
+| Feature | Test  | Expected Result | Actual Result |
+|-|-|-|-|  
+| Happy Pharmacy logo | Selecting logo on homepage | directs user back to homepage | Pass |
+| Navigation Links | Selecting navigation links | directs user to relevant categories & pages | Pass | 
+| All categories | Selecting All for each category | directs user to show all relevant categories on the same page | Pass |
+| Sort By | Selecting the filter Sort by for each category | successfully alters the search by price, name and category options reflects results accordingly on page | Pass |
+| Contact Us | Selecting Contact Us | directs user to Contact Us page | Pass |
+| Buy Now | Selecting Buy Now | directs user to full products list page | Pass | 
+| Submitting Review Form | Editing details in review form on Products | successfully edits message to admin and displays success message | Pass |
+| Submitting Edit Review Form | Submitting details in review form on Products | successfully sends message to admin and displays success message | Pass |
+| User Access | Logged in as user | I can leave a review comment on products | Pass |
+| User Access | Logged in as user and author | I can edit a review comment on products | Pass | 
+| User Access | Logged in as user and author | I can delete a review comment on products | Pass |
+| Form Validation Required fields | Filling in form on /contact page | requires name, email and body and contact reason selected to send to Django admin | Pass |
+| Contact form submission | submit contact form | successfully sends data to Django admin as expected | Pass |
+| Register | Register for an account | selecting Register in my account directs user to /accounts/signup/ page | Pass |
+| Login | Login to an account | selecting Login in my account directs user to /accounts/Login/ page | Pass |
+| Search | Using the search box | Entering a search returns expected result | Pass |
+| Back to top | Back to top box | Selecting the back to top box on the products pages brings the user back to the top of the page | Pass | 
+| Search no results | No search results | Entering a no results search returns error message and shows all products | Pass |
+| New User | Registering as a new user | Registering as a new user entering form validation works | Pass |
+| Admin | Logging in as superuser / admin | Logging in as superuser / admin directs user to admin access, shows product management page | Pass |
+| Login Message | log-in Success | "successfully signed in as (user name)" message shown to user | Pass |
+| Add Product | Adding a new product | Adding a new product on the product management page successfully adds product | Pass |
+| Add Product | no image is selected | default image is used | Pass |
+| Deleting Product | Deleting selected product | removed product from search | Pass |
+| Deleting Message | Deleting product confirmation | Confirmation message of deletion is shown when successfully deleted | Pass |
+| Defensive Programming | Test for SQL Injection attacks | Users not permitted to access create/update/delete products articles or reviews if they don't have access permission | Pass |
+| Logging out | message shown | Logging out as a user / admin prompts "are you sure" message | Pass |
+| Successfully signed out | signed out message shown | "You have signed out" message shows to user when successfully signed out | Pass |
+| Logging out | Logging out and redirect | Logging out as a user / admin directs user to homepage | Pass |
+| Footer | social media links | Clicking on the social media icons in the footer open the link in a new tab | Pass |
+| Footer | Privacy Policy links | Clicking on the Privacy Policy link in the footer diverts user to the /privacy/ page | Pass |
+
+### Responsiveness Browser Compatibility
+
+|  | Chrome | Firefox | Edge | Safari | Pass/Fail |
+| ------------- |-------------| -----|  ---------- |  -----| :----: |
+| Expected Appearance   | yes | yes  | yes  | yes | Pass |
+| Expected Layout   | yes | yes  | yes  | yes | Pass |
+
+## Bugs / Errors encountered during development
+
+Many many bugs were encountered along the way, here are a few examples:
+- 
