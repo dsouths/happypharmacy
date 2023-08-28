@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+<link rel="stylesheet" href="https://res.cloudinary.com/dghprmi1e/raw/upload/v1692914119/base.css">
 {% endblock %}
 
 {% block page_header %}
@@ -82,7 +82,7 @@
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Coupon Code</legend>
                             <div class="coupon-section">
-                                <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                                <input type="text" id="coupon-code" placeholder="Enter coupon code" autocomplete="off">
                                 <button type="button" id="apply-coupon">Apply</button> <!-- type="button" to prevent form submission -->
                                 <p id="discount-message"></p> <!-- Message to display success or error -->
                             </div>

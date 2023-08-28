@@ -1,231 +1,224 @@
+<!DOCTYPE html>
 {% load static %}
 
-
-<!doctype html>
 <html lang="en">
 
-<head>
+    <head>
 
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Exclusive vitamin & supplement pharmacy store based in Ireland">
-    <meta name="keywords"
-        content="vitamins, health supplements, healthy lifestyle, men's health, women's health, mental health, heart disease, diabetes, vitamin d, vitamin c, diet & exercise, menopause, allergies, oral hygiene, mouth ulcers, natural ingredients ">
-    {% endblock %}
+        {% block meta %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Exclusive vitamin & supplement pharmacy store based in Ireland">
+        <meta name="keywords"
+            content="vitamins, health supplements, healthy lifestyle, men's health, women's health, mental health, heart disease, diabetes, vitamin d, vitamin c, diet & exercise, menopause, allergies, oral hygiene, mouth ulcers, natural ingredients ">
+        {% endblock %}
 
-    {% block extra_meta %}
-    <link rel="icon" href="https://res.cloudinary.com/dghprmi1e/image/upload/v1692735893/happypharmacy/favicon.ico.png" type="image/x-icon">
-    {% endblock %}
+        {% block extra_meta %}
+        <link rel="icon" href="https://res.cloudinary.com/dghprmi1e/image/upload/v1692735893/happypharmacy/favicon.ico.png" type="image/x-icon">
+        {% endblock %}
 
-    {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://res.cloudinary.com/dghprmi1e/raw/upload/v1692914119/base.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dghprmi1e/image/upload/v1692735893/happypharmacy/favicon.ico.png">
+        {% block corecss %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://res.cloudinary.com/dghprmi1e/raw/upload/v1692914119/base.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dghprmi1e/image/upload/v1692735893/happypharmacy/favicon.ico.png">
 
-    {% endblock %}
+        {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+        {% block extra_css %}
+        {% endblock %}
 
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-    <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
-
-    {% block extra_js %}
-    {% endblock %}
-
-    <title>Happy Pharmacy - Supplements & Vitamins: Nourish, Thrive, and Glow {% block extra_title %}{% endblock %}</title>
-</head>
+        {% block corejs %}
+        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+        <script src="https://js.stripe.com/v3/"></script>
+        {% endblock %}
 
 
+    </head>
 
-<body>
-    <header class="container-fluid">
-        <div id="topnav" class="row bg-blue pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}">
-                    <img id="nav-logo" src="https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/hplogo.png" alt="The Happy Pharmacy company logo">
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input id="search-bar-nav" class="form-control border border-black rounded-0" type="text"
-                            name="q" placeholder="What can we help you with?">
-                        <label class="hidden-label" for="search-bar-nav">Search bar</label>
+    <body>
+        <header class="container-fluid">
+            <div id="topnav" class="row bg-blue pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}">
+                        <img id="nav-logo" src="https://res.cloudinary.com/dghprmi1e/image/upload/v1692736553/happypharmacy/hplogo.png" alt="The Happy Pharmacy company logo">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="{% url 'products' %}">
+                        <div class="input-group w-100">
+                            <input id="search-bar-nav" class="form-control border border-black rounded-0" type="text"
+                                name="q" placeholder="What can we help you with?">
+                            <label class="hidden-label" for="search-bar-nav">Search bar</label>
 
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit"
-                                aria-label="search button">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit"
+                                    aria-label="search button">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
                             </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
-                            href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    €{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    €0.00
-                                    {% endif %}
-                                </p>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
+                                href="{% url 'view_bag' %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        €0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="row bg-blue">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col accent-color text-white">
-                <h4 class="logo-font my-1"><strong>Free delivery on orders over €{{ free_delivery_threshold }}!</strong></h4>
+            <div class="row bg-blue">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
             </div>
-        </div>
-    </header>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col accent-color text-white">
+                    <h4 class="logo-font my-1"><strong>Free delivery on orders over €{{ free_delivery_threshold }}!</strong></h4>
+                </div>
+            </div>
+        </header>
 
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
+        {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
+            {% endfor %}
+        </div>
         {% endif %}
-        {% endwith %}
-        {% endfor %}
-    </div>
-    {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-    <!-- Footer -->
-    <footer class="page-footer font-small cyan darken-3" style="width: 100%;>
+        <!-- Footer -->
+        <footer class="page-footer font-small cyan darken-3" style="width: 100%;>
 
-        <!-- Footer Elements -->
-        <div class="container bg-blue">
+            <!-- Footer Elements -->
+            <div class="container bg-blue">
 
-            <!-- Grid row-->
-            <div class="sm_row">
+                <!-- Grid row-->
+                <div class="sm_row">
 
-                <!-- Grid column -->
-                <div class="col-md-12 py-2">
-                    <div class="mb-2 justify-content-center text-center">
+                    <!-- Grid column -->
+                    <div class="col-md-12 py-2">
+                        <div class="mb-2 justify-content-center text-center">
 
-                        <!-- Facebook -->
-                        <a aria-label="Link opens Facebook in a new tab" class="px-3 fb-ic text-black"
-                            href="https://www.facebook.com/happypharmacyirl" target="_blank">
-                            <i class="fab fa-facebook-f fa-lg white-text fa-2x"></i>
-                        </a>
-                        <!-- Twitter -->
-                        <a aria-label="Link opens Twitter in a new tab" class="px-3 tw-ic text-black"
-                            href="https://www.twitter.com" target="_blank">
-                            <i class="fab fa-twitter fa-lg white-text fa-2x"></i>
-                        </a>
+                            <!-- Facebook -->
+                            <a aria-label="Link opens Facebook in a new tab" class="px-3 fb-ic text-black"
+                                href="https://www.facebook.com/happypharmacyirl" target="_blank">
+                                <i class="fab fa-facebook-f fa-lg white-text fa-2x"></i>
+                            </a>
+                            <!-- Twitter -->
+                            <a aria-label="Link opens Twitter in a new tab" class="px-3 tw-ic text-black"
+                                href="https://www.twitter.com" target="_blank">
+                                <i class="fab fa-twitter fa-lg white-text fa-2x"></i>
+                            </a>
 
-                        <!--Instagram-->
-                        <a aria-label="Link opens Instagram in a new tab" class="px-3 ins-ic text-black"
-                            href="https://www.instagram.com" target="_blank">
-                            <i class="fab fa-instagram fa-lg white-text fa-2x"></i>
-                        </a>
-                        <br>
+                            <!--Instagram-->
+                            <a aria-label="Link opens Instagram in a new tab" class="px-3 ins-ic text-black"
+                                href="https://www.instagram.com" target="_blank">
+                                <i class="fab fa-instagram fa-lg white-text fa-2x"></i>
+                            </a>
+                            <br>
 
+
+                        </div>
 
                     </div>
 
+                    <!-- Grid column -->
+
                 </div>
-
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row-->
-            <div class= "container" id="privacy-container">
-                <div class="row text-center justify-content-center prevent-overflow">
-                    <div class="col-6 py-4">
-                        <a id="privacy-link"
-                            href="https://www.freeprivacypolicy.com/live/daecbb71-9515-4ba2-a62e-7d931a0c8871">Privacy
-                            Policy</a>
+                <!-- Grid row-->
+                <div class= "container" id="privacy-container">
+                    <div class="row text-center justify-content-center prevent-overflow">
+                        <div class="col-6 py-4">
+                            <a id="privacy-link"
+                                href="https://www.freeprivacypolicy.com/live/daecbb71-9515-4ba2-a62e-7d931a0c8871">Privacy
+                                Policy</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Footer Elements -->
+            <!-- Footer Elements -->
 
 
-    </footer>
-    <!-- Footer -->
+        </footer>
+        <!-- Footer -->
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
+        {% block postloadjs %}
+        <script type="text/javascript">
+            $('.toast').toast('show');
+        </script>
+        {% endblock %}
 
-</body>
-
+    </body>
 
 </html>

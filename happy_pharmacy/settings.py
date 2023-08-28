@@ -212,10 +212,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = 'pk_test_51Nbmd8IOLnsla5tCS0kYjxQoxQJIlVFz4geTjbnR4xTBlqZ65onnDaAbcWq6UrmcHyNKkv5FL2kvpdvBEpfxpuH900X8gJkHYC'
-STRIPE_SECRET_KEY = 'sk_test_51Nbmd8IOLnsla5tCFplQVYC92do8keVsAkHwBXAnKTQJbFtHVhmb0mUSIbBWVDqnUEQXXIuCcfHmHN8pw6XlJXm1008NzP8UqR'
 
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
+
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -223,4 +224,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
