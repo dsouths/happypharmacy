@@ -3,6 +3,14 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="https://res.cloudinary.com/dghprmi1e/raw/upload/v1693242758/profile_s9vfjz.css">
+<style>
+    th:nth-child(1) { /* Order Number */
+        width: 30%;
+    }
+    th:nth-child(2) { /* Date */
+        width: 20%;
+    }
+</style>
 {% endblock %}
 
 {% block page_header %}
@@ -44,7 +52,7 @@
                         <tr>
                             <td>
                                 <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
-                                    {{ order.order_number|truncatechars:6 }}
+                                    {{ order.order_number|slice:"-8:" }}
                                 </a>
                             </td>
                             <td>{{ order.date }}</td>
