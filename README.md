@@ -31,6 +31,7 @@ This website is for educational purposes only and the credit card payment functi
 - Expiration date = Any future date (Example: 12/24)
 - CVN = any 3 digits (Example: 132)
 - Zip/Postcode = any 5 digits (Example: 90210)
+- SALE10 can also be used as a discount code NB case sensitive
 
 As an online pharmacy operating in Ireland there are regulations that need to be adhered to if site is going into production.  The pharmacy regulator in Ireland is the PSI & more information on requirements for online pharmacies can be found [here](https://www.thepsi.ie/gns/Internet-Supply/Internet_supply_list_overview.aspx). If taken into production all guidelines will be adhered to including registration with the PSI.
 
@@ -365,9 +366,45 @@ Here is the test cases rewritten for an online pharmacy website called Happy Pha
 
 ## Bugs / Errors encountered during development
 
-
 Many many bugs were encountered along the way, here are a few examples:
-- 
+
+static files would not load due to filepath issues with cloudinary, this was resolved
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/f3b94d01-a1eb-4225-b9bf-ed9caf54cc5b)
+
+No products available for selection. I had forgetten to load fixtures/json files:
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/804601fd-ecc4-4b5e-95c0-aac31b1491da)
+
+Some images not loading as they were a jpeg file rather than webp like the rest of the files:
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/342a068b-5300-4da2-a638-1a198a6ebd11)
+
+css styling for signup would not load, incorrect file path
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/db8ce407-10a3-4b03-87ca-d1bac126ee51)
+
+favicon not loading correctly - file path incorrect
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/a2e3493e-3756-4654-90a8-880929a5412b)
+
+issues relating to checkout when trying to implement coupon/discount code
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/01bd2973-3f71-4f81-8664-169d7ee17da3)
+
+CSS styling issue due to unclosed <div>
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/82c5f111-c2e2-4b89-8d03-4e5592a2e427)
+
+{{ item.product.image.url }} to {{ item.product.image }}
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/ba73876b-df77-414a-8549-e8a723e2db7d)
+
+Overlapping containers: testimonials & mailchimp sunscription
+
+![image](https://github.com/dsouths/happypharmacy/assets/105642587/1f1629a7-c3f4-428e-8ece-e43781c5385c)
+
+
 
 ## Stripe
 * Register for an account at stripe.com
