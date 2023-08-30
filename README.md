@@ -1,23 +1,27 @@
 <h2>Portfolio Project 5 - Happy Pharmacy - Ecommerce Website</h2>
 
-- [**UX (User Experience)**](#ux-user-experience)
-  - [**User Stories**](#user-stories)
+- [**Introduction**](#introduction)
+- [**Agile Tools**](#agile-tools)
 - [**Design and Site Structure**](#design-and-site-structure)
-  - [**Functional Structure**](#functional-structure)
-  - [**Wireframes**](#wireframes)
+- [**Showcase**](#showcase)
+- [**UX (User Experience)**](#ux-user-experience)
+- [**User Stories**](#user-stories)
+- [**Design and Site Structure**](#design-and-site-structure)
+- [**Functional Structure**](#functional-structure)
+- [**Wireframes**](#wireframes)
 - [**Features**](#features)
-  - [**Responsive Design**](#responsive-design)
+- [**Responsive Design**](#responsive-design)
 - [**Technologies**](#technologies)
-  - [**Languages**](#languages)
-  - [**Frameworks and Libraries**](#frameworks-and-libraries)
-  - [**Tools**](#tools)
+- [**Languages**](#languages)
+- [**Frameworks and Libraries**](#frameworks-and-libraries)
+- [**Tools**](#tools)
 - [**Testing**](#testing)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
-  - [**Code**](#code)
-  - [**Content**](#content)
-  - [**Media**](#media)
-  - [**Acknowledgments**](#acknowledgments)
+- [**Code**](#code)
+- [**Content**](#content)
+- [**Media**](#media)
+- [**Acknowledgments**](#acknowledgments)
 
 ## Introduction
 
@@ -31,6 +35,14 @@ This website is for educational purposes only and the credit card payment functi
 As an online pharmacy operating in Ireland there are regulations that need to be adhered to if site is going into production.  The pharmacy regulator in Ireland is the PSI & more information on requirements for online pharmacies can be found [here](https://www.thepsi.ie/gns/Internet-Supply/Internet_supply_list_overview.aspx). If taken into production all guidelines will be adhered to including registration with the PSI.
 
 ![PSI online pharmacy](https://github.com/dsouths/happypharmacy/assets/105642587/7141a6e6-48da-494a-ae8a-7e87968fbfbe)
+
+## Agile tools
+
+I used a [Kanban board](https://github.com/users/dsouths/projects/4) for the development of this project, which made it possible to break down the project execution into subtasks and make it easier to complete and track project progress.  This is located in the GitHub Projects section
+
+## Design and Site Structure
+
+The site functionality was based on the XY Whitening Website by Martin McInerney & styling [Meaghers Pharmacy](https://meagherspharmacy.ie) both used as a basis & inspiration for my site.  
 
 
 ## Showcase
@@ -353,5 +365,120 @@ Here is the test cases rewritten for an online pharmacy website called Happy Pha
 
 ## Bugs / Errors encountered during development
 
+
 Many many bugs were encountered along the way, here are a few examples:
 - 
+
+## Stripe
+* Register for an account at stripe.com
+* Go to Developers section once logged in
+* Go to API keys section
+* Note both the publishable and secret keys
+* In your local environment(env.py) and Heroku, create environment variables STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY with the publishable and secret key values
+os.environ.setdefault('STRIPE_PUBLIC_KEY', 'YOUR_VALUE_GOES_HERE')
+os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
+* Back in the Developers section of your stripe account click on Webhooks
+* Create a webhook with the url of your website /checkout/wh/, for example:
+* Select the payment_intent.payment_failed and payment_intent.succeeded as events to send
+* Note the key created for this webhook
+* In your local environment(env.py) and Heroku, create environment variable STRIPE_WH_SECRET with the secret values os.environ.setdefault('STRIPE_WH_SECRET', 'YOUR_VALUE_GOES_HERE')
+* Test the webhook and note the success/fail attempts for troubleshooting, see events and logs for further testing.
+
+## Google Email
+* Create an email account at google.com, login, go to accounts settings in your gmail account and then click on Other Google Account Settings
+* Go to accounts and import then click on other account settings
+* Under signing into Google, turn on 2-step verification and follow the steps to enable
+* Once verified click on app passwords, select Other as the app and give the password a name, for example Django
+* Click create and a 16 digit password will be generated, copy this 16 digit password
+* In the env.py file, create an environment variable called EMAIL_HOST_PASS with the 16 digit password
+* In the env.py file, create an environment variable called EMAIL_HOST_USER with the email address of the gmail account
+* Set and confirm the following values in the settings.py file to successfully send emails
+* You will also need to set the variables EMAIL_HOST_PASS and EMAIL_HOST_USER in your production instance, for example Heroku
+
+## Deployment
+
+* This project was developed using a GitPod workspace. The code was committed to Git and pushed to GitHub using the terminal.
+
+* Log in to [Heroku](https://id.heroku.com/login) or create an account
+* On the main page click New and Create New App
+* Note: new app name must be unique
+* Next select your region, I chose Europe.
+* Click Create App button
+* Click in resources and select Heroku Postgres database
+* Click Reveal Config Vars and add new config "SECRET_KEY"
+* Click Reveal Config Vars and add new config "DISABLE_COLLECTSTATIC = 1"
+* The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+* Next, go to Buildpack section click Add Buildpack select python and Save Changes
+* Scroll to the top of the page and choose the Deploy tab
+* Select Github as the deployment method
+* Confirm you want to connect to GitHub
+* Search for the repository name and click the connect button
+* Scroll to the bottom of the deploy page and select the preferred deployment type
+* Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+* As Heroku Student Pack no longer includes free access to the Postgres add-on I had to migrate Postgres databases from Heroku to keep ElephantSQL.
+* Navigate to ElephantSQL.com and click “Get a managed database today”
+* Select “Try now for FREE” in the TINY TURTLE database plan
+* Select “Log in with GitHub” and authorize ElephantSQL with your selected GitHub account
+* In the Create new team form
+
+### Migrating databases
+* Create a database
+* Log in to ElephantSQL.com to access your dashboard
+* Click “Create New Instance”
+* Set up your plan
+* Select “Select Region” EXAMPLE "EU-West-1 (Ireland)"
+* Then click “Review”
+* Check your details are correct and then click “Create instance”
+* Return to the ElephantSQL dashboard and click on the database instance name for this project
+
+### Migrating your data
+* Navigate to the Postgres Migration Tool repo on github in a new browser tab
+* Click the Gitpod button to open a new workspace
+* Run the script " python3 reel2reel.py" command in the terminal
+* In a different browser tab, go to your app in Heroku and select the Settings tab
+* Click the “Reveal Config Vars” button
+* Copy the value in the DATABASE_URL Config Var. It will start with postgres://
+* Return to Gitpod and paste in the URL you just copied into the terminal where prompted to provide your DATABASE_URL and click enter
+* In your original browser tab, get your ElephantSQL database URL. Again, it will start with postgres://
+* Return to Gitpod and paste in the URL where prompted
+* The data will now be downloaded from Heroku and uploaded to your ElephantSQL database
+* To test that your database has been moved successfully, return to ElephantSQL and select BROWSER
+* Click the “Table queries” button. If you see any options in the dropdown, your tables have been created
+* Select a table name you recognise, and then click “Execute”
+* You should see your data displayed relating to the table you selected
+
+### Connecting ElephantSQL database to Heroku
+* In the Heroku Dashboard for your project, open the Resources tab
+* In the Resources tab, remove the existing Postgres add-on:
+* Confirm by typing in the name of your Heroku app when prompted.
+* Navigate to the Settings tab
+* Reveal your existing Config Vars. The original DATABASE_URL should have been deleted when the add-on was removed.
+* Add a new config var called DATABASE_URL and paste in the value for your ElephantSQL database, and click Add to save it.
+* Check the Activity tab to confirm
+
+### Final Deployment 
+
+* Create a Procfile 
+* When development is complete change the debug setting to: `DEBUG = False` in settings.py
+* In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
+
+### Forking This Project
+
+* Open [GitHub](https://github.com/dsouths/happypharmacy/)
+* Find the 'Fork' button at the top right of the page
+* Once you click the button the fork will be in your repository
+
+## Credits
+
+* Code Institute - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) -  the structure of my code was also based on this walkthrough
+* Code Institute - [Hello Django](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/121ef050096f4546a1c74327a9113ea6/) -  Walkthrough
+* Code Institute - [I think therefore I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) - Django blog project Walkthrough
+* HappyDental - My fourth Code Intitute project
+* Exclusive Whitening - by Martin McInerney - I used this code as a basis to build on & added extra functionality to my website including testimonials with star ratings & a discount coupon function
+* I used Stack Overflow, Slack (thanks to Kera_Hackteam especially)& Google for research into code functionalities and problem solving. 
+
+### Acknowledgments
+
+- The tutor support team at CI helping me to fix bugs relating to a number of issues - extremely patient & helpful, thank-you!
+- My mentor Martina who is always there to help & answer my questions
+- martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
