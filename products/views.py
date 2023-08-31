@@ -1,232 +1,241 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.views.decorators.http import require_POST
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-from django.db.models import Q
-from django.db.models.functions import Lower
+from django.conf import settings
+from django.http import JsonResponse
 
-from .models import Product, Category, ProductReview
-from .forms import ProductForm, ProductReviewForm
+from .forms import OrderForm, CouponApplyForm
+from .models import Order, OrderLineItem, Coupon
+from products.models import Product
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
+from bag.contexts import bag_contents
 
-# Create your views here.
+import stripe
+import json
 
 
-def all_products(request):
+@require_POST
+def cache_checkout_data(request):
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'bag': json.dumps(request.session.get('bag', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
+
+
+def checkout(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+    bag = request.session.get('bag', {})
+    current_bag = bag_contents(request)
+    total = current_bag['grand_total']
+    coupon_id = request.session.get('coupon_id')
+    discount = 0
+
+    if coupon_id:
+        try:
+            coupon = Coupon.objects.get(id=coupon_id)
+            if coupon.active:
+                discount = coupon.discount
+        except Coupon.DoesNotExist:
+            request.session['coupon_id'] = None
+
+    # Apply the discount to the total price
+    total = float(current_bag['grand_total'])
+    total = total - discount
+    request.session['total'] = total
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+
+    if request.method == 'POST':
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'county': request.POST['county'],
+        }
+
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
+              # Format the delivery_cost and grand_total here
+            order.delivery_cost = "{:.2f}".format(order.delivery_cost)
+            order.grand_total = "{:.2f}".format(order.grand_total)
+            order.save()
+            
+
+            for item_id, item_data in bag.items():
+                try:
+                    product = Product.objects.get(id=item_id)
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+                    else:
+                        for size, quantity in item_data['items_by_size'].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                quantity=quantity,
+                                product_size=size,
+                            )
+                            order_line_item.save()
+                except Product.DoesNotExist:
+                    messages.error(request, "One of the products in your bag wasn't found in our database. Please call us for assistance!")
+                    order.delete()
+                    return redirect(reverse('view_bag'))
+            order.update_total
+            order.save()
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('checkout:checkout_success', args=[order.order_number]))
+
+        else:
+            messages.error(request, 'There was an error with your form. Please double check your information.')
+            
+    else:
+        if not bag:
+            messages.error(request, "There's nothing in your bag at the moment")
+            return redirect(reverse('products'))
+
+        order_form = OrderForm()
+
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
+
+    template = 'checkout/checkout.html'
+    context = {
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
+        'discount': discount,
+        'grand_total': total,  # Include the updated total
+    }
+
+    return render(request, template, context)
+
+
+def apply_coupon(request):
+    total = float(request.session.get('total', 0))  # Retrieve the total from the session and convert to float
+    code = request.POST.get('code')
+    try:
+        coupon = Coupon.objects.get(code=code)
+        if coupon.active:
+            if coupon.discount_type == 'fixed':
+                discount = float(coupon.discount_value)
+            else:  # Assume percentage
+                discount = float(total * (float(coupon.discount_value) / 100))  # Convert discount_value to float
+
+            # Check if a discount has already been applied and is above €0.00
+            existing_discount = float(request.session.get('discount', 0))
+            if existing_discount > 0:
+                return JsonResponse({'success': False, 'error': 'A discount has already been applied'})
+            elif existing_discount == 0:
+                # Allow the user to apply a new coupon if the existing discount is zero
+                pass
+
+            new_total = total - discount
+            request.session['total'] = new_total  # Update the total in the session here
+            request.session['discount'] = discount
+            return JsonResponse({'success': True, 'new_total': new_total, 'discount': discount})
+        else:
+            return JsonResponse({'success': False, 'error': 'Coupon is not active'})
+    except Coupon.DoesNotExist:
+        return JsonResponse({'success': False, 'error': 'Invalid coupon code'})
+
+
+def checkout_success(request, order_number):
     """
-    A view to show all products, including sorting and search queries
+    Handle successful checkouts
     """
-    products = Product.objects.all()
-    query = None
-    categories = None
-    sort = None
-    direction = None
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
 
-# sorting logic
-    if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order_items = order.lineitems.all()
+        order.save()
+        for order_item in order_items:
+            if order_item.product.stock_level - order_item.quantity >= 0:
 
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
-
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
+                order_item.product.stock_level = order_item.product.stock_level - order_item.quantity
+                order_item.product.save()
+            else:
                 messages.error(
-                    request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
-
-            queries = Q(
-                name__icontains=query) | Q(
-                description__icontains=query)
-            products = products.filter(queries)
-
-    current_sorting = f'{sort}_{direction}'
-
-    context = {
-        'products': products,
-        'search_term': query,
-        'current_categories': categories,
-        'current_sorting': current_sorting,
-    }
-
-    return render(request, 'products/products.html', context)
+                    request,
+                    f'Not enough stock available. Please contact us for more information.')
 
 
-def product_detail(request, product_id):
-    """ A view to show individual product details """
-    product = get_object_or_404(Product, pk=product_id)
-    form = ProductReview
+        request.session['discount'] = 0
 
-    if request.method == 'POST':
-        form = ProductReviewForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.instance.user = request.user
-            form.instance.product = product
-            form.save()
-            messages.success(request, 'Review sent to admin for approval!')
-            context = {
-                'product': product,
-                'form': form,
+
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
             }
-
-            return render(request, 'products/product_detail.html', context)
-        else:
-            messages.error(
-                request,
-                'Failed to add review. Please ensure the form is valid.')
-    else:
-        form = ProductReviewForm()
-        context = {
-            'product': product,
-            'form': form,
-        }
-
-    return render(request, 'products/product_detail.html', context)
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
 
-@login_required
-def add_product(request):
-    """ Add a product to the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
 
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save()
-            messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(
-                request,
-                'Failed to add product. Please ensure the form is valid.')
-    else:
-        form = ProductForm()
+    if 'bag' in request.session:
+        del request.session['bag']
 
-    template = 'products/add_product.html'
+    template = 'checkout/checkout_success.html'
     context = {
-        'form': form,
+        'order': order,
     }
 
     return render(request, template, context)
-
-
-@login_required
-def edit_product(request, product_id):
-    """ Edit a product in the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(
-                request,
-                'Failed to update product. Please ensure the form is valid.')
-    else:
-        form = ProductForm(instance=product)
-        messages.info(request, f'You are editing {product.name}')
-
-    template = 'products/edit_product.html'
-    context = {
-        'form': form,
-        'product': product,
-    }
-
-    return render(request, template, context)
-
-
-@login_required
-def delete_product(request, product_id):
-    """ Delete a product from the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
-
-
-@login_required
-def delete_review(request, review_id, ):
-    """delete a product review"""
-    review = get_object_or_404(ProductReview, id=review_id)
-
-    if request.user == review.user:
-        review.delete()
-        messages.success(request, 'Review deleted!')
-
-        return redirect('product_detail', review.product.id)
-    else:
-        messages.error(
-            request,
-            'Failed to delete review. Please ensure that you have permission.')
-
-    return redirect('product_detail', review.product.id)
-
-
-def edit_review(request, review_id):
-    """edit a product review"""
-    review = get_object_or_404(ProductReview, id=review_id)
-    product = get_object_or_404(Product, pk=review.product.id)
-    form = ProductReviewForm(instance=review)
-
-    if request.method == 'POST':
-        form = ProductReviewForm(request.POST, request.FILES, instance=review)
-        if form.is_valid():
-
-            form.save()
-            messages.success(request, 'Review edited!')
-            context = {
-                'product': product,
-                'review': review,
-                'form': form,
-            }
-            return redirect('product_detail', review.product.id)
-        else:
-            messages.error(
-                request,
-                'Failed to add review. Please ensure the form is valid.')
-
-            form = ProductReviewForm(instance=review)
-            context = {
-                'product': product,
-                'review': review,
-                'form': form,
-            }
-    else:
-
-        form = ProductReviewForm(instance=review)
-        messages.info(request, f'You are editing {review.title}')
-        context = {
-            'product': product,
-            'review': review,
-            'form': form,
-        }
-        return render(request, 'products/product_detail.html', context)
-
-    return render(request, 'products/product_detail.html', context)
-
-    
