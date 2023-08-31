@@ -1,7 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category, ProductReview
-from cloudinary.forms import CloudinaryFileField
 
 
 """for adding products to db"""
@@ -12,12 +11,9 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
-    image = CloudinaryFileField(
+    image = forms.ImageField(
         label='Image',
         required=False,
-        options={
-            'cloud_name': 'dghprmi1e',
-        },
         widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
