@@ -926,3 +926,5 @@ body='{\n  "id": "pi_3NlzpzIOLnsla5tC1xRb1IyL",\n  "object": "payment_intent",\n
 link=https://dashboard.stripe.com/test/logs/req_Vk5tMjz8ulmSFN message='Dashboard link for request'
 /workspace/happypharmacy/happy_pharmacy/settings.py changed, reloading.
 Watching for file changes with StatReloader
+/workspace/happypharmacy/happy_pharmacy/settings.py changed, reloading.
+Watching for file changes with StatReloader
