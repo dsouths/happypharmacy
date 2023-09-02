@@ -86,6 +86,31 @@
                                 <button type="button" id="apply-coupon">Apply</button> <!-- type="button" to prevent form submission -->
                                 <p id="discount-message"></p> <!-- Message to display success or error -->
                             </div>
+                            <script>
+                                $('#apply-coupon').click(function() {
+                                    var code = $('#coupon-code').val();
+                                    $.post("{% url 'checkout:apply_coupon' %}", { code: code, csrfmiddlewaretoken: "{{ csrf_token }}" }, function(data) {
+                                        if (data.success) {
+                                            // Update the total on the page
+                                            $('#total').text(data.new_total.toFixed(2));
+                                            $('#discount').text(data.discount.toFixed(2));
+                                            
+                                            // Calculate and update the delivery charge
+                                            var orderTotal = parseFloat($('#total').text());
+                                            var delivery = orderTotal > 50 ? 0 : orderTotal * 0.1;
+                                            $('#delivery').text("€" + delivery.toFixed(2));
+                                            // Optionally, you may also update the grand total here
+                                            var grandTotal = orderTotal - data.discount + delivery;
+                                            $('#grand_total').text("€" + grandTotal.toFixed(2));
+                                            
+                                            $('#discount-message').text("Discount applied successfully!");
+                                        } else {
+                                            // Show an error message
+                                            $('#discount-message').text(data.error);
+                                        }
+                                    });
+                                });
+                            </script>
                         </legend>    
                     </fieldset>
                     
@@ -169,4 +194,5 @@
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
 <script src="https://res.cloudinary.com/dghprmi1e/raw/upload/v1693333599/stripe_elements_enbqtu.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 {% endblock %}
