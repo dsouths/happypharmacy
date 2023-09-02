@@ -88,35 +88,7 @@
                             </div>
                         </legend>    
                     </fieldset>
-
-                    <script>
-                        $('#apply-coupon').click(function() {
-                            var code = $('#coupon-code').val();
-                            $.post("{% url 'checkout:apply_coupon' %}", { code: code, csrfmiddlewaretoken: "{{ csrf_token }}" }, function(data) {
-                                if (data.success) {
-                                    // Update the total on the page
-                                    $('#total').text(data.new_total.toFixed(2));
-                                    $('#discount').text(data.discount.toFixed(2));
-                                    
-                                    // Calculate and update the delivery charge
-                                    var orderTotal = parseFloat($('#total').text());
-                                    var delivery = orderTotal > 50 ? 0 : orderTotal * 0.1;
-                                    $('#delivery').text("€" + delivery.toFixed(2));
-
-                                    // Optionally, you may also update the grand total here
-                                    var grandTotal = orderTotal - data.discount + delivery;
-                                    $('#grand_total').text("€" + grandTotal.toFixed(2));
-                                    
-                                    $('#discount-message').text("Discount applied successfully!");
-                                } else {
-                                    // Show an error message
-                                    $('#discount-message').text(data.error);
-                                }
-                            });
-                        });
-                    </script>
                     
-                
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}

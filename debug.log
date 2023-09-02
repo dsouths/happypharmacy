@@ -1,0 +1,601 @@
+Entering checkout view for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+GET request received in checkout for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlpIOIOLnsla5tC0hgm6AUG
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlpIOIOLnsla5tC0hgm6AUG response_code=200
+Entering checkout view for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+POST request received in checkout for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+Order form is valid for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+/workspace/happypharmacy/happy_pharmacy/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/happy_pharmacy/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Entering checkout view for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=495&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1275
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlpPlIOLnsla5tC1u842Bfa",\n  "object": "payment_intent",\n  "amount": 495,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlpPlIOLnsla5tC1u842Bfa_secret_lG6QgWWOjrp2WWAo5fd3vXMwm",\n  "confirmation_method": "automatic",\n  "created": 1693644165,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_DkOfFeyrHEvWnv message='Dashboard link for request'
+GET request received in checkout for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlpPlIOLnsla5tC1u842Bfa
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2221%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NlpPlIOLnsla5tC1u842Bfa HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlpPlIOLnsla5tC1u842Bfa response_code=200
+body='{\n  "id": "pi_3NlpPlIOLnsla5tC1u842Bfa",\n  "object": "payment_intent",\n  "amount": 495,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlpPlIOLnsla5tC1u842Bfa_secret_lG6QgWWOjrp2WWAo5fd3vXMwm",\n  "confirmation_method": "automatic",\n  "created": 1693644165,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"21\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_rr12Nkx6gOP9Ui message='Dashboard link for request'
+Entering checkout view for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=495&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1275
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlpPyIOLnsla5tC1K82WV2K",\n  "object": "payment_intent",\n  "amount": 495,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlpPyIOLnsla5tC1K82WV2K_secret_QqwMxy1jCY8HLoETRFUI7C0XK",\n  "confirmation_method": "automatic",\n  "created": 1693644178,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_IEkeh8fcsIT0uY message='Dashboard link for request'
+POST request received in checkout for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+Order form is valid for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+Watching for file changes with StatReloader
+Entering checkout view for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 49, in checkout
+    amount=stripe_total,
+UnboundLocalError: local variable 'stripe_total' referenced before assignment
+Not Found: /favicon.ico
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+Entering checkout view for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=5499&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nlrm7IOLnsla5tC0v0oFUAD",\n  "object": "payment_intent",\n  "amount": 5499,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlrm7IOLnsla5tC0v0oFUAD_secret_PFOyzauLqluzLfL7QykcgrzOf",\n  "confirmation_method": "automatic",\n  "created": 1693653239,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_y3KTB2pFQT4mYL message='Dashboard link for request'
+GET request received in checkout for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nlrm7IOLnsla5tC0v0oFUAD
+api_version=None message='Post details' post_data=metadata[bag]=%7B%221%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nlrm7IOLnsla5tC0v0oFUAD HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nlrm7IOLnsla5tC0v0oFUAD response_code=200
+body='{\n  "id": "pi_3Nlrm7IOLnsla5tC0v0oFUAD",\n  "object": "payment_intent",\n  "amount": 5499,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlrm7IOLnsla5tC0v0oFUAD_secret_PFOyzauLqluzLfL7QykcgrzOf",\n  "confirmation_method": "automatic",\n  "created": 1693653239,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"1\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_w3FrJfEjmemQ5I message='Dashboard link for request'
+Entering checkout view for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=5499&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlrmQIOLnsla5tC1MjyUfvw",\n  "object": "payment_intent",\n  "amount": 5499,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlrmQIOLnsla5tC1MjyUfvw_secret_LfoPZXcLfcIlchyGSaSfD502S",\n  "confirmation_method": "automatic",\n  "created": 1693653258,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_IZnFvj87kOyZkg message='Dashboard link for request'
+POST request received in checkout for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+Order form is valid for session o9mmo5nahg0yhgoixt7sq9937idjsivp
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/urls.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=4729&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlrsLIOLnsla5tC0nkTcu1V",\n  "object": "payment_intent",\n  "amount": 4729,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlrsLIOLnsla5tC0nkTcu1V_secret_kbgnpKqEPZP9Juapb5ppGdGYi",\n  "confirmation_method": "automatic",\n  "created": 1693653625,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_Map0ymjMK9pBcV message='Dashboard link for request'
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 148, in checkout
+    return render(request, template, context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'apply_coupon' not found. 'apply_coupon' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=4729&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nlrt8IOLnsla5tC0YvYch4e",\n  "object": "payment_intent",\n  "amount": 4729,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlrt8IOLnsla5tC0YvYch4e_secret_UKFHb7IVP4sUoR1Xoe2YY8qEh",\n  "confirmation_method": "automatic",\n  "created": 1693653674,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_g9qH5zBhHP7lWn message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nlrt8IOLnsla5tC0YvYch4e
+api_version=None message='Post details' post_data=metadata[bag]=%7B%223%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nlrt8IOLnsla5tC0YvYch4e HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nlrt8IOLnsla5tC0YvYch4e response_code=200
+body='{\n  "id": "pi_3Nlrt8IOLnsla5tC0YvYch4e",\n  "object": "payment_intent",\n  "amount": 4729,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlrt8IOLnsla5tC0YvYch4e_secret_UKFHb7IVP4sUoR1Xoe2YY8qEh",\n  "confirmation_method": "automatic",\n  "created": 1693653674,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"3\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_wK1qkqolE1I0zK message='Dashboard link for request'
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 94, in checkout
+    return redirect(reverse('checkout_success',
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'checkout_success' not found. 'checkout_success' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+/workspace/happypharmacy/checkout/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 94, in checkout
+    return redirect(reverse('checkout_success',
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'checkout_success' not found. 'checkout_success' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+/workspace/happypharmacy/checkout/urls.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nlrt8IOLnsla5tC0YvYch4e
+api_version=None message='Post details' post_data=metadata[bag]=%7B%223%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nlrt8IOLnsla5tC0YvYch4e HTTP/1.1" 200 1713
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nlrt8IOLnsla5tC0YvYch4e response_code=200
+body='{\n  "id": "pi_3Nlrt8IOLnsla5tC0YvYch4e",\n  "object": "payment_intent",\n  "amount": 4729,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 4729,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlrt8IOLnsla5tC0YvYch4e_secret_UKFHb7IVP4sUoR1Xoe2YY8qEh",\n  "confirmation_method": "automatic",\n  "created": 1693653674,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": "ch_3Nlrt8IOLnsla5tC09wkZKdA",\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"3\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": "pm_1NlrtQIOLnsla5tCOjnsUPPX",\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": {\n    "address": {\n      "city": "Malahide",\n      "country": "IE",\n      "line1": "13 Clairville Lodge",\n      "line2": "50 Kilmore Road, Lurgan",\n      "postal_code": null,\n      "state": "Co. Dublin"\n    },\n    "carrier": null,\n    "name": "Dave Southwell",\n    "phone": "+353858175471",\n    "tracking_number": null\n  },\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "succeeded",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_sQpmzrnALS5KP5 message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=7298&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlrwXIOLnsla5tC19CZg3UE",\n  "object": "payment_intent",\n  "amount": 7298,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlrwXIOLnsla5tC19CZg3UE_secret_qm0FHmSD8j1lqtNAyYuNWoJ4W",\n  "confirmation_method": "automatic",\n  "created": 1693653885,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_2h1rnpyJ51hbzF message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlrwXIOLnsla5tC19CZg3UE
+api_version=None message='Post details' post_data=metadata[bag]=%7B%223%22%3A+1%2C+%227%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NlrwXIOLnsla5tC19CZg3UE HTTP/1.1" 200 1366
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlrwXIOLnsla5tC19CZg3UE response_code=200
+body='{\n  "id": "pi_3NlrwXIOLnsla5tC19CZg3UE",\n  "object": "payment_intent",\n  "amount": 7298,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlrwXIOLnsla5tC19CZg3UE_secret_qm0FHmSD8j1lqtNAyYuNWoJ4W",\n  "confirmation_method": "automatic",\n  "created": 1693653885,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"3\\": 1, \\"7\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_SirkBgtjwkIF6W message='Dashboard link for request'
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 94, in checkout
+    return redirect(reverse('checkout_success',
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'checkout_success' not found. 'checkout_success' is not a valid view function or pattern name.
+/workspace/happypharmacy/checkout/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=7298&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlryCIOLnsla5tC0IZa3Raf",\n  "object": "payment_intent",\n  "amount": 7298,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlryCIOLnsla5tC0IZa3Raf_secret_iXMu4YF2JVZtKbymvAG2rnuCg",\n  "confirmation_method": "automatic",\n  "created": 1693653988,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_gLAzYsEEJ6bFaA message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlryCIOLnsla5tC0IZa3Raf
+api_version=None message='Post details' post_data=metadata[bag]=%7B%223%22%3A+1%2C+%227%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NlryCIOLnsla5tC0IZa3Raf HTTP/1.1" 200 1366
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlryCIOLnsla5tC0IZa3Raf response_code=200
+body='{\n  "id": "pi_3NlryCIOLnsla5tC0IZa3Raf",\n  "object": "payment_intent",\n  "amount": 7298,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlryCIOLnsla5tC0IZa3Raf_secret_iXMu4YF2JVZtKbymvAG2rnuCg",\n  "confirmation_method": "automatic",\n  "created": 1693653988,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"3\\": 1, \\"7\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_TogqcnA5za2IvL message='Dashboard link for request'
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=3299&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nls2ZIOLnsla5tC1Ao7Dp85",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nls2ZIOLnsla5tC1Ao7Dp85_secret_AzjngdusrRHriWcNsrOILq2Qq",\n  "confirmation_method": "automatic",\n  "created": 1693654259,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_u6a3Aj4ewMoKzc message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nls2ZIOLnsla5tC1Ao7Dp85
+api_version=None message='Post details' post_data=metadata[bag]=%7B%227%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nls2ZIOLnsla5tC1Ao7Dp85 HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nls2ZIOLnsla5tC1Ao7Dp85 response_code=200
+body='{\n  "id": "pi_3Nls2ZIOLnsla5tC1Ao7Dp85",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nls2ZIOLnsla5tC1Ao7Dp85_secret_AzjngdusrRHriWcNsrOILq2Qq",\n  "confirmation_method": "automatic",\n  "created": 1693654259,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"7\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_t21aMAnwi5AcYq message='Dashboard link for request'
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=3299&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nls70IOLnsla5tC13SIttaP",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nls70IOLnsla5tC13SIttaP_secret_D9KN9w0zKShwRgJCa1e0SY4m3",\n  "confirmation_method": "automatic",\n  "created": 1693654534,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_5SUugeZtLcVkwu message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nls70IOLnsla5tC13SIttaP
+api_version=None message='Post details' post_data=metadata[bag]=%7B%222%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nls70IOLnsla5tC13SIttaP HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nls70IOLnsla5tC13SIttaP response_code=200
+body='{\n  "id": "pi_3Nls70IOLnsla5tC13SIttaP",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nls70IOLnsla5tC13SIttaP_secret_D9KN9w0zKShwRgJCa1e0SY4m3",\n  "confirmation_method": "automatic",\n  "created": 1693654534,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"2\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_laE9AkBbWSAZ92 message='Dashboard link for request'
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 94, in checkout
+    return redirect(reverse('checkout:checkout_success', args=[order.order_number]))
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'checkout_success' with arguments '('',)' not found. 1 pattern(s) tried: ['checkout/checkout_success/(?P<order_number>[^/]+)\\Z']
+Not Found: /favicon.ico
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=3299&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nls9mIOLnsla5tC14pAMhhP",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nls9mIOLnsla5tC14pAMhhP_secret_rhXONZAfF4lPCMWBGAbnYxL6h",\n  "confirmation_method": "automatic",\n  "created": 1693654706,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_N8FycGLBLPsA9N message='Dashboard link for request'
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/admin.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=3299&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlsD5IOLnsla5tC0utmYdJ1",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlsD5IOLnsla5tC0utmYdJ1_secret_lsuRJUdUewLwMEgGCRDaolPiF",\n  "confirmation_method": "automatic",\n  "created": 1693654911,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_9gFpMHmExWIjYL message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlsD5IOLnsla5tC0utmYdJ1
+api_version=None message='Post details' post_data=metadata[bag]=%7B%222%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NlsD5IOLnsla5tC0utmYdJ1 HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlsD5IOLnsla5tC0utmYdJ1 response_code=200
+body='{\n  "id": "pi_3NlsD5IOLnsla5tC0utmYdJ1",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlsD5IOLnsla5tC0utmYdJ1_secret_lsuRJUdUewLwMEgGCRDaolPiF",\n  "confirmation_method": "automatic",\n  "created": 1693654911,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"2\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_o6PFCwbb2zRLIh message='Dashboard link for request'
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1319&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlsG3IOLnsla5tC09jVstIu",\n  "object": "payment_intent",\n  "amount": 1319,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlsG3IOLnsla5tC09jVstIu_secret_7dJqnthrB4olnWwjYJTqHf0oG",\n  "confirmation_method": "automatic",\n  "created": 1693655095,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_XUZRsKjy10t2ps message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlsG3IOLnsla5tC09jVstIu
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2211%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NlsG3IOLnsla5tC09jVstIu HTTP/1.1" 200 1357
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlsG3IOLnsla5tC09jVstIu response_code=200
+body='{\n  "id": "pi_3NlsG3IOLnsla5tC09jVstIu",\n  "object": "payment_intent",\n  "amount": 1319,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlsG3IOLnsla5tC09jVstIu_secret_7dJqnthrB4olnWwjYJTqHf0oG",\n  "confirmation_method": "automatic",\n  "created": 1693655095,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"11\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_L6TlXsSij06ONA message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=6933&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlsJlIOLnsla5tC1N20WAm3",\n  "object": "payment_intent",\n  "amount": 6933,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlsJlIOLnsla5tC1N20WAm3_secret_cZK2FdxjFsYGoHEXvPqUeGoYS",\n  "confirmation_method": "automatic",\n  "created": 1693655325,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_fZ1jtYMCSVswZ0 message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlsJlIOLnsla5tC1N20WAm3
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2214%22%3A+1%2C+%221%22%3A+1%2C+%2220%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NlsJlIOLnsla5tC1N20WAm3 HTTP/1.1" 200 1378
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlsJlIOLnsla5tC1N20WAm3 response_code=200
+body='{\n  "id": "pi_3NlsJlIOLnsla5tC1N20WAm3",\n  "object": "payment_intent",\n  "amount": 6933,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlsJlIOLnsla5tC1N20WAm3_secret_cZK2FdxjFsYGoHEXvPqUeGoYS",\n  "confirmation_method": "automatic",\n  "created": 1693655325,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"14\\": 1, \\"1\\": 1, \\"20\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_SjAXkZdi96P6yG message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=495&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1275
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nlt2cIOLnsla5tC1z5Nwkye",\n  "object": "payment_intent",\n  "amount": 495,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlt2cIOLnsla5tC1z5Nwkye_secret_5zb20WbU1jveQ9217CzQlvUIv",\n  "confirmation_method": "automatic",\n  "created": 1693658106,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_9CEwn0diCJuu6g message='Dashboard link for request'
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nlt2cIOLnsla5tC1z5Nwkye
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2221%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nlt2cIOLnsla5tC1z5Nwkye HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nlt2cIOLnsla5tC1z5Nwkye response_code=200
+body='{\n  "id": "pi_3Nlt2cIOLnsla5tC1z5Nwkye",\n  "object": "payment_intent",\n  "amount": 495,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlt2cIOLnsla5tC1z5Nwkye_secret_5zb20WbU1jveQ9217CzQlvUIv",\n  "confirmation_method": "automatic",\n  "created": 1693658106,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"21\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_WcBQw8aWz4hqf8 message='Dashboard link for request'
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1078&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NltRrIOLnsla5tC1yoQ3SJh",\n  "object": "payment_intent",\n  "amount": 1078,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NltRrIOLnsla5tC1yoQ3SJh_secret_ZeMLzpfUOdm8csQjNjvrf7mcI",\n  "confirmation_method": "automatic",\n  "created": 1693659671,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_1HwEdRtiSTwvFp message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NltRrIOLnsla5tC1yoQ3SJh
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2216%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NltRrIOLnsla5tC1yoQ3SJh HTTP/1.1" 200 1357
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NltRrIOLnsla5tC1yoQ3SJh response_code=200
+body='{\n  "id": "pi_3NltRrIOLnsla5tC1yoQ3SJh",\n  "object": "payment_intent",\n  "amount": 1078,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NltRrIOLnsla5tC1yoQ3SJh_secret_ZeMLzpfUOdm8csQjNjvrf7mcI",\n  "confirmation_method": "automatic",\n  "created": 1693659671,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"16\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_Vkz3ZA7gyxxNhh message='Dashboard link for request'
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 94, in checkout
+    return redirect(reverse('checkout_success',
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'checkout_success' not found. 'checkout_success' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspace/happypharmacy/checkout/views.py", line 94, in checkout
+    return redirect(reverse('checkout_success',
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/workspace/.pip-modules/lib/python3.8/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'checkout_success' not found. 'checkout_success' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/views.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1078&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NltywIOLnsla5tC09fswiLt",\n  "object": "payment_intent",\n  "amount": 1078,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NltywIOLnsla5tC09fswiLt_secret_FbEGaQsnjdG3Y8cXq95iOmTOR",\n  "confirmation_method": "automatic",\n  "created": 1693661722,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_KOnG1NDYL4x361 message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NltywIOLnsla5tC09fswiLt
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2216%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NltywIOLnsla5tC09fswiLt HTTP/1.1" 200 1357
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NltywIOLnsla5tC09fswiLt response_code=200
+body='{\n  "id": "pi_3NltywIOLnsla5tC09fswiLt",\n  "object": "payment_intent",\n  "amount": 1078,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NltywIOLnsla5tC09fswiLt_secret_FbEGaQsnjdG3Y8cXq95iOmTOR",\n  "confirmation_method": "automatic",\n  "created": 1693661722,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"16\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_Y9JrUZnn3k6FnA message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1078&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nltz8IOLnsla5tC1Z2NGOYw",\n  "object": "payment_intent",\n  "amount": 1078,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nltz8IOLnsla5tC1Z2NGOYw_secret_WGaZrwFGyLHzKKVGrgcHbd2Vb",\n  "confirmation_method": "automatic",\n  "created": 1693661734,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_S2WZIEZUO714PJ message='Dashboard link for request'
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1319&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NluBAIOLnsla5tC1NuCVNdO",\n  "object": "payment_intent",\n  "amount": 1319,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NluBAIOLnsla5tC1NuCVNdO_secret_tlfL11w4o7QbCAJkCLcsxidS0",\n  "confirmation_method": "automatic",\n  "created": 1693662480,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_T8X3v2bKeTqOV4 message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NluBAIOLnsla5tC1NuCVNdO
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2211%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NluBAIOLnsla5tC1NuCVNdO HTTP/1.1" 200 1357
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NluBAIOLnsla5tC1NuCVNdO response_code=200
+body='{\n  "id": "pi_3NluBAIOLnsla5tC1NuCVNdO",\n  "object": "payment_intent",\n  "amount": 1319,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NluBAIOLnsla5tC1NuCVNdO_secret_tlfL11w4o7QbCAJkCLcsxidS0",\n  "confirmation_method": "automatic",\n  "created": 1693662480,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"11\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_wHCq4di6CwHws9 message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1319&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NluBPIOLnsla5tC0tEVGhTW",\n  "object": "payment_intent",\n  "amount": 1319,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NluBPIOLnsla5tC0tEVGhTW_secret_Z4rs8H7UcLZGXOtxZEGTpfUav",\n  "confirmation_method": "automatic",\n  "created": 1693662495,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_frXnW70SMopoyL message='Dashboard link for request'
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=2310&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NluDeIOLnsla5tC1QEdecHo",\n  "object": "payment_intent",\n  "amount": 2310,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NluDeIOLnsla5tC1QEdecHo_secret_fjFij8kM23qqqxqjkwL11xj15",\n  "confirmation_method": "automatic",\n  "created": 1693662634,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_wrbrJzYKxLPICU message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NluDeIOLnsla5tC1QEdecHo
+api_version=None message='Post details' post_data=metadata[bag]=%7B%2218%22%3A+1%2C+%2222%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NluDeIOLnsla5tC1QEdecHo HTTP/1.1" 200 1368
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NluDeIOLnsla5tC1QEdecHo response_code=200
+body='{\n  "id": "pi_3NluDeIOLnsla5tC1QEdecHo",\n  "object": "payment_intent",\n  "amount": 2310,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NluDeIOLnsla5tC1QEdecHo_secret_fjFij8kM23qqqxqjkwL11xj15",\n  "confirmation_method": "automatic",\n  "created": 1693662634,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"18\\": 1, \\"22\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_YzpP48xoG3MRsj message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=2310&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NluDqIOLnsla5tC0bwlTbfC",\n  "object": "payment_intent",\n  "amount": 2310,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NluDqIOLnsla5tC0bwlTbfC_secret_Tb4onToH8C7KSEPYMYvEPwhHr",\n  "confirmation_method": "automatic",\n  "created": 1693662646,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_ABWFcwvIFNhQCC message='Dashboard link for request'
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/models.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=4729&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nluv4IOLnsla5tC0Myf2Q1R",\n  "object": "payment_intent",\n  "amount": 4729,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nluv4IOLnsla5tC0Myf2Q1R_secret_pDhVQ81TMK0vpCGtmtOrXCsjz",\n  "confirmation_method": "automatic",\n  "created": 1693665326,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_OdyfAtC2BoD70P message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nluv4IOLnsla5tC0Myf2Q1R
+api_version=None message='Post details' post_data=metadata[bag]=%7B%223%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nluv4IOLnsla5tC0Myf2Q1R HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nluv4IOLnsla5tC0Myf2Q1R response_code=200
+body='{\n  "id": "pi_3Nluv4IOLnsla5tC0Myf2Q1R",\n  "object": "payment_intent",\n  "amount": 4729,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nluv4IOLnsla5tC0Myf2Q1R_secret_pDhVQ81TMK0vpCGtmtOrXCsjz",\n  "confirmation_method": "automatic",\n  "created": 1693665326,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"3\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_P3UozPNGfY4EVG message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=4729&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NluvGIOLnsla5tC0nbUQNkZ",\n  "object": "payment_intent",\n  "amount": 4729,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NluvGIOLnsla5tC0nbUQNkZ_secret_w7L7bzgAT6RFxv3RFHPf0MRBB",\n  "confirmation_method": "automatic",\n  "created": 1693665338,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_nyfojjifpBZxQN message='Dashboard link for request'
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/webhook_handler.py changed, reloading.
+Watching for file changes with StatReloader
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=3299&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nlv2uIOLnsla5tC0SejcKPY",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlv2uIOLnsla5tC0SejcKPY_secret_D8ZpZYE3fevdwZK9DstRagedF",\n  "confirmation_method": "automatic",\n  "created": 1693665812,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_SyvAaee49oCjPv message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3Nlv2uIOLnsla5tC0SejcKPY
+api_version=None message='Post details' post_data=metadata[bag]=%7B%222%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3Nlv2uIOLnsla5tC0SejcKPY HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3Nlv2uIOLnsla5tC0SejcKPY response_code=200
+body='{\n  "id": "pi_3Nlv2uIOLnsla5tC0SejcKPY",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlv2uIOLnsla5tC0SejcKPY_secret_D8ZpZYE3fevdwZK9DstRagedF",\n  "confirmation_method": "automatic",\n  "created": 1693665812,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"2\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_HiBV4lmjRaQzxQ message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=3299&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3Nlv3bIOLnsla5tC0yyGk8FP",\n  "object": "payment_intent",\n  "amount": 3299,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3Nlv3bIOLnsla5tC0yyGk8FP_secret_gDsLlfPkBPrtS5AXiQZkzRF6K",\n  "confirmation_method": "automatic",\n  "created": 1693665855,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_ZB3Li3tnaBOgFv message='Dashboard link for request'
+/workspace/happypharmacy/checkout/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/workspace/happypharmacy/checkout/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Using selector: EpollSelector
+Using selector: EpollSelector
+Using selector: EpollSelector
+Using selector: EpollSelector
+Not Found: /favicon.ico
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1429&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlvN6IOLnsla5tC150HXHYq",\n  "object": "payment_intent",\n  "amount": 1429,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlvN6IOLnsla5tC150HXHYq_secret_aJloE3XSabSG7hO0Msxc5esTE",\n  "confirmation_method": "automatic",\n  "created": 1693667064,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_jXoUXVNa5CkOR0 message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents/pi_3NlvN6IOLnsla5tC150HXHYq
+api_version=None message='Post details' post_data=metadata[bag]=%7B%225%22%3A+1%7D&metadata[save_info]=true&metadata[username]=admin123
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents/pi_3NlvN6IOLnsla5tC150HXHYq HTTP/1.1" 200 1356
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents/pi_3NlvN6IOLnsla5tC150HXHYq response_code=200
+body='{\n  "id": "pi_3NlvN6IOLnsla5tC150HXHYq",\n  "object": "payment_intent",\n  "amount": 1429,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlvN6IOLnsla5tC150HXHYq_secret_aJloE3XSabSG7hO0Msxc5esTE",\n  "confirmation_method": "automatic",\n  "created": 1693667064,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {\n    "bag": "{\\"5\\": 1}",\n    "save_info": "true",\n    "username": "admin123"\n  },\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_knoBB8csPc1WsQ message='Dashboard link for request'
+message='Request to Stripe api' method=post path=https://api.stripe.com/v1/payment_intents
+api_version=None message='Post details' post_data=amount=1429&currency=eur
+Starting new HTTPS connection (1): api.stripe.com:443
+https://api.stripe.com:443 "POST /v1/payment_intents HTTP/1.1" 200 1276
+message='Stripe API response' path=https://api.stripe.com/v1/payment_intents response_code=200
+body='{\n  "id": "pi_3NlvNUIOLnsla5tC0hBWmhS6",\n  "object": "payment_intent",\n  "amount": 1429,\n  "amount_capturable": 0,\n  "amount_details": {\n    "tip": {}\n  },\n  "amount_received": 0,\n  "application": null,\n  "application_fee_amount": null,\n  "automatic_payment_methods": null,\n  "canceled_at": null,\n  "cancellation_reason": null,\n  "capture_method": "automatic",\n  "client_secret": "pi_3NlvNUIOLnsla5tC0hBWmhS6_secret_eonymd1RxfVRD7MmFL3WLdFsN",\n  "confirmation_method": "automatic",\n  "created": 1693667088,\n  "currency": "eur",\n  "customer": null,\n  "description": null,\n  "invoice": null,\n  "last_payment_error": null,\n  "latest_charge": null,\n  "livemode": false,\n  "metadata": {},\n  "next_action": null,\n  "on_behalf_of": null,\n  "payment_method": null,\n  "payment_method_options": {\n    "card": {\n      "installments": null,\n      "mandate_options": null,\n      "network": null,\n      "request_three_d_secure": "automatic"\n    }\n  },\n  "payment_method_types": [\n    "card"\n  ],\n  "processing": null,\n  "receipt_email": null,\n  "review": null,\n  "setup_future_usage": null,\n  "shipping": null,\n  "source": null,\n  "statement_descriptor": null,\n  "statement_descriptor_suffix": null,\n  "status": "requires_payment_method",\n  "transfer_data": null,\n  "transfer_group": null\n}' message='API response body'
+link=https://dashboard.stripe.com/test/logs/req_DuEmOakQoa5vDE message='Dashboard link for request'
+Not Found: /favicon.ico
