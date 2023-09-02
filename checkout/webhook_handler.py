@@ -62,7 +62,7 @@ class StripeWH_Handler:
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
         )
-
+        print(intent)
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
         grand_total = round(intent.charges.data[0].amount / 100, 2)
@@ -86,7 +86,8 @@ class StripeWH_Handler:
                 profile.default_street_address2 = shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
                 profile.save()
-        order, created = Order.objects.get_or_create(
+        
+        order, created = Order.objects.get(
             stripe_pid=pid,
             defaults={
                 "full_name": shipping_details.name,

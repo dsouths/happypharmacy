@@ -39,7 +39,7 @@ def checkout(request):
     total = current_bag['grand_total']
     coupon_id = request.session.get('coupon_id')
     discount = 0
-
+    
     if coupon_id:
         try:
             coupon = Coupon.objects.get(id=coupon_id)
@@ -233,5 +233,5 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-
+    print (order.stripe_pid, order.order_number, 1)
     return render(request, template, context)
