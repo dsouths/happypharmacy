@@ -87,7 +87,7 @@ class StripeWH_Handler:
                 profile.default_county = shipping_details.address.state
                 profile.save()
         
-        order, created = Order.objects.get(
+        order, created = Order.objects.get_or_create(
             stripe_pid=pid,
             defaults={
                 "full_name": shipping_details.name,
