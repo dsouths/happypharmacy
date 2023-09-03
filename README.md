@@ -267,6 +267,10 @@ I created a Facebook business page to help generate growth organically by buildi
 
 ![HP facebook](https://github.com/dsouths/happypharmacy/assets/105642587/1945d0a6-22df-45a1-8b74-b3ae99e51fb0)
 
+![Screenshot 2023-09-03 162617](https://github.com/dsouths/happypharmacy/assets/105642587/7927ff34-e779-465b-9c36-c38712dea34c)
+
+![Screenshot 2023-09-03 162659](https://github.com/dsouths/happypharmacy/assets/105642587/e500507b-f85c-49d1-a9f8-0c08be7ecc19)
+
 ### Email Marketing
 
 Mailchimp provides an effective platform for gaining new customers and retaining existing ones through newsletter campaigns. By tracking signups and engagement, Mailchimp allows us to monitor the performance of our marketing efforts. Customers/users must opt-in to receive our newsletter, & are automatically enrolled in weekly mail outs. This strategy was chosen because its free to set up with the current level of business and can scale quickly as the business grows therefore increase conversions and generate more revenue for the business. Overall, Mailchimp enables us to boost conversions and revenue through targeted email marketing, with no or minimal upfront investment.
@@ -558,6 +562,12 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 - My mentor Martina who is always there to help & answer my questions
 - Martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
 - My wife & kids for their support throughout the Code Institute Full Stack diploma
+
+## Improvements, known bugs & further developments
+
+If I take this project into production I plan to eliminate all known bugs including horizontal scroll at 320px on landing page, if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
+
+I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.
 
 ## Final thoughts
 
