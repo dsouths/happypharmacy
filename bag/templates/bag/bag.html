@@ -93,7 +93,7 @@
                         </td>
                     </tr>
                     {% if item.quantity > item.product.stock_level %}
-                    <script type="text/javascript">
+                    <script>
                         // if the quantity is higher than the available stock of an item it will be reduced to the max available number of stock items
                         function fixQuantity() {
                             var form = €('.form');
