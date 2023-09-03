@@ -1,6 +1,3 @@
-@import url('//cdn-images.mailchimp.com/embedcode/classic-061523.css');
-
-
 html {
     height: 100%;
 }
@@ -9,14 +6,6 @@ body {
     color: #555;
     font-family: 'Montserrat', sans-serif;
 }
-
-#mc_embed_signup {
-    background: #fff;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 200px !important;
-}
-
 
 /*navbar */
 
@@ -144,6 +133,20 @@ a.category-badge>span.badge:hover {
 
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+/* Mobile devices */
+#fourohfour {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablets and larger */
+@media (min-width: 768px) {
+    #fourohfour {
+        max-width: 500px;
+        height: auto;
+    }
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -351,12 +354,12 @@ input[name='q']::placeholder {
 }
 
 @media (max-width: 575px) {
-    #mc_embed_signup,
-    .testimonials-container {
-        width: 75%;
+    #mc_embed_signup {
+        width: 75% !important;
         max-width: 75%;
         overflow-x: hidden;
         box-sizing: border-box;
+        margin-left: 2px;
     }
 
     .row {
@@ -370,7 +373,7 @@ input[name='q']::placeholder {
     }
 
     .mc_embed_signup_scroll {
-        max-width: 50% !important;
+        max-width: 75% !important;
         box-sizing: border-box;
     }
 
@@ -381,11 +384,12 @@ input[name='q']::placeholder {
 }
 
 @media (max-width: 575px) {
-    #mc_embed_signup_scroll {
-        width: 100px;
-        max-width: 100px !important;
-        overflow-x: hidden;
-        box-sizing: border-box;
+    #mailchimp-container {
+        width: 750%; /* or whatever width you find suitable */
+    }
+    .refferal_badge {
+        width: 75px; /* reduce the size of the referral badge */
+        height: auto;
     }
 
 }
