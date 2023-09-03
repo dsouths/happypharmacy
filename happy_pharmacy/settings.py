@@ -189,7 +189,7 @@ STATIC_URL = '/static/'
 CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('CLOUD_NAME'),
+    'CLOUD_NAME': 'dghprmi1e',
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
