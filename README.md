@@ -270,6 +270,7 @@ Mailchimp provides an effective platform for gaining new customers and retaining
 * [amiresponsive](http://ami.responsivedesign.is/) to see how responsive the site is on different devices.
 * [Balsamiq](https://balsamiq.com/) was used to create the Wireframes.
 * [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) v4.6 was used to help build responsive, mobile-first design.
+* [CI Pep 8 Python Linter](https://pep8ci.herokuapp.com/) - used to validate python code
 * [Color-hex](https://www.color-hex.com/) once I identified the colors I wanted I used color-hex to generate the palette.
 * [Django](https://www.djangoproject.com/) free and open-source, Python-based web framework that follows the model–template–views architectural pattern.
 * [Font Awesome](https://fontawesome.com/) was used for icons for aesthetic and UX purposes on the buttons.
@@ -549,4 +550,13 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 
 - The tutor support team at CI helping me to fix bugs relating to a number of issues - extremely patient & helpful, thank-you!
 - My mentor Martina who is always there to help & answer my questions
-- martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
+- Martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
+- My wife & kids for their support throughout the Code Institute Full Stack diploma
+
+## Final thoughts
+
+I found this project extremely challenging & rewarding as it all came together. I tried to take on board feedback from my previous projects & utilize in this project. I'd like to thank Code Institute, all the tutors & assessors for helping me get through this year & start my journey as a software developer
+
+Thank you for your time
+
+daves
