@@ -321,7 +321,7 @@ JS files checked with JSHint for conformity.
 ### Color Contrast Accessibility Validator
 The site passed the color contrast test on https://color.a11y.com/ 
 
-Here is the test cases rewritten for an online pharmacy website called Happy Pharmacy:
+###Manual Testing
 
 | Feature | Test  | Expected Result | Actual Result |
 |-|-|-|-|  
