@@ -267,6 +267,10 @@ I created a Facebook business page to help generate growth organically by buildi
 
 ![HP facebook](https://github.com/dsouths/happypharmacy/assets/105642587/1945d0a6-22df-45a1-8b74-b3ae99e51fb0)
 
+![Screenshot 2023-09-03 162617](https://github.com/dsouths/happypharmacy/assets/105642587/7927ff34-e779-465b-9c36-c38712dea34c)
+
+![Screenshot 2023-09-03 162659](https://github.com/dsouths/happypharmacy/assets/105642587/e500507b-f85c-49d1-a9f8-0c08be7ecc19)
+
 ### Email Marketing
 
 Mailchimp provides an effective platform for gaining new customers and retaining existing ones through newsletter campaigns. By tracking signups and engagement, Mailchimp allows us to monitor the performance of our marketing efforts. Customers/users must opt-in to receive our newsletter, & are automatically enrolled in weekly mail outs. This strategy was chosen because its free to set up with the current level of business and can scale quickly as the business grows therefore increase conversions and generate more revenue for the business. Overall, Mailchimp enables us to boost conversions and revenue through targeted email marketing, with no or minimal upfront investment.
