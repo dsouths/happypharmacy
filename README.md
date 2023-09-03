@@ -131,9 +131,11 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
 ## Design
 
 ### Wireframes
-### Mobile Nav
+### Mobile Navigation bar & landing page
 
 ![mobile navbar](https://github.com/dsouths/happypharmacy/assets/105642587/4012010e-e01d-41d5-be52-76639fce5c58)
+
+![HP - landing page (mobile)](https://github.com/dsouths/happypharmacy/assets/105642587/7aafa8c2-0e0c-4c68-9609-20ddca9f6711)
 
 
 ### Homepage
