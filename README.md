@@ -131,9 +131,15 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
 ## Design
 
 ### Wireframes
-### Mobile Nav
+### Mobile Navigation bar & landing page
+
+Nav bar close up
 
 ![mobile navbar](https://github.com/dsouths/happypharmacy/assets/105642587/4012010e-e01d-41d5-be52-76639fce5c58)
+
+Landing page (mobile)
+
+![HP - landing page (mobile)](https://github.com/dsouths/happypharmacy/assets/105642587/eaacabdd-c6cb-4813-814a-55bf45bb0d13)
 
 
 ### Homepage
@@ -270,6 +276,7 @@ Mailchimp provides an effective platform for gaining new customers and retaining
 * [amiresponsive](http://ami.responsivedesign.is/) to see how responsive the site is on different devices.
 * [Balsamiq](https://balsamiq.com/) was used to create the Wireframes.
 * [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) v4.6 was used to help build responsive, mobile-first design.
+* [CI Pep 8 Python Linter](https://pep8ci.herokuapp.com/) - used to validate python code
 * [Color-hex](https://www.color-hex.com/) once I identified the colors I wanted I used color-hex to generate the palette.
 * [Django](https://www.djangoproject.com/) free and open-source, Python-based web framework that follows the model–template–views architectural pattern.
 * [Font Awesome](https://fontawesome.com/) was used for icons for aesthetic and UX purposes on the buttons.
@@ -296,21 +303,52 @@ Mailchimp provides an effective platform for gaining new customers and retaining
 ## Testing
 ### Lighthouse
 
+The site scored highly on desktop all all counts.
+
+![lighthouse - landing (desktop)](https://github.com/dsouths/happypharmacy/assets/105642587/1fb764bf-0d1f-4917-b00a-b596d6245804)
+
+Performance on mobiles was less impressive. Performance issues will be addressed if site is taken into production
+
+![lighthouse - landing (mobile)](https://github.com/dsouths/happypharmacy/assets/105642587/5a4cbbf4-a931-4eaa-bf6b-6806a1e2c914)
+
+
 
 ### HTML Validation
 HTML files that have been validated with W3.
 - index.html
+  
+  ![w3html checker - landing](https://github.com/dsouths/happypharmacy/assets/105642587/92abe06b-4ac9-457d-92c4-86aa991b14de)
+
 - products.html
+
+  ![w3html checker - products](https://github.com/dsouths/happypharmacy/assets/105642587/b9f218c5-d3c7-4a16-9f14-4299537c0762)
+
 - product_detail.html
+
+  ![w3html checker - products detail](https://github.com/dsouths/happypharmacy/assets/105642587/65be265a-2070-4b83-b848-f9ef6d9f3922)
+  
 - bag.html
+
+  ![w3html checker - bag](https://github.com/dsouths/happypharmacy/assets/105642587/ee0956b5-9883-4458-8567-fbaa7ed2a189)
+
 - checkout.html
+  
+  ![w3html checker - checkout](https://github.com/dsouths/happypharmacy/assets/105642587/fccbcb3f-b84e-4ba8-8d2a-fc61cd0a5d9f)
+
 - checkout_success.html
+
+  ![w3html checker - checkout success](https://github.com/dsouths/happypharmacy/assets/105642587/71e1c927-13ae-40d6-93f2-758950344a1f)
+
 - contact.html
-- profiles.html
-- 404.html
+
+  ![w3html checker - contact](https://github.com/dsouths/happypharmacy/assets/105642587/0fee4c93-c3c0-445d-b0a8-5d32f24a25d2)
+
 
 ### W3C CSS Validator
 W3C CSS Validator user to ensure there were no errors or warnings present.
+
+![W3 CSS checker - base ](https://github.com/dsouths/happypharmacy/assets/105642587/83a16dd1-fff8-40b9-abe8-05a52dacb432)
+
 
 ### Python Validation
 Autopep8 to validate all the Python files and checked them with Flake8.
@@ -518,4 +556,13 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 
 - The tutor support team at CI helping me to fix bugs relating to a number of issues - extremely patient & helpful, thank-you!
 - My mentor Martina who is always there to help & answer my questions
-- martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
+- Martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
+- My wife & kids for their support throughout the Code Institute Full Stack diploma
+
+## Final thoughts
+
+I found this project extremely challenging & rewarding as it all came together. I tried to take on board feedback from my previous projects & utilize in this project. I'd like to thank Code Institute, all the tutors & assessors for helping me get through this year & start my journey as a software developer
+
+Thank you for your time
+
+daves
