@@ -1,4 +1,5 @@
-@import url('//cdn-images.mailchimp.com/embedcode/classic-071822.css');
+@import url('//cdn-images.mailchimp.com/embedcode/classic-061523.css');
+
 
 html {
     height: 100%;
@@ -13,8 +14,9 @@ body {
     background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-    max-width: 200px;
+    width: 200px !important;
 }
+
 
 /*navbar */
 
@@ -39,7 +41,7 @@ body {
 .dropdown-item:hover,
 .dropdown-item:active {
   color: #fff !important; 
-}.
+}
   
 /* from Bulma */
 .icon {
@@ -351,24 +353,24 @@ input[name='q']::placeholder {
 @media (max-width: 575px) {
     #mc_embed_signup,
     .testimonials-container {
-        width: 100%;
-        max-width: 100%;
+        width: 75%;
+        max-width: 75%;
         overflow-x: hidden;
         box-sizing: border-box;
     }
 
     .row {
-        max-width: 100%;
+        max-width: 75%;
         box-sizing: border-box;
     }
 
     .mc-field-group {
-        max-width: 100%;
+        max-width: 75%;
         box-sizing: border-box;
     }
 
     .mc_embed_signup_scroll {
-        max-width: 100%;
+        max-width: 50% !important;
         box-sizing: border-box;
     }
 
@@ -378,6 +380,15 @@ input[name='q']::placeholder {
 
 }
 
+@media (max-width: 575px) {
+    #mc_embed_signup_scroll {
+        width: 100px;
+        max-width: 100px !important;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+}
 
 /* Product Form */
 
@@ -635,6 +646,7 @@ input[name='q']::placeholder {
 #mc_embed_signup .asterisk {
     color: #A9040D;
 }
+
 
 /* hides form labels in 1 pixel so screen readers can still see them*/
 .hidden-label {

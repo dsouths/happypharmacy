@@ -233,5 +233,4 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-    print (order.stripe_pid, order.order_number, 1)
     return render(request, template, context)
