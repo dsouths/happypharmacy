@@ -12,14 +12,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os 
 import dj_database_url
+import cloudinary
+import cloudinary_storage
 env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'env.py')
 
 if os.path.isfile(env_path):
     import sys
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     import env
-import cloudinary
-import cloudinary_storage
+
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

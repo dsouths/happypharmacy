@@ -39,7 +39,6 @@ def checkout(request):
     total = current_bag['grand_total']
     coupon_id = request.session.get('coupon_id')
     discount = 0
-    
     if coupon_id:
         try:
             coupon = Coupon.objects.get(id=coupon_id)
@@ -79,7 +78,6 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
-            
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -110,7 +108,7 @@ def checkout(request):
 
         else:
             messages.error(request, 'There was an error with your form. Please double check your information.')
-            
+
     else:
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
@@ -202,9 +200,7 @@ def checkout_success(request, order_number):
                     request,
                     f'Not enough stock available. Please contact us for more information.')
 
-
         request.session['discount'] = 0
-
 
         # Save the user's info
         if save_info:
@@ -220,7 +216,6 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
