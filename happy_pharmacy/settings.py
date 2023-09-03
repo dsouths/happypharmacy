@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 
-import os 
+import os
 import dj_database_url
 import cloudinary
 import cloudinary_storage
@@ -20,8 +20,6 @@ if os.path.isfile(env_path):
     import sys
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     import env
-
-
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -34,7 +32,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-CURRENCY_CODE = 'EUR' 
+CURRENCY_CODE = 'EUR'
 CURRENCY_SYMBOL = '€'
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -69,7 +67,6 @@ INSTALLED_APPS = [
     'profiles',
     'storages',
     'contact',
-    
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -122,7 +119,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-
+HANDLER404 = 'happy_pharmacy.views.page_not_found_view'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -229,25 +226,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-    'file': {
-        'level': 'DEBUG',  # Change from INFO to DEBUG
-        'class': 'logging.FileHandler',
-        'filename': 'debug.log',
-    },
-    },
-    'root': {
-        'handlers': ['file'],
-        'level': 'DEBUG',  # Change from INFO to DEBUG
-    },
-}
-
-
-
-
-
-
