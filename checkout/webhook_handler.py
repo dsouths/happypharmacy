@@ -10,20 +10,16 @@ from profiles.models import UserProfile
 import json
 import time
 import stripe
-import logging
 
-logger = logging.getLogger(__name__)
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
     def __init__(self, request):
         self.request = request
-        logger.debug("Initialized StripeWH_Handler")
 
     def _send_confirmation_email(self, order):
         """Send the user a confirmation email"""
-        logger.debug("Sending confirmation email")
         cust_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
@@ -43,7 +39,6 @@ class StripeWH_Handler:
         """
         Handle a generic/unknown/unexpected webhook event
         """
-        logger.debug(f"Unhandled event: {event['type']}")
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
@@ -52,7 +47,6 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
-        logger.debug("Handling payment_intent.succeeded")  # Debug print statement
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
@@ -105,7 +99,6 @@ class StripeWH_Handler:
         )
 
         if not created:
-            logger.debug("Order already exists. Skipping creation.")
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
@@ -133,15 +126,12 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
-        logger.debug("Checking if order exists...")  # Debug print statement
         if order_exists:
-            logger.debug("Order exists. Sending email.")  # Debug print statement
             return HttpResponse(
                 content=(f'Webhook received: {event["type"]} | SUCCESS: '
                          'Verified order already in database'),
                 status=200)
         else:
-            logger.debug("Order does not exist. Creating...")  # Debug print statement
             order = None
             try:
                 order = Order.objects.create(
@@ -192,7 +182,6 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.payment_failed webhook from Stripe
         """
-        logger.debug(f"Handling payment_intent.payment_failed: {event['type']}")
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
