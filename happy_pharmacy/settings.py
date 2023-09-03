@@ -39,7 +39,7 @@ CURRENCY_SYMBOL = '€'
 SECRET_KEY = os.environ.get('SECRET_KEY', '12344')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '8000-dsouths-happypharmacy-74bu0dz7bky.ws-eu104.gitpod.io', 'happypharmacy-1309edb52292.herokuapp.com']
 
 
@@ -194,8 +194,8 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
