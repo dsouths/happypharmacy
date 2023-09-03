@@ -296,21 +296,52 @@ Mailchimp provides an effective platform for gaining new customers and retaining
 ## Testing
 ### Lighthouse
 
+The site scored highly on desktop all all counts.
+
+![lighthouse - landing (desktop)](https://github.com/dsouths/happypharmacy/assets/105642587/1fb764bf-0d1f-4917-b00a-b596d6245804)
+
+Performance on mobiles was less impressive. Performance issues will be addressed if site is taken into production
+
+![lighthouse - landing (mobile)](https://github.com/dsouths/happypharmacy/assets/105642587/5a4cbbf4-a931-4eaa-bf6b-6806a1e2c914)
+
+
 
 ### HTML Validation
 HTML files that have been validated with W3.
 - index.html
+  
+  ![w3html checker - landing](https://github.com/dsouths/happypharmacy/assets/105642587/92abe06b-4ac9-457d-92c4-86aa991b14de)
+
 - products.html
+
+  ![w3html checker - products](https://github.com/dsouths/happypharmacy/assets/105642587/b9f218c5-d3c7-4a16-9f14-4299537c0762)
+
 - product_detail.html
+
+  ![w3html checker - products detail](https://github.com/dsouths/happypharmacy/assets/105642587/65be265a-2070-4b83-b848-f9ef6d9f3922)
+  
 - bag.html
+
+  ![w3html checker - bag](https://github.com/dsouths/happypharmacy/assets/105642587/ee0956b5-9883-4458-8567-fbaa7ed2a189)
+
 - checkout.html
+  
+  ![w3html checker - checkout](https://github.com/dsouths/happypharmacy/assets/105642587/fccbcb3f-b84e-4ba8-8d2a-fc61cd0a5d9f)
+
 - checkout_success.html
+
+  ![w3html checker - checkout success](https://github.com/dsouths/happypharmacy/assets/105642587/71e1c927-13ae-40d6-93f2-758950344a1f)
+
 - contact.html
-- profiles.html
-- 404.html
+
+  ![w3html checker - contact](https://github.com/dsouths/happypharmacy/assets/105642587/0fee4c93-c3c0-445d-b0a8-5d32f24a25d2)
+
 
 ### W3C CSS Validator
 W3C CSS Validator user to ensure there were no errors or warnings present.
+
+![W3 CSS checker - base ](https://github.com/dsouths/happypharmacy/assets/105642587/83a16dd1-fff8-40b9-abe8-05a52dacb432)
+
 
 ### Python Validation
 Autopep8 to validate all the Python files and checked them with Flake8.
