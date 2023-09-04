@@ -85,7 +85,7 @@ body {
     color: white;
 }
 
-.text-black {
+.text-yellow {
     color: #fec636 !important;
 }
 
@@ -355,17 +355,13 @@ input[name='q']::placeholder {
 
 @media (max-width: 575px) {
     #mc_embed_signup {
-        width: 75% !important;
-        max-width: 75%;
+        width: 90% !important;
+        max-width: 90%;
         overflow-x: hidden;
         box-sizing: border-box;
         margin-left: 2px;
     }
 
-    .row {
-        max-width: 75%;
-        box-sizing: border-box;
-    }
 
     .mc-field-group {
         max-width: 75%;
@@ -373,26 +369,18 @@ input[name='q']::placeholder {
     }
 
     .mc_embed_signup_scroll {
-        max-width: 75% !important;
+        max-width: 100% !important;
         box-sizing: border-box;
     }
 
+
+}
+
+@media (max-width: 324px) {
     body {
-        overflow-x: hidden;
+      overflow-x: hidden;
     }
-
-}
-
-@media (max-width: 575px) {
-    #mailchimp-container {
-        width: 750%; /* or whatever width you find suitable */
-    }
-    .refferal_badge {
-        width: 75px; /* reduce the size of the referral badge */
-        height: auto;
-    }
-
-}
+  }
 
 /* Product Form */
 
