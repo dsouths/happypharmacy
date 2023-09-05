@@ -297,7 +297,7 @@ input[name='q']::placeholder {
 }
 
 .rating span.selected {
-    color: gold;
+    color: gold !important;
 }
 
 .star,
@@ -355,7 +355,7 @@ input[name='q']::placeholder {
 
 @media (max-width: 575px) {
     #mc_embed_signup {
-        width: 90% !important;
+        width: 100% !important;
         max-width: 90%;
         overflow-x: hidden;
         box-sizing: border-box;
