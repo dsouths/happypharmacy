@@ -48,7 +48,8 @@ The site functionality was based on the XY Whitening Website by Martin McInerney
 
 ## Showcase
 
-![amirepsonsive](https://github.com/dsouths/happypharmacy/assets/105642587/23097de1-f4c6-4573-9959-aa829df95ffc)
+![amirepsonsive](https://github.com/dsouths/happypharmacy/assets/105642587/ee3d376a-d27c-4848-8d87-f19e44729178)
+
 
 The deployed [HAPPYPHARMACY](https://happypharmacy-1309edb52292.herokuapp.com/)
 
@@ -565,7 +566,7 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 
 ## Improvements, known bugs & further developments
 
-If I take this project into production I plan to eliminate all known bugs including horizontal scroll at 320px on landing page (tested on Samsung S21 360px × 800px), if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
+If I take this project into production I plan to eliminate all known bugs including, if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
 
 I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be coutnry specific. I also plan to include line items & images in the confirmation email, instead of just the order total.
 
