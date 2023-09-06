@@ -571,10 +571,6 @@ input[name='q']::placeholder {
     overflow-x: hidden;
 }
 
-#privacy-link {
-    color: #fafafa!important;
-}
-
 .responsive-image {
     width: 75% !important;
     height: auto !important;
@@ -600,6 +596,7 @@ input[name='q']::placeholder {
 }
 
 #privacy-link {
+    color: #fafafa!important;
     margin: 30px auto;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
