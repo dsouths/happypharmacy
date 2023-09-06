@@ -31,7 +31,8 @@ This website is for educational purposes only and the credit card payment functi
 - Expiration date = Any future date (Example: 12/24)
 - CVN = any 3 digits (Example: 132)
 - Zip/Postcode = any 5 digits (Example: 90210)
-- SALE10 can also be used as a discount code NB case sensitive
+- SALE25 can also be used as a discount code NB case sensitive. Verification in place to check it's valid so you can test validity check with another e.g. SALE10
+  
 
 As an online pharmacy operating in Ireland there are regulations that need to be adhered to if site is going into production.  The pharmacy regulator in Ireland is the PSI & more information on requirements for online pharmacies can be found [here](https://www.thepsi.ie/gns/Internet-Supply/Internet_supply_list_overview.aspx). If taken into production all guidelines will be adhered to including registration with the PSI.
 
@@ -569,6 +570,8 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 If I take this project into production I plan to eliminate all known bugs including, if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
 
 I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be coutnry specific. I also plan to include line items & images in the confirmation email, instead of just the order total. I would also like to incorporate a wishlist function to further improve the UX of the user. 
+
+I have left the contact page for logged in users to encourage users to sign up. This page also acts as testimonials page, use the drop down menu for selection, & then logged in users can leave testimonial for the website. I have used this as a logged in function to stop anonymous users leaving spam or unwarranted negative feedback. The testimonials need to be approved by admin also before they show on the website.   
 
 ## Final thoughts
 
