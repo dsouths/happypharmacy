@@ -557,7 +557,7 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 * Code Institute - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) -  the structure of my code was also based on this walkthrough
 * Code Institute - [Hello Django](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/121ef050096f4546a1c74327a9113ea6/) -  Walkthrough
 * Code Institute - [I think therefore I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) - Django blog project Walkthrough
-* HappyDental - My fourth Code Intitute project
+* HappyDental - My fourth Code Institute project
 * Exclusive Whitening - by Martin McInerney - I used this code as a basis to build on & added extra functionality to my website including testimonials with star ratings & a discount coupon function
 * I used Stack Overflow, Slack (thanks to Kera_Hackteam especially)& Google for research into code functionalities and problem solving.
 * Diana Polekhina unsplash for my colourful landing background image 
