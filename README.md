@@ -313,9 +313,15 @@ The site scored highly on desktop all all counts.
 
 ![lighthouse - landing (desktop)](https://github.com/dsouths/happypharmacy/assets/105642587/1fb764bf-0d1f-4917-b00a-b596d6245804)
 
-Performance on mobiles was less impressive. Performance issues will be addressed if site is taken into production
+Performance on mobiles was less impressive. I amended some issue & improved performance slightly but remaining issues will be addressed if site is taken into production to further improve performance on lighthouse testing on mobile screen
+
+Before adjustments
 
 ![lighthouse - landing (mobile)](https://github.com/dsouths/happypharmacy/assets/105642587/5a4cbbf4-a931-4eaa-bf6b-6806a1e2c914)
+
+After adjustments
+
+![lighthouse - landing (mobile) v2 ](https://github.com/dsouths/happypharmacy/assets/105642587/57c0c3f1-3212-4205-8960-228c28465c32)
 
 
 
