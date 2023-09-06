@@ -6,21 +6,16 @@
 - [**Showcase**](#showcase)
 - [**UX (User Experience)**](#ux-user-experience)
 - [**User Stories**](#user-stories)
-- [**Design and Site Structure**](#design-and-site-structure)
 - [**Functional Structure**](#functional-structure)
-- [**Wireframes**](#wireframes)
-- [**Features**](#features)
-- [**Responsive Design**](#responsive-design)
-- [**Technologies**](#technologies)
-- [**Languages**](#languages)
-- [**Frameworks and Libraries**](#frameworks-and-libraries)
-- [**Tools**](#tools)
+- [**Design and Site Structure**](#design-and-site-structure)
+- [**Frameworks, Libraries & Programs Used**](#frameworks-libraries-and-programs-used)
 - [**Testing**](#testing)
+- [**Responsive Browser Compatibility**](#responsive-browser-compatibility)
+- [**Bugs and Errors**](#Bugs-and-Errors)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
 - [**Code**](#code)
 - [**Content**](#content)
-- [**Media**](#media)
 - [**Acknowledgments**](#acknowledgments)
 
 ## Introduction
@@ -64,7 +59,7 @@ This is my 5th project under the Code Institute Diploma in Full Stack Developmen
 This website is a fictional Online Pharmacy selling vitamins, supplements & some healthcare products called HAPPYPHARMACY. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
 
 
-## UX - User Experience
+## UX (User Experience)
 ### User Stories
 
 ### Admin 
@@ -125,12 +120,12 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
 * User authentication
 * CRUD functionality for superuser(s)
 
-## Architecture
+## Functional Structure
 ### Database Schema
 
 ![Happy Pharmacy - database schema](https://github.com/dsouths/happypharmacy/assets/105642587/5cb0f8db-930a-4c58-a48b-edd8fc3a6e1f)
 
-## Design
+## Design and Site Structure
 
 ### Wireframes
 ### Mobile Navigation bar & landing page
@@ -277,7 +272,8 @@ I created a Facebook business page to help generate growth organically by buildi
 
 Mailchimp provides an effective platform for gaining new customers and retaining existing ones through newsletter campaigns. By tracking signups and engagement, Mailchimp allows us to monitor the performance of our marketing efforts. Customers/users must opt-in to receive our newsletter, & are automatically enrolled in weekly mail outs. This strategy was chosen because its free to set up with the current level of business and can scale quickly as the business grows therefore increase conversions and generate more revenue for the business. Overall, Mailchimp enables us to boost conversions and revenue through targeted email marketing, with no or minimal upfront investment.
 
-### Frameworks, Libraries & Programs Used
+### Technologies
+## Frameworks, Libraries and Programs Used
 
 * [amiresponsive](http://ami.responsivedesign.is/) to see how responsive the site is on different devices.
 * [Balsamiq](https://balsamiq.com/) was used to create the Wireframes.
@@ -407,14 +403,14 @@ The site passed the color contrast test on https://color.a11y.com/
 | Footer | social media links | Clicking on the social media icons in the footer open the link in a new tab | Pass |
 | Footer | Privacy Policy links | Clicking on the Privacy Policy link in the footer diverts user to the /privacy/ page | Pass |
 
-### Responsiveness Browser Compatibility
+### Responsive Browser Compatibility
 
 |  | Chrome | Firefox | Edge | Safari | Pass/Fail |
 | ------------- |-------------| -----|  ---------- |  -----| :----: |
 | Expected Appearance   | yes | yes  | yes  | yes | Pass |
 | Expected Layout   | yes | yes  | yes  | yes | Pass |
 
-## Bugs / Errors encountered during development
+## Bugs and Errors
 
 Many many bugs were encountered along the way, here are a few examples:
 
@@ -562,7 +558,8 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 * Code Institute - [I think therefore I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) - Django blog project Walkthrough
 * HappyDental - My fourth Code Intitute project
 * Exclusive Whitening - by Martin McInerney - I used this code as a basis to build on & added extra functionality to my website including testimonials with star ratings & a discount coupon function
-* I used Stack Overflow, Slack (thanks to Kera_Hackteam especially)& Google for research into code functionalities and problem solving. 
+* I used Stack Overflow, Slack (thanks to Kera_Hackteam especially)& Google for research into code functionalities and problem solving.
+* Diana Polekhina unsplash for my colourful landing background image 
 
 ### Acknowledgments
 
