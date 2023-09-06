@@ -439,7 +439,7 @@ issues relating to checkout when trying to implement coupon/discount code
 
 ![image](https://github.com/dsouths/happypharmacy/assets/105642587/01bd2973-3f71-4f81-8664-169d7ee17da3)
 
-CSS styling issue due to unclosed <div>
+CSS styling issue due to unclosed div
 
 ![image](https://github.com/dsouths/happypharmacy/assets/105642587/82c5f111-c2e2-4b89-8d03-4e5592a2e427)
 
