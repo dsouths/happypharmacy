@@ -568,12 +568,12 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 
 If I take this project into production I plan to eliminate all known bugs including, if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
 
-I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be coutnry specific. I also plan to include line items & images in the confirmation email, instead of just the order total.
+I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be coutnry specific. I also plan to include line items & images in the confirmation email, instead of just the order total. I would also like to incorporate a wishlist function to further improve the UX of the user. 
 
 ## Final thoughts
 
-I found this project extremely challenging & rewarding as it all came together. I tried to take on board feedback from my previous projects & utilize in this project. I'd like to thank Code Institute, all the tutors & assessors for helping me get through this year & start my journey as a software developer
+I found this project extremely challenging & rewarding as it all came together. I have taken on board feedback from my previous projects & utilized in this project. I'd like to thank Code Institute, all the tutors & assessors for helping me get through this year & start my journey as a software developer
 
-Thank you for your time
+Thank you for your time!
 
 daves
