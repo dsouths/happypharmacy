@@ -6,22 +6,18 @@
 - [**Showcase**](#showcase)
 - [**UX (User Experience)**](#ux-user-experience)
 - [**User Stories**](#user-stories)
-- [**Design and Site Structure**](#design-and-site-structure)
 - [**Functional Structure**](#functional-structure)
 - [**Wireframes**](#wireframes)
-- [**Features**](#features)
-- [**Responsive Design**](#responsive-design)
-- [**Technologies**](#technologies)
-- [**Languages**](#languages)
-- [**Frameworks and Libraries**](#frameworks-and-libraries)
-- [**Tools**](#tools)
+- [**Design and Site Structure**](#design-and-site-structure)
+- [**Frameworks, Libraries & Programs Used**](#frameworks-libraries-and-programs-used)
 - [**Testing**](#testing)
+- [**Responsive Browser Compatibility**](#responsive-browser-compatibility)
+- [**Bugs and Errors**](#Bugs-and-Errors)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
-- [**Code**](#code)
-- [**Content**](#content)
-- [**Media**](#media)
 - [**Acknowledgments**](#acknowledgments)
+- [**Improvements**](#improvements)
+- [**Final Comments**](#final-comments)
 
 ## Introduction
 
@@ -31,7 +27,8 @@ This website is for educational purposes only and the credit card payment functi
 - Expiration date = Any future date (Example: 12/24)
 - CVN = any 3 digits (Example: 132)
 - Zip/Postcode = any 5 digits (Example: 90210)
-- SALE10 can also be used as a discount code NB case sensitive
+- SALE25 can also be used as a discount code NB case sensitive. Verification in place to check it's valid so you can test validity check with another e.g. SALE10
+  
 
 As an online pharmacy operating in Ireland there are regulations that need to be adhered to if site is going into production.  The pharmacy regulator in Ireland is the PSI & more information on requirements for online pharmacies can be found [here](https://www.thepsi.ie/gns/Internet-Supply/Internet_supply_list_overview.aspx). If taken into production all guidelines will be adhered to including registration with the PSI.
 
@@ -63,15 +60,15 @@ This is my 5th project under the Code Institute Diploma in Full Stack Developmen
 This website is a fictional Online Pharmacy selling vitamins, supplements & some healthcare products called HAPPYPHARMACY. It is designed to be responsive and accessible on a variety of devices for the ease of use of the site by potential users.
 
 
-## UX - User Experience
+## UX (User Experience)
 ### User Stories
 
 ### Admin 
 
 - As an admin I want a panel to:
-  - create a blog post.
-  - edit a blog post.
-  - delete a blog post.
+  - view orders
+  - amend orders
+  - add & delete discount codes
   
 - As an admin I want to be able to:
   - log in so that I can access superuser privileges
@@ -91,7 +88,7 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
   - filter feature so that I can filter the products.
   - have a search feature so that I can search the database of products.
   - leave a review on the product so that I can give feedback.
-  - have a review edit button so that I can ammend my mistakes.
+  - have a review edit button so that I can amend my mistakes.
   - have a review delete button so that I can delete a review.
   - want a shopping bag so that I can add prodcts to it.
   - want an edit bag/delete item button so that I can edit/delete quantity in my shopping bag.
@@ -124,12 +121,12 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
 * User authentication
 * CRUD functionality for superuser(s)
 
-## Architecture
+## Functional Structure
 ### Database Schema
 
 ![Happy Pharmacy - database schema](https://github.com/dsouths/happypharmacy/assets/105642587/5cb0f8db-930a-4c58-a48b-edd8fc3a6e1f)
 
-## Design
+## Design and Site Structure
 
 ### Wireframes
 ### Mobile Navigation bar & landing page
@@ -276,7 +273,8 @@ I created a Facebook business page to help generate growth organically by buildi
 
 Mailchimp provides an effective platform for gaining new customers and retaining existing ones through newsletter campaigns. By tracking signups and engagement, Mailchimp allows us to monitor the performance of our marketing efforts. Customers/users must opt-in to receive our newsletter, & are automatically enrolled in weekly mail outs. This strategy was chosen because its free to set up with the current level of business and can scale quickly as the business grows therefore increase conversions and generate more revenue for the business. Overall, Mailchimp enables us to boost conversions and revenue through targeted email marketing, with no or minimal upfront investment.
 
-### Frameworks, Libraries & Programs Used
+### Technologies
+## Frameworks, Libraries and Programs Used
 
 * [amiresponsive](http://ami.responsivedesign.is/) to see how responsive the site is on different devices.
 * [Balsamiq](https://balsamiq.com/) was used to create the Wireframes.
@@ -312,9 +310,15 @@ The site scored highly on desktop all all counts.
 
 ![lighthouse - landing (desktop)](https://github.com/dsouths/happypharmacy/assets/105642587/1fb764bf-0d1f-4917-b00a-b596d6245804)
 
-Performance on mobiles was less impressive. Performance issues will be addressed if site is taken into production
+Performance on mobiles was less impressive. I amended some issue & improved performance slightly but remaining issues will be addressed if site is taken into production to further improve performance on lighthouse testing on mobile screen
+
+Before adjustments
 
 ![lighthouse - landing (mobile)](https://github.com/dsouths/happypharmacy/assets/105642587/5a4cbbf4-a931-4eaa-bf6b-6806a1e2c914)
+
+After adjustments
+
+![lighthouse - landing (mobile) v2 ](https://github.com/dsouths/happypharmacy/assets/105642587/57c0c3f1-3212-4205-8960-228c28465c32)
 
 
 
@@ -400,14 +404,14 @@ The site passed the color contrast test on https://color.a11y.com/
 | Footer | social media links | Clicking on the social media icons in the footer open the link in a new tab | Pass |
 | Footer | Privacy Policy links | Clicking on the Privacy Policy link in the footer diverts user to the /privacy/ page | Pass |
 
-### Responsiveness Browser Compatibility
+### Responsive Browser Compatibility
 
 |  | Chrome | Firefox | Edge | Safari | Pass/Fail |
 | ------------- |-------------| -----|  ---------- |  -----| :----: |
 | Expected Appearance   | yes | yes  | yes  | yes | Pass |
 | Expected Layout   | yes | yes  | yes  | yes | Pass |
 
-## Bugs / Errors encountered during development
+## Bugs and Errors
 
 Many many bugs were encountered along the way, here are a few examples:
 
@@ -435,7 +439,7 @@ issues relating to checkout when trying to implement coupon/discount code
 
 ![image](https://github.com/dsouths/happypharmacy/assets/105642587/01bd2973-3f71-4f81-8664-169d7ee17da3)
 
-CSS styling issue due to unclosed <div>
+CSS styling issue due to unclosed div
 
 ![image](https://github.com/dsouths/happypharmacy/assets/105642587/82c5f111-c2e2-4b89-8d03-4e5592a2e427)
 
@@ -553,9 +557,10 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 * Code Institute - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) -  the structure of my code was also based on this walkthrough
 * Code Institute - [Hello Django](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/121ef050096f4546a1c74327a9113ea6/) -  Walkthrough
 * Code Institute - [I think therefore I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) - Django blog project Walkthrough
-* HappyDental - My fourth Code Intitute project
+* HappyDental - My fourth Code Institute project
 * Exclusive Whitening - by Martin McInerney - I used this code as a basis to build on & added extra functionality to my website including testimonials with star ratings & a discount coupon function
-* I used Stack Overflow, Slack (thanks to Kera_Hackteam especially)& Google for research into code functionalities and problem solving. 
+* I used Stack Overflow, Slack (thanks to Kera_Hackteam especially)& Google for research into code functionalities and problem solving.
+* Diana Polekhina unsplash for my colourful landing background image 
 
 ### Acknowledgments
 
@@ -564,16 +569,22 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 - Martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
 - My wife & kids for their support throughout the Code Institute Full Stack diploma
 
-## Improvements, known bugs & further developments
+## Improvements
+
+### Improvements, known bugs & further developments
 
 If I take this project into production I plan to eliminate all known bugs including, if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
 
-I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be coutnry specific. I also plan to include line items & images in the confirmation email, instead of just the order total.
+I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be country specific. I also plan to include line items & images in the confirmation email, instead of just the order total. I would also like to incorporate a wishlist function to further improve the UX of the user. 
 
-## Final thoughts
+I have left the contact page for logged in users to encourage users to sign up. This page also acts as testimonials page, use the drop down menu for selection, & then logged in users can leave testimonial for the website. I have used this as a logged in function to stop anonymous users leaving spam or unwarranted negative feedback. The testimonials need to be approved by admin also before they show on the website.
 
-I found this project extremely challenging & rewarding as it all came together. I tried to take on board feedback from my previous projects & utilize in this project. I'd like to thank Code Institute, all the tutors & assessors for helping me get through this year & start my journey as a software developer
+I also have a latest deals section after the user sucesfully checks out, to encourage further sales. I have not currently populated this with any products but intend to if taken into production
 
-Thank you for your time
+## Final comments
+
+I found this project extremely challenging & rewarding as it all came together. I have taken on board feedback from my previous projects & utilized in this project. I'd like to thank Code Institute, all the tutors & assessors for helping me get through this year & start my journey as a software developer
+
+Thank you for your time!
 
 daves
