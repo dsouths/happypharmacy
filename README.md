@@ -16,7 +16,7 @@
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
 - [**Acknowledgments**](#acknowledgments)
-- [**Improvements, known bugs & further developments**](#improvements,-known-bugs-&-further-developments)
+- [**Improvements**](#improvements)
 - [**Final Comments**](#final-comments)
 
 ## Introduction
@@ -568,6 +568,8 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 - My mentor Martina who is always there to help & answer my questions
 - Martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
 - My wife & kids for their support throughout the Code Institute Full Stack diploma
+
+### Improvements
 
 ## Improvements, known bugs & further developments
 
