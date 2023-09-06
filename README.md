@@ -7,6 +7,7 @@
 - [**UX (User Experience)**](#ux-user-experience)
 - [**User Stories**](#user-stories)
 - [**Functional Structure**](#functional-structure)
+- [**Wireframes**](#wireframes)
 - [**Design and Site Structure**](#design-and-site-structure)
 - [**Frameworks, Libraries & Programs Used**](#frameworks-libraries-and-programs-used)
 - [**Testing**](#testing)
