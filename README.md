@@ -70,9 +70,9 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
 ### Admin 
 
 - As an admin I want a panel to:
-  - create a blog post.
-  - edit a blog post.
-  - delete a blog post.
+  - view orders
+  - amend orders
+  - add & delete discount codes
   
 - As an admin I want to be able to:
   - log in so that I can access superuser privileges
@@ -92,7 +92,7 @@ This website is a fictional Online Pharmacy selling vitamins, supplements & some
   - filter feature so that I can filter the products.
   - have a search feature so that I can search the database of products.
   - leave a review on the product so that I can give feedback.
-  - have a review edit button so that I can ammend my mistakes.
+  - have a review edit button so that I can amend my mistakes.
   - have a review delete button so that I can delete a review.
   - want a shopping bag so that I can add prodcts to it.
   - want an edit bag/delete item button so that I can edit/delete quantity in my shopping bag.
