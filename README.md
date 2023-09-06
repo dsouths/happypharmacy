@@ -569,9 +569,9 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 - Martin McInerney who created a great Exclusive Whitening ecommerce site & inspired me to create the Happy Pharmacy site
 - My wife & kids for their support throughout the Code Institute Full Stack diploma
 
-### Improvements
+## Improvements
 
-## Improvements, known bugs & further developments
+### Improvements, known bugs & further developments
 
 If I take this project into production I plan to eliminate all known bugs including, if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
 
