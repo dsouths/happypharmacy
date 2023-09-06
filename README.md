@@ -579,7 +579,7 @@ I have left the contact page for logged in users to encourage users to sign up. 
 
 I also have a latest deals section after the user sucesfully checks out, to encourage further sales. I have nto currently populated this with any products but intend to if taken into production
 
-## Final thoughts
+## Final comments
 
 I found this project extremely challenging & rewarding as it all came together. I have taken on board feedback from my previous projects & utilized in this project. I'd like to thank Code Institute, all the tutors & assessors for helping me get through this year & start my journey as a software developer
 
