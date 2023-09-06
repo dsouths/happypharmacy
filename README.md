@@ -16,7 +16,7 @@
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
 - [**Acknowledgments**](#acknowledgments)
-- [**Improvements, known bugs & further developments**](improvements,-known-bugs-&-further-developments)
+- [**Improvements, known bugs & further developments**](#improvements,-known-bugs-&-further-developments)
 - [**Final Comments**](#final-comments)
 
 ## Introduction
