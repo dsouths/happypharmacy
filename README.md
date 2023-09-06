@@ -575,11 +575,11 @@ os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
 
 If I take this project into production I plan to eliminate all known bugs including, if user clicks back button after completing a successful checkout (server 500 error) & issues with discount being applied, if the user applies discount but decides to add further products to the basket they cannot reapply the discount without completing a successful checkout. 
 
-I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be coutnry specific. I also plan to include line items & images in the confirmation email, instead of just the order total. I would also like to incorporate a wishlist function to further improve the UX of the user. 
+I can easily add new products & categories to scaleup the website for commerical use. I will also get the appropriate copyright for images of products used & if necessary go through the appropriate channels to sell pharmacy only products, if needed.  Stripe currently asks for a "zip code" during payment, for production this will be changed to be country specific. I also plan to include line items & images in the confirmation email, instead of just the order total. I would also like to incorporate a wishlist function to further improve the UX of the user. 
 
 I have left the contact page for logged in users to encourage users to sign up. This page also acts as testimonials page, use the drop down menu for selection, & then logged in users can leave testimonial for the website. I have used this as a logged in function to stop anonymous users leaving spam or unwarranted negative feedback. The testimonials need to be approved by admin also before they show on the website.
 
-I also have a latest deals section after the user sucesfully checks out, to encourage further sales. I have nto currently populated this with any products but intend to if taken into production
+I also have a latest deals section after the user sucesfully checks out, to encourage further sales. I have not currently populated this with any products but intend to if taken into production
 
 ## Final comments
 
