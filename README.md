@@ -15,8 +15,6 @@
 - [**Bugs and Errors**](#Bugs-and-Errors)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
-- [**Code**](#code)
-- [**Content**](#content)
 - [**Acknowledgments**](#acknowledgments)
 
 ## Introduction
